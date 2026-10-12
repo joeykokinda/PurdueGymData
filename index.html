@@ -13,7 +13,7 @@
     --bg: #f6f6f4; --surface: #ffffff; --border: #e3e3df; --border-strong: #cfcfca;
     --ink: #0b0b0b; --ink-2: #4f4f4a; --ink-3: #8a8a84;
     --gold: #a87f00; --gold-fill: #cfb991;
-    --typical: #5f5f5f; --band: rgba(95, 95, 95, 0.12); --track: #ececea;
+    --typical: #5f5f5f; --band: rgba(95, 95, 95, 0.12); --track: #ececea; --predict: #c9a74a;
     --heat-low: #f3efe4; --heat-high: #6b5200; --grid: #ececea;
     --mono: "JetBrains Mono", ui-monospace, monospace;
   }
@@ -22,7 +22,7 @@
       --bg: #070707; --surface: #101010; --border: #232323; --border-strong: #333;
       --ink: #f4f4f1; --ink-2: #b3b3ad; --ink-3: #75756f;
       --gold: #daaa00; --gold-fill: #cfb991;
-      --typical: #9a9a9a; --band: rgba(154, 154, 154, 0.14); --track: #222;
+      --typical: #9a9a9a; --band: rgba(154, 154, 154, 0.14); --track: #222; --predict: #f0dc8c;
       --heat-low: #1a1812; --heat-high: #e8c860; --grid: #1f1f1f;
     }
   }
@@ -64,7 +64,7 @@
   .hero .num small { font-size: 16px; color: var(--ink-3); font-weight: 400; letter-spacing: 0; }
   .hero .usual-num { color: var(--ink-3); }
   .delta { font: 600 13px var(--mono); color: var(--ink-3); align-self: end; padding-bottom: 6px; }
-  .delta.up { color: var(--gold); }
+  .up { color: var(--gold); }
   .hero .segments { grid-column: 1 / -1; height: 18px; margin-top: 12px; }
 
   #sections { margin-top: 12px; }
@@ -92,6 +92,7 @@
   .legend { display: flex; gap: 14px; font-size: 12px; color: var(--ink-2); padding: 10px 18px 0; }
   .legend span { display: inline-flex; align-items: center; gap: 6px; }
   .key-line { width: 16px; border-top: 2px solid var(--gold); }
+  .key-predict { width: 16px; border-top: 2px dashed var(--predict); }
   .key-ghost { width: 16px; height: 10px; background: var(--band); border-top: 2px dashed var(--typical); }
   svg text { font: 11px var(--mono); fill: var(--ink-3); }
   #chart { display: block; width: 100%; height: 300px; }
@@ -162,7 +163,7 @@
   <button class="card hero" id="hero" aria-pressed="true">
     <div><div class="label">Now</div><div class="num" id="now-count">–</div></div>
     <div><div class="label" id="usual-label">Usually</div><div class="num usual-num" id="usual-count">–</div></div>
-    <div><div class="label" id="next-label">Next hour</div><div class="num usual-num" id="next-count">–</div></div>
+    <div><div class="label" id="peak-label">Peak today</div><div class="num usual-num" id="peak-count">–</div></div>
     <div class="delta" id="now-delta"></div>
     <div class="segments" id="now-segments" aria-hidden="true"></div>
   </button>
@@ -239,9 +240,10 @@ function campusNow() {
     iso: `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}` };
 }
 
-// On phones only the first few tiles show until expanded, so the chart stays reachable.
-const mobileLimit = matchMedia("(max-width: 760px)").matches ? 12 : Infinity;
-const state = { tile: building, weekday: campusNow().weekday, range: "|", showAll: false, live: [], typical: {}, typicalNext: {}, buildingGrid: null, grid: null, today: null };
+const narrow = matchMedia("(max-width: 760px)").matches;
+// Only the main areas show until expanded, so the chart stays close.
+const tileLimit = narrow ? 8 : 10;
+const state = { tile: building, weekday: campusNow().weekday, range: "|", showAll: false, live: [], day: {}, buildingGrid: null, grid: null, today: null };
 
 function segmentsHTML(fraction, count, usualFraction) {
   const filled = Math.round(Math.min(1, Math.max(0, fraction)) * count);
@@ -257,28 +259,54 @@ function liveFor(tile) {
   return { open: open.length > 0, count: open.reduce((sum, area) => sum + area.count, 0), capacity };
 }
 
-const nextHourOf = now => ({ weekday: now.hour === 23 ? (now.weekday + 1) % 7 : now.weekday, hour: (now.hour + 1) % 24 });
+// Cells seen on few days are usually opening or closing time, so they are left out of peaks.
+const reliable = (cells, cell) => cell && cell.days >= Math.max(2, 0.4 * Math.max(...cells.map(other => other?.days || 0)));
 
 // ponytail: a group's usual is the sum of its members' medians, not the median of their sums.
-function usualFor(tile, typical = state.typical) {
-  const cells = tile.areas.map(area => typical[area]).filter(Boolean);
+function usualFor(tile, hour) {
+  const cells = tile.areas.map(area => state.day[area]?.[hour]).filter(Boolean);
   return cells.length ? cells.reduce((sum, cell) => sum + cell.count, 0) : null;
 }
 
-// Percentages on tiny counts are noise, so small areas show the difference in people instead.
-// Where the area usually heads over the next hour; changes under 10% (or 2 people) read as flat.
-function trendHTML(usual, next) {
-  if (usual == null || next == null) return "";
-  const change = next - usual;
-  const flat = Math.abs(change) < Math.max(2, usual * 0.1);
-  return ` <span class="trend ${!flat && change > 0 ? "up" : ""}">${flat ? "→" : change > 0 ? "↗" : "↘"} ${fmt(next)}</span>`;
+function peakFor(tile) {
+  let peak = null;
+  for (const hour of hourOrder) {
+    const counts = tile.areas.map(area => state.day[area] && reliable(state.day[area], state.day[area][hour]) ? state.day[area][hour].count : null)
+      .filter(count => count != null);
+    const count = counts.reduce((sum, value) => sum + value, 0);
+    if (counts.length && (!peak || count > peak.count)) peak = { hour, count };
+  }
+  return peak;
 }
 
-function deltaHTML(count, usual) {
+function peakText(peak) {
+  if (!peak) return "";
+  const passed = hourOrder.indexOf(peak.hour) < hourOrder.indexOf(campusNow().hour);
+  return `${passed ? "peaked" : "peak"} ${hourLabel(peak.hour)}`;
+}
+
+// Small areas compare in people, since a percentage of 2 people is noise.
+function vsUsual(count, usual) {
   if (usual == null) return "";
-  const small = usual < 10;
-  const change = small ? Math.round(count - usual) : Math.round((count / usual - 1) * 100);
-  return `<span class="${change > 0 ? "up" : ""}">${change > 0 ? "▲" : change < 0 ? "▼" : "="} ${Math.abs(change)}${small ? "" : "%"}</span>`;
+  if (usual < 10) {
+    const difference = Math.round(count - usual);
+    return difference === 0 ? "about usual" : `<span class="${difference > 0 ? "up" : ""}">${Math.abs(difference)} ${difference > 0 ? "above" : "below"} usual</span>`;
+  }
+  const change = Math.round((count / usual - 1) * 100);
+  return Math.abs(change) < 10 ? "about usual" : `<span class="${change > 0 ? "up" : ""}">${Math.abs(change)}% ${change > 0 ? "above" : "below"} usual</span>`;
+}
+
+// Today's pace (actual ÷ typical over the last three hours that have both) applied to the
+// typical curve for the hours still ahead.
+function predictToday(row, todayHours) {
+  const seen = hourOrder.filter(hour => todayHours[hour] != null);
+  const paired = seen.filter(hour => row[hour]?.count > 0).slice(-3);
+  if (!paired.length) return null;
+  const pace = paired.reduce((sum, hour) => sum + todayHours[hour], 0) / paired.reduce((sum, hour) => sum + row[hour].count, 0);
+  const clamped = Math.min(3, Math.max(0.3, pace));
+  const last = seen[seen.length - 1];
+  const ahead = hourOrder.slice(hourOrder.indexOf(last) + 1).filter(hour => reliable(row, row[hour]));
+  return { last, hours: Object.fromEntries(ahead.map(hour => [hour, row[hour].count * clamped])) };
 }
 
 async function init() {
@@ -326,13 +354,10 @@ function select(tile) {
 async function loadLive() {
   const now = campusNow();
   const nowMs = Date.parse(now.iso + "Z");
-  const next = nextHourOf(now);
-  const [live, typical, typicalNext] = await Promise.all([getJSON("/api/live"),
-    getJSON(`/api/typical?day=${now.weekday}&hour=${now.hour}`), getJSON(`/api/typical?day=${next.weekday}&hour=${next.hour}`)]);
+  const [live, day] = await Promise.all([getJSON("/api/live"), getJSON(`/api/day?day=${now.weekday}`)]);
   // An area counts as open if it is not flagged closed and has reported within the last 3 hours.
   state.live = live.map(area => ({ ...area, fresh: !area.closed && nowMs - Date.parse(area.updated + "Z") < 3 * 3600e3 }));
-  state.typical = typical;
-  state.typicalNext = typicalNext;
+  state.day = day;
   const whole = liveFor(building);
   const newest = state.live.map(area => area.updated).sort().pop();
   element("status").classList.toggle("open", whole.open);
@@ -353,23 +378,23 @@ function renderLive() {
   element("now-count").innerHTML = whole.open ? `${fmt(whole.count)}<small> / ${fmt(whole.capacity)}</small>` : "Closed";
   element("usual-label").textContent = `Usual · ${hourLabel(now.hour)}`;
   element("usual-count").textContent = usual ? fmt(usual) : "–";
-  element("now-delta").innerHTML = whole.open ? deltaHTML(whole.count, usual) : "";
-  const next = nextHourOf(now);
-  const usualNext = state.buildingGrid?.[next.weekday][next.hour]?.count;
-  element("next-label").textContent = `Usual · ${hourLabel(next.hour)}`;
-  element("next-count").innerHTML = usualNext ? fmt(usualNext) : "–";
+  element("now-delta").innerHTML = whole.open ? vsUsual(whole.count, usual) : "";
+  const row = state.buildingGrid?.[now.weekday] || [];
+  const peakHour = hourOrder.filter(hour => reliable(row, row[hour])).sort((a, b) => row[b].count - row[a].count)[0];
+  element("peak-label").textContent = peakHour != null ? `Peak · ${hourLabel(peakHour)}` : "Peak today";
+  element("peak-count").textContent = peakHour != null ? fmt(row[peakHour].count) : "–";
   element("now-segments").innerHTML = segmentsHTML(whole.capacity ? whole.count / whole.capacity : 0, 50,
     usual && whole.capacity ? usual / whole.capacity : null);
 
   const listed = new Set(tiles.flatMap(tile => tile.areas));
   const extra = state.live.filter(area => !listed.has(area.name)).map(area => ({ label: area.name, areas: [area.name] }));
   const present = [...tiles, ...extra].filter(tile => state.live.some(area => tile.areas.includes(area.name)));
-  const shown = state.showAll ? present : present.slice(0, mobileLimit);
+  const shown = state.showAll ? present : present.slice(0, tileLimit);
   const grid = document.createElement("div");
   grid.className = "tiles";
   grid.append(...shown.map(tile => {
     const live = liveFor(tile);
-    const usual = usualFor(tile);
+    const usual = usualFor(tile, now.hour);
     const button = document.createElement("button");
     button.className = "card tile" + (live.open ? "" : " closed");
     button.setAttribute("aria-pressed", state.tile.label === tile.label);
@@ -378,7 +403,7 @@ function renderLive() {
       (tile.short ? `<div class="members">${escapeHTML(tile.short)}</div>` : "") +
       `<div class="count">${live.open ? `${live.count}<small> / ${live.capacity}</small>` : "Closed"}</div>
       <div class="segments">${segmentsHTML(live.open ? fraction : 0, 24, usual != null && live.capacity ? usual / live.capacity : null)}</div>
-      <div class="meta"><span>usually ${usual != null ? fmt(usual) : "–"}${trendHTML(usual, usualFor(tile, state.typicalNext))}</span><span>${live.open ? deltaHTML(live.count, usual) : ""}</span></div>`;
+      <div class="meta"><span>${live.open ? vsUsual(live.count, usual) : ""}</span><span>${peakText(peakFor(tile))}</span></div>`;
     button.onclick = () => select(tile);
     return button;
   }));
@@ -436,11 +461,14 @@ function renderChart() {
   const todayHours = isToday && state.today ? state.today.hours : Array(24).fill(null);
   const hours = hourOrder.filter(hour => row[hour] || todayHours[hour] != null);
   const dayName = days[state.weekday];
-  element("legend").innerHTML = (isToday ? `<span><i class="key-line"></i>Today</span>` : "") + `<span><i class="key-ghost"></i>Typical ${dayName}</span>`;
+  element("legend").innerHTML = (isToday ? `<span><i class="key-line"></i>Today</span><span><i class="key-predict"></i>Predicted</span>` : "") +
+    `<span><i class="key-ghost"></i>Typical ${dayName}</span>`;
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
   if (!hours.length) { svg.innerHTML = `<text x="${width / 2}" y="${height / 2}" text-anchor="middle">No data</text>`; return; }
 
-  const maxValue = Math.max(1, ...hours.map(hour => Math.max(row[hour]?.high || 0, todayHours[hour] || 0)));
+  const prediction = isToday ? predictToday(row, todayHours) : null;
+  const predicted = prediction?.hours || {};
+  const maxValue = Math.max(1, ...hours.map(hour => Math.max(row[hour]?.high || 0, todayHours[hour] || 0, predicted[hour] || 0)));
   const step = niceStep(maxValue / 4);
   const yMax = Math.ceil(maxValue / step) * step;
   const spacing = (width - margin.left - margin.right) / Math.max(1, hours.length - 1);
@@ -474,6 +502,11 @@ function renderChart() {
       markup += `<line x1="${nowX}" x2="${nowX}" y1="${margin.top}" y2="${height - margin.bottom}" stroke="var(--ink)" stroke-dasharray="2 3"/>`;
       markup += `<text x="${nowX + 5}" y="${margin.top + 6}" style="fill:var(--ink);font-weight:600">NOW</text>`;
     }
+    if (prediction) {
+      const start = [x(hours.indexOf(prediction.last)), y(todayHours[prediction.last])];
+      const ahead = hours.filter(hour => predicted[hour] != null).map(hour => [x(hours.indexOf(hour)), y(predicted[hour])]);
+      if (ahead.length) markup += `<path d="${pathFrom([start, ...ahead])}" fill="none" stroke="var(--predict)" stroke-width="2.25" stroke-dasharray="6 4" stroke-linejoin="round"/>`;
+    }
     // Today can skip hours when the feed was slow, so connect across gaps and dot each real reading.
     markup += `<path d="${pathFrom(today)}" fill="none" stroke="var(--gold)" stroke-width="2.25" stroke-linejoin="round" stroke-linecap="round"/>`;
     markup += today.map((point, index) => `<circle cx="${point[0]}" cy="${point[1]}" r="${index === today.length - 1 ? 4.5 : 2.5}" fill="var(--gold)" ${index === today.length - 1 ? 'stroke="var(--surface)" stroke-width="2"' : ""}/>`).join("");
@@ -490,6 +523,7 @@ function renderChart() {
     cross.setAttribute("x1", x(index)); cross.setAttribute("x2", x(index)); cross.setAttribute("visibility", "visible");
     tip.innerHTML = `<b>${dayName.slice(0, 3)} ${hourLabel(hour)}</b>` +
       (isToday && todayHours[hour] != null ? `<br>Today ${fmt(todayHours[hour])}` : "") +
+      (predicted[hour] != null ? `<br>Predicted ${fmt(predicted[hour])}` : "") +
       (cell ? `<br>Typical ${fmt(cell.count)} (${fmt(cell.low)}–${fmt(cell.high)})` : "");
     tip.style.display = "block";
     tip.style.left = Math.min(event.clientX + 14, innerWidth - tip.offsetWidth - 8) + "px";
@@ -510,7 +544,7 @@ function renderHeatmap() {
   const maxPct = Math.max(1, ...cells.map(cell => cell.pct));
   const table = element("heat");
   if (!cells.length) { table.innerHTML = `<tr><td style="background:none;color:var(--ink-3)">No data</td></tr>`; return; }
-  let html = `<thead><tr><th></th>${hours.map(hour => `<th scope="col" aria-label="${hourLabel(hour)}">${hour % (mobile ? 6 : 3) === 0 ? shortHour(hour) : ""}</th>`).join("")}</tr></thead><tbody>`;
+  let html = `<thead><tr><th></th>${hours.map(hour => `<th scope="col" aria-label="${hourLabel(hour)}">${hour % (narrow ? 6 : 3) === 0 ? shortHour(hour) : ""}</th>`).join("")}</tr></thead><tbody>`;
   for (const weekday of dayOrder) {
     html += `<tr><th scope="row">${days[weekday].slice(0, 3)}</th>`;
     for (const hour of hours) {
@@ -527,10 +561,9 @@ function renderHeatmap() {
 function renderTimes() {
   const now = campusNow();
   const row = state.grid[now.weekday];
-  const maxDays = Math.max(0, ...row.map(cell => cell?.days || 0));
-  // Hours seen on few days are usually opening or closing time, so they are left out.
-  const rest = hourOrder.slice(hourOrder.indexOf(now.hour) + 1)
-    .filter(hour => row[hour] && row[hour].days >= Math.max(2, maxDays * 0.4)).map(hour => ({ hour, ...row[hour] }));
+  const prediction = state.today ? predictToday(row, state.today.hours) : null;
+  const rest = hourOrder.slice(hourOrder.indexOf(now.hour) + 1).filter(hour => reliable(row, row[hour]))
+    .map(hour => ({ hour, count: prediction?.hours[hour] ?? row[hour].count }));
   const quietest = rest.reduce((best, entry) => !best || entry.count < best.count ? entry : best, null);
   const busiest = rest.reduce((best, entry) => !best || entry.count > best.count ? entry : best, null);
   element("rest-min").textContent = quietest ? hourLabel(quietest.hour) : "–";

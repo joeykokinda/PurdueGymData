@@ -401,20 +401,19 @@ func serve(db *sql.DB, address string) {
 		})
 	})
 
-	// /api/typical?day=1&hour=17: every area's typical cell for one weekday and hour, keyed by area name.
-	http.HandleFunc("GET /api/typical", func(writer http.ResponseWriter, request *http.Request) {
+	// /api/day?day=1: every area's typical 24 hours for one weekday, keyed by area name.
+	http.HandleFunc("GET /api/day", func(writer http.ResponseWriter, request *http.Request) {
 		writeCached(writer, request, func() (any, error) {
 			query := request.URL.Query()
-			weekday, errDay := strconv.Atoi(query.Get("day"))
-			hour, errHour := strconv.Atoi(query.Get("hour"))
-			if errDay != nil || errHour != nil || weekday < 0 || weekday > 6 || hour < 0 || hour > 23 {
-				return nil, fmt.Errorf("day must be 0-6 and hour 0-23")
+			weekday, err := strconv.Atoi(query.Get("day"))
+			if err != nil || weekday < 0 || weekday > 6 {
+				return nil, fmt.Errorf("day must be 0-6")
 			}
 			from, to := dateRange(query)
 			rows, err := db.Query(`SELECT l.name, r.location_id, r.ts, r.count, r.capacity FROM readings r
 				JOIN locations l ON l.id = r.location_id
-				WHERE r.closed = 0 AND r.ts >= ? AND r.ts <= ? AND substr(r.ts, 12, 2) = ? AND strftime('%w', substr(r.ts, 1, 10)) = ?`,
-				from, to, fmt.Sprintf("%02d", hour), strconv.Itoa(weekday))
+				WHERE r.closed = 0 AND r.ts >= ? AND r.ts <= ? AND strftime('%w', substr(r.ts, 1, 10)) = ?`,
+				from, to, strconv.Itoa(weekday))
 			if err != nil {
 				return nil, err
 			}
@@ -428,13 +427,11 @@ func serve(db *sql.DB, address string) {
 				}
 				byArea[name] = append(byArea[name], item)
 			}
-			typical := map[string]*cell{}
+			days := map[string][24]*cell{}
 			for name, samples := range byArea {
-				if found := heatmap(samples)[weekday][hour]; found != nil {
-					typical[name] = found
-				}
+				days[name] = heatmap(samples)[weekday]
 			}
-			return typical, rows.Err()
+			return days, rows.Err()
 		})
 	})
 
