@@ -1,5 +1,5 @@
 [Unit]
-Description=CoRec busyness tracker (corec.jaeger.lol)
+Description=CoRec busyness tracker (corec.pyras.org)
 After=network-online.target
 
 [Service]

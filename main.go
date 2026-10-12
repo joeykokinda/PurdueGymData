@@ -10,6 +10,7 @@ import (
 	"os"
 	"sort"
 	"strings"
+	"sync"
 	"time"
 
 	_ "time/tzdata"
@@ -137,7 +138,7 @@ func fetchFeed(url string) ([]feedItem, error) {
 	if err != nil {
 		return nil, err
 	}
-	request.Header.Set("User-Agent", "corec-tracker (+https://corec.jaeger.lol)")
+	request.Header.Set("User-Agent", "corec-tracker (+https://corec.pyras.org)")
 	response, err := httpClient.Do(request)
 	if err != nil {
 		return nil, err
@@ -193,14 +194,21 @@ func quantile(sorted []float64, q float64) float64 {
 }
 
 // hourlyTotals averages each location's readings within a calendar hour ("2006-01-02T15")
-// and sums the locations, so a group of areas reads as one space.
+// and sums the locations, so a group of areas reads as one space. Areas often skip an hour,
+// so each hour is scaled up from the areas that reported to every area that reported that day.
+// Hours where less than half that capacity reported are dropped rather than extrapolated.
 func hourlyTotals(samples []sample) map[string]total {
 	type locationHour struct {
 		locationID int
 		hour       string
 	}
+	type locationDay struct {
+		locationID int
+		date       string
+	}
 	type sums struct{ count, capacity, readings float64 }
 	perLocation := map[locationHour]*sums{}
+	dayCapacity := map[locationDay]float64{}
 	for _, item := range samples {
 		key := locationHour{item.locationID, item.ts[:13]}
 		if perLocation[key] == nil {
@@ -209,13 +217,26 @@ func hourlyTotals(samples []sample) map[string]total {
 		perLocation[key].count += float64(item.count)
 		perLocation[key].capacity += float64(item.capacity)
 		perLocation[key].readings++
+		dayCapacity[locationDay{item.locationID, item.ts[:10]}] = float64(item.capacity)
 	}
-	totals := map[string]total{}
+	reported := map[string]total{}
 	for key, sum := range perLocation {
-		hour := totals[key.hour]
+		hour := reported[key.hour]
 		hour.count += sum.count / sum.readings
 		hour.capacity += sum.capacity / sum.readings
-		totals[key.hour] = hour
+		reported[key.hour] = hour
+	}
+	fullCapacity := map[string]float64{}
+	for key, capacity := range dayCapacity {
+		fullCapacity[key.date] += capacity
+	}
+	totals := map[string]total{}
+	for hour, sum := range reported {
+		capacity := fullCapacity[hour[:10]]
+		if sum.capacity == 0 || sum.capacity < capacity/2 {
+			continue
+		}
+		totals[hour] = total{sum.count / sum.capacity * capacity, capacity}
 	}
 	return totals
 }
@@ -272,6 +293,15 @@ func querySamples(db *sql.DB, areas []string, from, to string) ([]sample, error)
 		samples = append(samples, item)
 	}
 	return samples, rows.Err()
+}
+
+// History only changes once per poll, so grids are reused for one poll interval.
+// ponytail: unbounded map keyed by query string; fine for a handful of areas and ranges.
+var heatmapCache sync.Map
+
+type cachedGrid struct {
+	grid  [7][24]*cell
+	built time.Time
 }
 
 func writeJSON(writer http.ResponseWriter, value any) {
@@ -344,12 +374,19 @@ func serve(db *sql.DB, address string) {
 		} else {
 			to += "T99"
 		}
+		key := request.URL.RawQuery
+		if cached, ok := heatmapCache.Load(key); ok && time.Since(cached.(cachedGrid).built) < pollInterval {
+			writeJSON(writer, cached.(cachedGrid).grid)
+			return
+		}
 		samples, err := querySamples(db, query["area"], from, to)
 		if err != nil {
 			http.Error(writer, err.Error(), 500)
 			return
 		}
-		writeJSON(writer, heatmap(samples))
+		grid := heatmap(samples)
+		heatmapCache.Store(key, cachedGrid{grid, time.Now()})
+		writeJSON(writer, grid)
 	})
 
 	// /api/today?area=...: hourly totals so far for the current campus date, indexed by hour.

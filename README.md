@@ -1,6 +1,6 @@
 # PurdueGymData
 
-How busy each area of Purdue's CoRec is, live and historically. Live at **https://corec.jaeger.lol**.
+How busy each area of Purdue's CoRec is, live and historically. Live at **https://corec.pyras.org**.
 
 ## Data
 
