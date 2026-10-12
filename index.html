@@ -67,13 +67,10 @@
   .delta.up { color: var(--gold); }
   .hero .segments { grid-column: 1 / -1; height: 18px; margin-top: 12px; }
 
-  .section { margin-top: 18px; }
-  .section summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 8px; padding: 4px 2px 8px; }
-  .section summary::-webkit-details-marker { display: none; }
-  .section summary::before { content: "▸"; font-size: 10px; transition: transform .15s; }
-  .section[open] summary::before { transform: rotate(90deg); }
-  .section summary .total { margin-left: auto; font: 11px var(--mono); letter-spacing: 0; text-transform: none; }
-  .section summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+  #sections { margin-top: 12px; }
+  .more { all: unset; box-sizing: border-box; display: block; width: 100%; margin-top: 8px; padding: 10px; text-align: center; cursor: pointer;
+    border: 1px dashed var(--border-strong); border-radius: 10px; font: 500 13px Inter, sans-serif; color: var(--ink-2); }
+  .more:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
   .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
   .tile { padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
   .tile .name { font-weight: 600; font-size: 13px; }
@@ -214,16 +211,16 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 const dayOrder = [1, 2, 3, 4, 5, 6, 0];
 const hourOrder = [...Array(24).keys()].map(hour => (hour + 5) % 24);
 
-// Tiles in display order. A tile with several areas is shown as their total.
-const sections = [
-  ["Fitness", ["Colby Fitness", "East Fitness", "Upper Fitness", "Fitness Loft", "Fitness Pavilion", "Scifres", "Olympic Lifting Room", "Faculty/Staff Workout Area"]],
-  ["Courts", [{ label: "Basketball", areas: ["Feature Gym", "B&G Gym 1-3", "B&G Gym 4-6"], short: "Feature + B&G 1–6" },
-    "Lower Gym", "Upper Gym", "MAC Court", { label: "Racquetball", areas: ["Racquetball Courts 2-3", "Racquetball Courts 9-16"], short: "Courts 2–3 + 9–16" }]],
-  ["Climbing", ["Bouldering Wall", "Kilter Board Wall", "Climbing Wall", "Climbing Cave"]],
-  ["Studios & rooms", ["MP2", "MP3", "MP4", "MP5", "MP6", "MP7", "Combative Arts Room", "Cycling Studio", "Mindfulness Room", "APGL"]],
-  ["Tracks & mezzanines", ["Upper Track (4th Floor)", "Atrium Track (3rd Floor)", "East Mezzanine (3rd Floor)", "West Mezzanine (3rd Floor)"]],
-  ["Outdoor & other", ["Outdoor Tennis", "Outdoor Pickleball", "TREC"]],
-].map(([title, tiles]) => [title, tiles.map(tile => typeof tile === "string" ? { label: tile, areas: [tile] } : tile)]);
+// Tiles in display order. Courts is the only tile that totals several areas.
+const tiles = [
+  { label: "Courts", areas: ["Feature Gym", "B&G Gym 1-3", "B&G Gym 4-6"], short: "Feature Gym + B&G 1–6" },
+  ...["Colby Fitness", "Lower Gym", "East Fitness", "Upper Fitness", "Fitness Loft", "Fitness Pavilion", "Scifres", "Olympic Lifting Room",
+    "Upper Gym", "MAC Court", "Bouldering Wall", "Kilter Board Wall", "Climbing Wall", "Climbing Cave",
+    "Racquetball Courts 2-3", "Racquetball Courts 9-16", "MP2", "MP3", "MP4", "MP5", "MP6", "MP7", "Combative Arts Room",
+    "Cycling Studio", "Mindfulness Room", "APGL", "Upper Track (4th Floor)", "Atrium Track (3rd Floor)",
+    "East Mezzanine (3rd Floor)", "West Mezzanine (3rd Floor)", "Outdoor Tennis", "Outdoor Pickleball", "TREC",
+    "Faculty/Staff Workout Area"].map(name => ({ label: name, areas: [name] })),
+];
 const building = { label: "Whole building", areas: [] };
 
 const element = id => document.getElementById(id);
@@ -242,10 +239,9 @@ function campusNow() {
     iso: `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}` };
 }
 
-const mobile = matchMedia("(max-width: 760px)").matches;
-// On phones the long tail of rooms starts folded so the chart is reachable.
-const folded = new Set(mobile ? ["Studios & rooms", "Tracks & mezzanines", "Outdoor & other", "Other"] : []);
-const state = { tile: building, weekday: campusNow().weekday, range: "|", live: [], typical: {}, typicalNext: {}, buildingGrid: null, grid: null, today: null };
+// On phones only the first few tiles show until expanded, so the chart stays reachable.
+const mobileLimit = matchMedia("(max-width: 760px)").matches ? 12 : Infinity;
+const state = { tile: building, weekday: campusNow().weekday, range: "|", showAll: false, live: [], typical: {}, typicalNext: {}, buildingGrid: null, grid: null, today: null };
 
 function segmentsHTML(fraction, count, usualFraction) {
   const filled = Math.round(Math.min(1, Math.max(0, fraction)) * count);
@@ -299,7 +295,7 @@ async function init() {
   const params = new URLSearchParams(location.search);
   if (params.has("range")) state.range = params.get("range");
   if (params.has("day")) state.weekday = +params.get("day");
-  if (params.has("tile")) state.tile = sections.flatMap(([, tiles]) => tiles).find(tile => tile.label === params.get("tile")) || building;
+  if (params.has("tile")) state.tile = tiles.find(tile => tile.label === params.get("tile")) || building;
   element("range-select").value = state.range;
   element("day-select").value = state.weekday;
 
@@ -365,39 +361,36 @@ function renderLive() {
   element("now-segments").innerHTML = segmentsHTML(whole.capacity ? whole.count / whole.capacity : 0, 50,
     usual && whole.capacity ? usual / whole.capacity : null);
 
-  const listed = new Set(sections.flatMap(([, tiles]) => tiles.flatMap(tile => tile.areas)));
+  const listed = new Set(tiles.flatMap(tile => tile.areas));
   const extra = state.live.filter(area => !listed.has(area.name)).map(area => ({ label: area.name, areas: [area.name] }));
-  const allSections = extra.length ? [...sections, ["Other", extra]] : sections;
-  element("sections").replaceChildren(...allSections.flatMap(([title, tiles]) => {
-    const present = tiles.filter(tile => state.live.some(area => tile.areas.includes(area.name)));
-    if (!present.length) return [];
-    const section = document.createElement("details");
-    section.className = "section";
-    section.open = !folded.has(title);
-    section.ontoggle = () => section.open ? folded.delete(title) : folded.add(title);
-    const total = present.reduce((sum, tile) => sum + liveFor(tile).count, 0);
-    section.innerHTML = `<summary class="label"><span></span><span class="total">${fmt(total)} now</span></summary>`;
-    section.querySelector("summary span").textContent = title;
-    const grid = document.createElement("div");
-    grid.className = "tiles";
-    grid.append(...present.map(tile => {
-      const live = liveFor(tile);
-      const usual = usualFor(tile);
-      const button = document.createElement("button");
-      button.className = "card tile" + (live.open ? "" : " closed");
-      button.setAttribute("aria-pressed", state.tile.label === tile.label);
-      const fraction = live.capacity ? live.count / live.capacity : 0;
-      button.innerHTML = `<div class="name">${escapeHTML(tile.label)}</div>` +
-        (tile.short ? `<div class="members">${escapeHTML(tile.short)}</div>` : "") +
-        `<div class="count">${live.open ? `${live.count}<small> / ${live.capacity}</small>` : "Closed"}</div>
-        <div class="segments">${segmentsHTML(live.open ? fraction : 0, 24, usual != null && live.capacity ? usual / live.capacity : null)}</div>
-        <div class="meta"><span>usually ${usual != null ? fmt(usual) : "–"}${trendHTML(usual, usualFor(tile, state.typicalNext))}</span><span>${live.open ? deltaHTML(live.count, usual) : ""}</span></div>`;
-      button.onclick = () => select(tile);
-      return button;
-    }));
-    section.append(grid);
-    return [section];
+  const present = [...tiles, ...extra].filter(tile => state.live.some(area => tile.areas.includes(area.name)));
+  const shown = state.showAll ? present : present.slice(0, mobileLimit);
+  const grid = document.createElement("div");
+  grid.className = "tiles";
+  grid.append(...shown.map(tile => {
+    const live = liveFor(tile);
+    const usual = usualFor(tile);
+    const button = document.createElement("button");
+    button.className = "card tile" + (live.open ? "" : " closed");
+    button.setAttribute("aria-pressed", state.tile.label === tile.label);
+    const fraction = live.capacity ? live.count / live.capacity : 0;
+    button.innerHTML = `<div class="name">${escapeHTML(tile.label)}</div>` +
+      (tile.short ? `<div class="members">${escapeHTML(tile.short)}</div>` : "") +
+      `<div class="count">${live.open ? `${live.count}<small> / ${live.capacity}</small>` : "Closed"}</div>
+      <div class="segments">${segmentsHTML(live.open ? fraction : 0, 24, usual != null && live.capacity ? usual / live.capacity : null)}</div>
+      <div class="meta"><span>usually ${usual != null ? fmt(usual) : "–"}${trendHTML(usual, usualFor(tile, state.typicalNext))}</span><span>${live.open ? deltaHTML(live.count, usual) : ""}</span></div>`;
+    button.onclick = () => select(tile);
+    return button;
   }));
+  const children = [grid];
+  if (shown.length < present.length) {
+    const more = document.createElement("button");
+    more.className = "more";
+    more.textContent = `Show all ${present.length}`;
+    more.onclick = () => { state.showAll = true; renderLive(); };
+    children.push(more);
+  }
+  element("sections").replaceChildren(...children);
 }
 
 async function loadHistory() {
