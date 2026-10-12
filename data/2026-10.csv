@@ -1,0 +1,2242 @@
+ts,location_id,area,count,capacity,closed,source
+2026-10-01T07:23:31,7459,MP2,0,100,0,gymscrape
+2026-10-01T07:23:36,6142,Combative Arts Room,3,11,0,gymscrape
+2026-10-01T07:23:39,5985,Lower Gym,41,282,0,gymscrape
+2026-10-01T08:18:42,5978,Faculty/Staff Workout Area,1,25,0,gymscrape
+2026-10-01T08:18:43,6129,Upper Track (4th Floor),1,10,0,gymscrape
+2026-10-01T08:18:44,5996,Upper Gym,1,100,0,gymscrape
+2026-10-01T08:18:45,7451,MP6,15,45,0,gymscrape
+2026-10-01T08:18:45,7452,MP7,16,45,0,gymscrape
+2026-10-01T08:18:46,5995,Upper Fitness,10,46,0,gymscrape
+2026-10-01T08:18:47,6130,MAC Court,2,100,0,gymscrape
+2026-10-01T08:18:47,6157,East Mezzanine (3rd Floor),1,15,0,gymscrape
+2026-10-01T08:18:48,5984,Atrium Track (3rd Floor),3,50,0,gymscrape
+2026-10-01T08:18:49,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-01T08:18:49,6158,West Mezzanine (3rd Floor),3,25,0,gymscrape
+2026-10-01T08:18:50,6143,MP5,0,106,0,gymscrape
+2026-10-01T08:18:50,10219,Racquetball Courts 9-16,1,80,0,gymscrape
+2026-10-01T08:18:51,7293,Fitness Pavilion,19,70,0,gymscrape
+2026-10-01T08:18:52,5979,Feature Gym,1,50,0,gymscrape
+2026-10-01T08:18:52,5981,Fitness Loft,9,55,0,gymscrape
+2026-10-01T08:18:53,5960,B&G Gym 1-3,1,100,0,gymscrape
+2026-10-01T08:18:54,5961,B&G Gym 4-6,1,100,0,gymscrape
+2026-10-01T08:18:55,5993,Scifres,10,80,0,gymscrape
+2026-10-01T08:18:56,5969,Bouldering Wall,2,26,0,gymscrape
+2026-10-01T08:18:56,11623,Kilter Board Wall,0,20,0,gymscrape
+2026-10-01T08:18:57,11620,East Fitness,7,208,0,gymscrape
+2026-10-01T08:18:58,5990,Olympic Lifting Room,0,16,0,gymscrape
+2026-10-01T08:18:58,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-01T08:18:59,11610,Climbing Cave,0,15,0,gymscrape
+2026-10-01T08:19:00,6131,MP3,1,20,0,gymscrape
+2026-10-01T08:19:00,6132,MP4,1,26,0,gymscrape
+2026-10-01T08:19:01,11622,Cycling Studio,16,60,0,gymscrape
+2026-10-01T08:19:02,7290,Colby Fitness,58,380,0,gymscrape
+2026-10-01T08:57:26,9552,Outdoor Tennis,2,50,0,gymscrape
+2026-10-01T08:57:27,9553,Outdoor Pickleball,2,50,0,gymscrape
+2026-10-01T10:17:00,5978,Faculty/Staff Workout Area,2,25,0,kvijay
+2026-10-01T10:17:01,5996,Upper Gym,1,100,0,kvijay
+2026-10-01T10:17:01,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-01T10:17:02,7451,MP6,0,45,0,kvijay
+2026-10-01T10:17:03,7452,MP7,2,45,0,kvijay
+2026-10-01T10:17:04,5995,Upper Fitness,16,46,0,kvijay
+2026-10-01T10:17:04,6130,MAC Court,0,100,0,kvijay
+2026-10-01T10:17:05,5984,Atrium Track (3rd Floor),4,50,0,kvijay
+2026-10-01T10:17:05,6157,East Mezzanine (3rd Floor),2,15,0,kvijay
+2026-10-01T10:17:06,6158,West Mezzanine (3rd Floor),5,25,0,kvijay
+2026-10-01T10:17:07,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-01T10:17:07,10219,Racquetball Courts 9-16,3,80,0,kvijay
+2026-10-01T10:17:08,6143,MP5,2,106,0,kvijay
+2026-10-01T10:17:09,5981,Fitness Loft,10,55,0,kvijay
+2026-10-01T10:17:09,7293,Fitness Pavilion,21,70,0,kvijay
+2026-10-01T10:17:10,5979,Feature Gym,18,50,0,kvijay
+2026-10-01T10:17:11,5960,B&G Gym 1-3,3,100,0,kvijay
+2026-10-01T10:17:11,5961,B&G Gym 4-6,0,100,0,kvijay
+2026-10-01T10:17:12,5993,Scifres,14,80,0,kvijay
+2026-10-01T10:17:13,7459,MP2,1,100,0,kvijay
+2026-10-01T10:17:14,5969,Bouldering Wall,9,26,0,kvijay
+2026-10-01T10:17:15,11620,East Fitness,12,208,0,kvijay
+2026-10-01T10:17:15,11623,Kilter Board Wall,1,20,0,kvijay
+2026-10-01T10:17:16,5990,Olympic Lifting Room,1,16,0,kvijay
+2026-10-01T10:17:16,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-01T10:17:17,11610,Climbing Cave,0,15,0,kvijay
+2026-10-01T10:17:18,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-01T10:17:19,6131,MP3,2,20,0,kvijay
+2026-10-01T10:17:19,6132,MP4,0,26,0,kvijay
+2026-10-01T10:17:20,11622,Cycling Studio,16,60,1,kvijay
+2026-10-01T10:17:21,5985,Lower Gym,55,282,0,kvijay
+2026-10-01T10:17:21,7290,Colby Fitness,80,380,0,kvijay
+2026-10-01T10:35:23,9552,Outdoor Tennis,1,50,0,kvijay
+2026-10-01T10:35:24,9553,Outdoor Pickleball,5,50,0,kvijay
+2026-10-01T13:32:37,5978,Faculty/Staff Workout Area,2,25,0,gymscrape
+2026-10-01T13:32:37,6129,Upper Track (4th Floor),2,10,0,gymscrape
+2026-10-01T13:32:38,5996,Upper Gym,5,100,0,gymscrape
+2026-10-01T13:32:39,7451,MP6,0,45,0,gymscrape
+2026-10-01T13:32:39,7452,MP7,3,45,0,gymscrape
+2026-10-01T13:32:40,5995,Upper Fitness,7,46,0,gymscrape
+2026-10-01T13:32:41,6130,MAC Court,5,100,0,gymscrape
+2026-10-01T13:32:41,6157,East Mezzanine (3rd Floor),1,15,0,gymscrape
+2026-10-01T13:32:42,5984,Atrium Track (3rd Floor),3,50,0,gymscrape
+2026-10-01T13:32:43,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-01T13:32:43,6158,West Mezzanine (3rd Floor),9,25,0,gymscrape
+2026-10-01T13:32:44,6143,MP5,0,106,0,gymscrape
+2026-10-01T13:32:44,10219,Racquetball Courts 9-16,1,80,0,gymscrape
+2026-10-01T13:32:45,7293,Fitness Pavilion,16,70,0,gymscrape
+2026-10-01T13:32:48,5961,B&G Gym 4-6,6,100,0,gymscrape
+2026-10-01T13:32:48,5993,Scifres,9,80,0,gymscrape
+2026-10-01T13:32:50,7459,MP2,1,100,0,gymscrape
+2026-10-01T13:32:51,5969,Bouldering Wall,9,26,0,gymscrape
+2026-10-01T13:32:51,11623,Kilter Board Wall,1,20,0,gymscrape
+2026-10-01T13:32:52,5990,Olympic Lifting Room,1,16,0,gymscrape
+2026-10-01T13:32:52,11620,East Fitness,15,208,0,gymscrape
+2026-10-01T13:32:53,5991,Racquetball Courts 2-3,2,20,0,gymscrape
+2026-10-01T13:32:54,6142,Combative Arts Room,0,11,0,gymscrape
+2026-10-01T13:32:54,11610,Climbing Cave,1,15,0,gymscrape
+2026-10-01T13:32:55,6131,MP3,4,20,0,gymscrape
+2026-10-01T13:32:56,6132,MP4,0,26,0,gymscrape
+2026-10-01T13:32:57,7290,Colby Fitness,91,380,0,gymscrape
+2026-10-01T13:32:57,11622,Cycling Studio,16,60,1,kvijay
+2026-10-01T13:32:58,5985,Lower Gym,61,282,0,gymscrape
+2026-10-01T13:37:46,9552,Outdoor Tennis,0,50,0,gymscrape
+2026-10-01T13:37:46,9553,Outdoor Pickleball,11,50,0,gymscrape
+2026-10-01T14:05:09,5994,TREC,0,300,1,kvijay
+2026-10-01T15:04:20,5979,Feature Gym,28,50,0,gymscrape
+2026-10-01T15:04:20,5981,Fitness Loft,12,55,0,gymscrape
+2026-10-01T15:04:21,5960,B&G Gym 1-3,6,100,0,gymscrape
+2026-10-01T15:47:34,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-01T15:47:35,5996,Upper Gym,3,100,0,kvijay
+2026-10-01T15:47:35,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-01T15:47:36,7451,MP6,0,45,0,kvijay
+2026-10-01T15:47:37,5995,Upper Fitness,16,46,0,kvijay
+2026-10-01T15:47:37,7452,MP7,1,45,0,kvijay
+2026-10-01T15:47:38,6130,MAC Court,18,100,0,kvijay
+2026-10-01T15:47:39,5984,Atrium Track (3rd Floor),4,50,0,kvijay
+2026-10-01T15:47:39,6157,East Mezzanine (3rd Floor),1,15,0,kvijay
+2026-10-01T15:47:40,6158,West Mezzanine (3rd Floor),5,25,0,kvijay
+2026-10-01T15:47:41,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-01T15:47:41,10219,Racquetball Courts 9-16,2,80,0,kvijay
+2026-10-01T15:47:42,6143,MP5,0,106,0,kvijay
+2026-10-01T15:47:43,5981,Fitness Loft,17,55,0,kvijay
+2026-10-01T15:47:43,7293,Fitness Pavilion,29,70,0,kvijay
+2026-10-01T15:47:44,5979,Feature Gym,28,50,0,kvijay
+2026-10-01T15:47:45,5960,B&G Gym 1-3,26,100,0,kvijay
+2026-10-01T15:47:45,5961,B&G Gym 4-6,14,100,0,kvijay
+2026-10-01T15:47:46,5993,Scifres,27,80,0,kvijay
+2026-10-01T15:47:47,5969,Bouldering Wall,19,26,0,kvijay
+2026-10-01T15:47:47,7459,MP2,0,100,0,kvijay
+2026-10-01T15:47:48,11620,East Fitness,28,208,0,kvijay
+2026-10-01T15:47:48,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-01T15:47:49,5990,Olympic Lifting Room,1,16,0,kvijay
+2026-10-01T15:47:50,5991,Racquetball Courts 2-3,1,20,0,kvijay
+2026-10-01T15:47:50,11610,Climbing Cave,1,15,0,kvijay
+2026-10-01T15:47:51,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-01T15:47:52,6131,MP3,0,20,0,kvijay
+2026-10-01T15:47:52,6132,MP4,0,26,0,kvijay
+2026-10-01T15:47:53,7290,Colby Fitness,109,380,0,kvijay
+2026-10-01T15:47:54,5985,Lower Gym,81,282,0,kvijay
+2026-10-01T15:56:11,9552,Outdoor Tennis,0,50,0,kvijay
+2026-10-01T15:56:12,9553,Outdoor Pickleball,26,50,0,kvijay
+2026-10-01T18:43:13,5994,TREC,38,300,0,gymscrape
+2026-10-01T18:43:14,9552,Outdoor Tennis,0,50,0,gymscrape
+2026-10-01T18:43:15,9553,Outdoor Pickleball,49,50,0,gymscrape
+2026-10-01T19:01:24,5978,Faculty/Staff Workout Area,6,25,0,kvijay
+2026-10-01T19:01:25,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-01T19:01:26,5996,Upper Gym,23,100,0,kvijay
+2026-10-01T19:01:27,7451,MP6,22,45,0,kvijay
+2026-10-01T19:01:28,7452,MP7,21,45,0,kvijay
+2026-10-01T19:01:30,5995,Upper Fitness,24,46,0,kvijay
+2026-10-01T19:01:31,6130,MAC Court,28,100,0,kvijay
+2026-10-01T19:01:31,6157,East Mezzanine (3rd Floor),0,15,0,kvijay
+2026-10-01T19:01:32,5984,Atrium Track (3rd Floor),11,50,0,kvijay
+2026-10-01T19:01:33,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-01T19:01:33,6158,West Mezzanine (3rd Floor),6,25,0,kvijay
+2026-10-01T19:01:34,10219,Racquetball Courts 9-16,28,80,0,kvijay
+2026-10-01T19:01:35,6143,MP5,1,106,0,kvijay
+2026-10-01T19:01:35,7293,Fitness Pavilion,26,70,0,kvijay
+2026-10-01T19:01:36,5981,Fitness Loft,29,55,0,kvijay
+2026-10-01T19:01:37,5979,Feature Gym,5,50,0,kvijay
+2026-10-01T19:01:38,5960,B&G Gym 1-3,35,100,0,kvijay
+2026-10-01T19:01:38,5961,B&G Gym 4-6,35,100,0,kvijay
+2026-10-01T19:01:40,5993,Scifres,33,80,0,kvijay
+2026-10-01T19:01:42,5972,Climbing Wall,7,18,0,kvijay
+2026-10-01T19:01:42,7459,MP2,22,100,0,kvijay
+2026-10-01T19:01:43,5969,Bouldering Wall,19,26,0,kvijay
+2026-10-01T19:01:44,11620,East Fitness,31,208,0,kvijay
+2026-10-01T19:01:44,11623,Kilter Board Wall,1,20,0,kvijay
+2026-10-01T19:01:45,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-01T19:01:46,5991,Racquetball Courts 2-3,2,20,0,kvijay
+2026-10-01T19:01:46,11610,Climbing Cave,1,15,0,kvijay
+2026-10-01T19:01:47,6142,Combative Arts Room,1,11,0,kvijay
+2026-10-01T19:01:48,6131,MP3,9,20,0,kvijay
+2026-10-01T19:01:48,6132,MP4,1,26,0,kvijay
+2026-10-01T19:01:49,11622,Cycling Studio,21,60,0,kvijay
+2026-10-01T19:01:50,7290,Colby Fitness,105,380,0,kvijay
+2026-10-01T19:01:50,11621,APGL,9,30,0,kvijay
+2026-10-01T19:01:51,5985,Lower Gym,79,282,0,kvijay
+2026-10-01T19:57:03,5994,TREC,26,300,0,kvijay
+2026-10-01T19:57:04,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-01T19:58:40,9553,Outdoor Pickleball,19,50,0,kvijay
+2026-10-01T20:45:59,5994,TREC,29,300,0,kvijay
+2026-10-01T20:46:00,9552,Outdoor Tennis,8,50,0,gymscrape
+2026-10-01T21:47:45,5978,Faculty/Staff Workout Area,0,25,0,gymscrape
+2026-10-01T21:47:46,6129,Upper Track (4th Floor),0,10,0,gymscrape
+2026-10-01T21:47:47,5996,Upper Gym,14,100,0,gymscrape
+2026-10-01T21:47:47,7451,MP6,21,45,0,gymscrape
+2026-10-01T21:47:48,7452,MP7,23,45,0,gymscrape
+2026-10-01T21:47:49,5995,Upper Fitness,10,46,0,gymscrape
+2026-10-01T21:47:49,6130,MAC Court,51,100,0,gymscrape
+2026-10-01T21:47:50,5984,Atrium Track (3rd Floor),3,50,0,gymscrape
+2026-10-01T21:47:50,6157,East Mezzanine (3rd Floor),8,15,0,gymscrape
+2026-10-01T21:47:51,6158,West Mezzanine (3rd Floor),3,25,0,gymscrape
+2026-10-01T21:47:52,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-01T21:47:52,10219,Racquetball Courts 9-16,24,80,0,gymscrape
+2026-10-01T21:47:53,6143,MP5,28,106,0,gymscrape
+2026-10-01T21:47:54,5981,Fitness Loft,16,55,0,gymscrape
+2026-10-01T21:47:54,7293,Fitness Pavilion,29,70,0,gymscrape
+2026-10-01T21:47:55,5979,Feature Gym,17,50,0,gymscrape
+2026-10-01T21:47:56,5960,B&G Gym 1-3,34,100,0,gymscrape
+2026-10-01T21:47:56,5961,B&G Gym 4-6,36,100,0,gymscrape
+2026-10-01T21:47:57,5993,Scifres,26,80,0,gymscrape
+2026-10-01T21:47:59,5972,Climbing Wall,15,18,0,gymscrape
+2026-10-01T21:47:59,7459,MP2,2,100,0,gymscrape
+2026-10-01T21:48:00,5969,Bouldering Wall,31,26,0,gymscrape
+2026-10-01T21:48:01,11623,Kilter Board Wall,0,20,0,gymscrape
+2026-10-01T21:48:02,5990,Olympic Lifting Room,1,16,0,gymscrape
+2026-10-01T21:48:02,11620,East Fitness,29,208,0,gymscrape
+2026-10-01T21:48:03,5991,Racquetball Courts 2-3,2,20,0,gymscrape
+2026-10-01T21:48:04,11610,Climbing Cave,4,15,0,kvijay
+2026-10-01T21:48:05,6142,Combative Arts Room,2,11,0,gymscrape
+2026-10-01T21:48:06,6131,MP3,10,20,0,gymscrape
+2026-10-01T21:48:06,6132,MP4,12,26,0,gymscrape
+2026-10-01T21:48:07,11622,Cycling Studio,0,60,1,kvijay
+2026-10-01T21:48:08,11621,APGL,16,30,0,gymscrape
+2026-10-01T21:48:10,5985,Lower Gym,78,282,0,gymscrape
+2026-10-01T21:48:10,7290,Colby Fitness,93,380,0,gymscrape
+2026-10-01T21:50:45,9553,Outdoor Pickleball,32,50,0,gymscrape
+2026-10-01T22:34:21,5978,Faculty/Staff Workout Area,2,25,0,kvijay
+2026-10-01T22:34:21,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-01T22:34:22,5996,Upper Gym,30,100,0,kvijay
+2026-10-01T22:34:23,7451,MP6,22,45,0,kvijay
+2026-10-01T22:34:24,7452,MP7,0,45,0,kvijay
+2026-10-01T22:34:25,5995,Upper Fitness,11,46,0,kvijay
+2026-10-01T22:34:25,6130,MAC Court,50,100,0,kvijay
+2026-10-01T22:34:26,6157,East Mezzanine (3rd Floor),5,15,0,kvijay
+2026-10-01T22:34:27,5984,Atrium Track (3rd Floor),4,50,0,kvijay
+2026-10-01T22:34:28,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-01T22:34:28,6158,West Mezzanine (3rd Floor),3,25,0,kvijay
+2026-10-01T22:34:29,10219,Racquetball Courts 9-16,16,80,0,kvijay
+2026-10-01T22:34:30,6143,MP5,35,106,0,kvijay
+2026-10-01T22:34:30,7293,Fitness Pavilion,28,70,0,kvijay
+2026-10-01T22:34:31,5981,Fitness Loft,17,55,0,kvijay
+2026-10-01T22:34:32,5960,B&G Gym 1-3,32,100,0,kvijay
+2026-10-01T22:34:32,5979,Feature Gym,13,50,0,kvijay
+2026-10-01T22:34:33,5961,B&G Gym 4-6,34,100,0,kvijay
+2026-10-01T22:34:34,5993,Scifres,31,80,0,kvijay
+2026-10-01T22:34:34,7459,MP2,4,100,0,kvijay
+2026-10-01T22:34:35,5972,Climbing Wall,8,18,0,kvijay
+2026-10-01T22:34:36,5969,Bouldering Wall,24,26,0,kvijay
+2026-10-01T22:34:36,11623,Kilter Board Wall,2,20,0,kvijay
+2026-10-01T22:34:37,11620,East Fitness,27,208,0,kvijay
+2026-10-01T22:34:38,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-01T22:34:38,5991,Racquetball Courts 2-3,2,20,0,kvijay
+2026-10-01T22:34:39,6142,Combative Arts Room,4,11,0,kvijay
+2026-10-01T22:34:40,6131,MP3,4,20,0,kvijay
+2026-10-01T22:34:40,6132,MP4,14,26,0,kvijay
+2026-10-01T22:34:41,7290,Colby Fitness,86,380,0,kvijay
+2026-10-01T22:34:41,11621,APGL,15,30,0,kvijay
+2026-10-01T22:34:42,5985,Lower Gym,67,282,0,kvijay
+2026-10-01T22:34:43,9552,Outdoor Tennis,2,50,0,kvijay
+2026-10-01T22:34:43,9553,Outdoor Pickleball,35,50,0,kvijay
+2026-10-02T05:50:48,5972,Climbing Wall,0,18,1,kvijay
+2026-10-02T05:50:54,11621,APGL,0,30,1,kvijay
+2026-10-02T05:50:56,5994,TREC,0,300,1,kvijay
+2026-10-02T06:54:06,5978,Faculty/Staff Workout Area,1,25,0,kvijay
+2026-10-02T06:54:07,5996,Upper Gym,0,100,0,kvijay
+2026-10-02T06:54:07,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-02T06:54:08,7451,MP6,0,45,0,kvijay
+2026-10-02T06:54:09,5995,Upper Fitness,5,46,0,kvijay
+2026-10-02T06:54:09,7452,MP7,1,45,0,kvijay
+2026-10-02T06:54:10,6130,MAC Court,4,100,0,kvijay
+2026-10-02T06:54:11,5984,Atrium Track (3rd Floor),0,50,0,kvijay
+2026-10-02T06:54:11,6157,East Mezzanine (3rd Floor),1,15,0,kvijay
+2026-10-02T06:54:12,6158,West Mezzanine (3rd Floor),1,25,0,kvijay
+2026-10-02T06:54:13,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-02T06:54:13,10219,Racquetball Courts 9-16,0,80,0,kvijay
+2026-10-02T06:54:14,6143,MP5,1,106,0,kvijay
+2026-10-02T06:54:15,5981,Fitness Loft,9,55,0,kvijay
+2026-10-02T06:54:15,7293,Fitness Pavilion,10,70,0,kvijay
+2026-10-02T06:54:16,5960,B&G Gym 1-3,1,100,0,kvijay
+2026-10-02T06:54:16,5979,Feature Gym,0,50,0,kvijay
+2026-10-02T06:54:17,5961,B&G Gym 4-6,1,100,0,kvijay
+2026-10-02T06:54:18,5993,Scifres,12,80,0,kvijay
+2026-10-02T06:54:19,7459,MP2,9,100,0,kvijay
+2026-10-02T06:54:20,5969,Bouldering Wall,2,26,0,kvijay
+2026-10-02T06:54:20,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-02T06:54:21,11620,East Fitness,9,208,0,kvijay
+2026-10-02T06:54:22,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-02T06:54:22,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-02T06:54:23,11610,Climbing Cave,0,15,0,kvijay
+2026-10-02T06:54:24,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-02T06:54:27,6131,MP3,0,20,0,kvijay
+2026-10-02T06:54:27,6132,MP4,0,26,0,kvijay
+2026-10-02T06:54:28,7290,Colby Fitness,35,380,0,kvijay
+2026-10-02T06:54:29,5985,Lower Gym,32,282,0,kvijay
+2026-10-02T06:54:29,9552,Outdoor Tennis,0,50,0,kvijay
+2026-10-02T06:54:30,9553,Outdoor Pickleball,0,50,0,kvijay
+2026-10-02T08:52:33,11622,Cycling Studio,0,60,1,kvijay
+2026-10-02T10:32:30,5978,Faculty/Staff Workout Area,0,25,0,gymscrape
+2026-10-02T10:32:31,6129,Upper Track (4th Floor),1,10,0,gymscrape
+2026-10-02T10:32:32,5996,Upper Gym,1,100,0,gymscrape
+2026-10-02T10:32:32,7451,MP6,0,45,0,gymscrape
+2026-10-02T10:32:33,7452,MP7,1,45,0,gymscrape
+2026-10-02T10:32:34,5995,Upper Fitness,10,46,0,gymscrape
+2026-10-02T10:32:34,6130,MAC Court,7,100,0,gymscrape
+2026-10-02T10:32:35,6157,East Mezzanine (3rd Floor),2,15,0,gymscrape
+2026-10-02T10:32:36,5984,Atrium Track (3rd Floor),0,50,0,gymscrape
+2026-10-02T10:32:36,6158,West Mezzanine (3rd Floor),3,25,0,gymscrape
+2026-10-02T10:32:37,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-02T10:32:38,6143,MP5,2,106,0,gymscrape
+2026-10-02T10:32:38,10219,Racquetball Courts 9-16,0,80,0,gymscrape
+2026-10-02T10:32:39,5981,Fitness Loft,10,55,0,gymscrape
+2026-10-02T10:32:39,7293,Fitness Pavilion,22,70,0,gymscrape
+2026-10-02T10:32:40,5979,Feature Gym,2,50,0,gymscrape
+2026-10-02T10:32:41,5960,B&G Gym 1-3,1,100,0,gymscrape
+2026-10-02T10:32:41,5961,B&G Gym 4-6,2,100,0,gymscrape
+2026-10-02T10:32:42,5993,Scifres,19,80,0,gymscrape
+2026-10-02T10:32:43,5969,Bouldering Wall,10,26,0,gymscrape
+2026-10-02T10:32:43,7459,MP2,1,100,0,gymscrape
+2026-10-02T10:32:44,11623,Kilter Board Wall,1,20,0,gymscrape
+2026-10-02T10:32:45,5990,Olympic Lifting Room,1,16,0,gymscrape
+2026-10-02T10:32:45,11620,East Fitness,14,208,0,gymscrape
+2026-10-02T10:32:46,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-02T10:32:46,11610,Climbing Cave,0,15,0,gymscrape
+2026-10-02T10:32:47,6142,Combative Arts Room,0,11,0,gymscrape
+2026-10-02T10:32:48,6131,MP3,2,20,0,gymscrape
+2026-10-02T10:32:48,6132,MP4,0,26,0,gymscrape
+2026-10-02T10:32:49,7290,Colby Fitness,91,380,0,gymscrape
+2026-10-02T10:32:50,5985,Lower Gym,61,282,0,gymscrape
+2026-10-02T10:32:51,9552,Outdoor Tennis,2,50,0,gymscrape
+2026-10-02T10:32:51,9553,Outdoor Pickleball,0,50,0,gymscrape
+2026-10-02T11:23:21,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-02T11:23:22,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-02T11:23:23,5996,Upper Gym,3,100,0,kvijay
+2026-10-02T11:23:24,7451,MP6,1,45,0,kvijay
+2026-10-02T11:23:25,5995,Upper Fitness,15,46,0,kvijay
+2026-10-02T11:23:25,7452,MP7,4,45,0,kvijay
+2026-10-02T11:23:26,6130,MAC Court,5,100,0,kvijay
+2026-10-02T11:23:27,5984,Atrium Track (3rd Floor),3,50,0,kvijay
+2026-10-02T11:23:27,6157,East Mezzanine (3rd Floor),1,15,0,kvijay
+2026-10-02T11:23:28,6158,West Mezzanine (3rd Floor),7,25,0,kvijay
+2026-10-02T11:23:29,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-02T11:23:30,6143,MP5,0,106,0,kvijay
+2026-10-02T11:23:30,10219,Racquetball Courts 9-16,1,80,0,kvijay
+2026-10-02T11:23:31,7293,Fitness Pavilion,29,70,0,kvijay
+2026-10-02T11:23:32,5979,Feature Gym,1,50,0,kvijay
+2026-10-02T11:23:32,5981,Fitness Loft,9,55,0,kvijay
+2026-10-02T11:23:33,5960,B&G Gym 1-3,7,100,0,kvijay
+2026-10-02T11:23:34,5961,B&G Gym 4-6,6,100,0,kvijay
+2026-10-02T11:23:34,5993,Scifres,21,80,0,kvijay
+2026-10-02T11:23:35,7459,MP2,0,100,0,kvijay
+2026-10-02T11:23:36,5969,Bouldering Wall,18,26,0,kvijay
+2026-10-02T11:23:36,11623,Kilter Board Wall,1,20,0,kvijay
+2026-10-02T11:23:37,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-02T11:23:37,11620,East Fitness,12,208,0,kvijay
+2026-10-02T11:23:38,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-02T11:23:39,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-02T11:23:39,11610,Climbing Cave,0,15,0,kvijay
+2026-10-02T11:23:40,6131,MP3,0,20,0,kvijay
+2026-10-02T11:23:41,6132,MP4,0,26,0,kvijay
+2026-10-02T11:23:42,5985,Lower Gym,69,282,0,kvijay
+2026-10-02T11:23:42,7290,Colby Fitness,115,380,0,kvijay
+2026-10-02T11:23:43,9552,Outdoor Tennis,2,50,0,kvijay
+2026-10-02T11:23:44,9553,Outdoor Pickleball,9,50,0,kvijay
+2026-10-02T13:36:17,11622,Cycling Studio,0,60,1,kvijay
+2026-10-02T15:19:59,5978,Faculty/Staff Workout Area,2,25,0,gymscrape
+2026-10-02T15:20:00,6129,Upper Track (4th Floor),0,10,0,gymscrape
+2026-10-02T15:20:01,5996,Upper Gym,6,100,0,gymscrape
+2026-10-02T15:20:02,7451,MP6,2,45,0,gymscrape
+2026-10-02T15:20:02,7452,MP7,2,45,0,gymscrape
+2026-10-02T15:20:03,5995,Upper Fitness,10,46,0,gymscrape
+2026-10-02T15:20:04,6130,MAC Court,12,100,0,gymscrape
+2026-10-02T15:20:07,6157,East Mezzanine (3rd Floor),2,15,0,gymscrape
+2026-10-02T15:20:08,5984,Atrium Track (3rd Floor),0,50,0,gymscrape
+2026-10-02T15:20:08,6158,West Mezzanine (3rd Floor),5,25,0,gymscrape
+2026-10-02T15:20:09,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-02T15:20:10,10219,Racquetball Courts 9-16,0,80,0,gymscrape
+2026-10-02T15:20:11,6143,MP5,1,106,0,gymscrape
+2026-10-02T15:20:11,7293,Fitness Pavilion,22,70,0,gymscrape
+2026-10-02T15:20:12,5981,Fitness Loft,15,55,0,gymscrape
+2026-10-02T15:20:13,5960,B&G Gym 1-3,2,100,0,gymscrape
+2026-10-02T15:20:13,5979,Feature Gym,5,50,0,gymscrape
+2026-10-02T15:20:14,5961,B&G Gym 4-6,31,100,0,gymscrape
+2026-10-02T15:20:15,5993,Scifres,18,80,0,gymscrape
+2026-10-02T15:20:16,7459,MP2,0,100,0,gymscrape
+2026-10-02T15:20:17,5969,Bouldering Wall,19,26,0,gymscrape
+2026-10-02T15:20:18,11623,Kilter Board Wall,2,20,0,gymscrape
+2026-10-02T15:20:19,5990,Olympic Lifting Room,2,16,0,gymscrape
+2026-10-02T15:20:19,11620,East Fitness,27,208,0,gymscrape
+2026-10-02T15:20:20,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-02T15:20:21,11610,Climbing Cave,4,15,0,gymscrape
+2026-10-02T15:20:22,6142,Combative Arts Room,1,11,0,gymscrape
+2026-10-02T15:20:23,6131,MP3,1,20,0,gymscrape
+2026-10-02T15:20:24,6132,MP4,1,26,0,gymscrape
+2026-10-02T15:20:25,7290,Colby Fitness,76,380,0,gymscrape
+2026-10-02T15:20:25,11621,APGL,9,30,0,gymscrape
+2026-10-02T15:20:26,5985,Lower Gym,70,282,0,gymscrape
+2026-10-02T15:20:27,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-02T15:20:28,9553,Outdoor Pickleball,20,50,0,gymscrape
+2026-10-02T16:37:40,5978,Faculty/Staff Workout Area,2,25,0,kvijay
+2026-10-02T16:37:41,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-02T16:37:42,5996,Upper Gym,30,100,0,kvijay
+2026-10-02T16:37:43,7451,MP6,1,45,0,kvijay
+2026-10-02T16:37:44,7452,MP7,4,45,0,kvijay
+2026-10-02T16:37:45,5995,Upper Fitness,9,46,0,kvijay
+2026-10-02T16:37:46,6130,MAC Court,36,100,0,kvijay
+2026-10-02T16:37:47,6157,East Mezzanine (3rd Floor),3,15,0,kvijay
+2026-10-02T16:37:50,5984,Atrium Track (3rd Floor),3,50,0,kvijay
+2026-10-02T16:37:51,6158,West Mezzanine (3rd Floor),2,25,0,kvijay
+2026-10-02T16:37:54,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-02T16:37:55,10219,Racquetball Courts 9-16,0,80,0,kvijay
+2026-10-02T16:37:58,6143,MP5,2,106,0,kvijay
+2026-10-02T16:37:58,7293,Fitness Pavilion,24,70,0,kvijay
+2026-10-02T16:38:00,5981,Fitness Loft,22,55,0,kvijay
+2026-10-02T16:38:02,5979,Feature Gym,8,50,0,kvijay
+2026-10-02T16:38:06,5960,B&G Gym 1-3,8,100,0,kvijay
+2026-10-02T16:38:07,5961,B&G Gym 4-6,39,100,0,kvijay
+2026-10-02T16:38:09,5993,Scifres,21,80,0,kvijay
+2026-10-02T16:38:12,7459,MP2,0,100,0,kvijay
+2026-10-02T16:38:14,5972,Climbing Wall,4,18,0,kvijay
+2026-10-02T16:38:15,5969,Bouldering Wall,25,26,0,kvijay
+2026-10-02T16:38:18,11623,Kilter Board Wall,4,20,0,kvijay
+2026-10-02T16:38:19,11620,East Fitness,31,208,0,kvijay
+2026-10-02T16:38:21,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-02T16:38:22,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-02T16:38:24,11610,Climbing Cave,0,15,0,kvijay
+2026-10-02T16:38:25,6142,Combative Arts Room,2,11,0,kvijay
+2026-10-02T16:38:26,6131,MP3,2,20,0,kvijay
+2026-10-02T16:38:26,6132,MP4,1,26,0,kvijay
+2026-10-02T16:38:27,11621,APGL,7,30,0,kvijay
+2026-10-02T16:38:28,5985,Lower Gym,77,282,0,kvijay
+2026-10-02T16:38:28,7290,Colby Fitness,83,380,0,kvijay
+2026-10-02T16:38:29,9553,Outdoor Pickleball,24,50,0,kvijay
+2026-10-02T18:29:06,5994,TREC,43,300,0,gymscrape
+2026-10-02T18:29:08,9552,Outdoor Tennis,6,50,0,gymscrape
+2026-10-02T18:29:09,9553,Outdoor Pickleball,104,50,0,gymscrape
+2026-10-02T19:25:02,5978,Faculty/Staff Workout Area,4,25,0,kvijay
+2026-10-02T19:25:03,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-02T19:25:04,5996,Upper Gym,45,100,0,kvijay
+2026-10-02T19:25:05,7451,MP6,1,45,0,kvijay
+2026-10-02T19:25:06,5995,Upper Fitness,12,46,0,kvijay
+2026-10-02T19:25:06,7452,MP7,6,45,0,kvijay
+2026-10-02T19:25:07,6130,MAC Court,24,100,0,kvijay
+2026-10-02T19:25:08,6157,East Mezzanine (3rd Floor),0,15,0,kvijay
+2026-10-02T19:25:09,5984,Atrium Track (3rd Floor),4,50,0,kvijay
+2026-10-02T19:25:09,6158,West Mezzanine (3rd Floor),2,25,0,kvijay
+2026-10-02T19:25:10,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-02T19:25:11,10219,Racquetball Courts 9-16,12,80,0,kvijay
+2026-10-02T19:25:12,6143,MP5,11,106,0,kvijay
+2026-10-02T19:25:12,7293,Fitness Pavilion,23,70,0,kvijay
+2026-10-02T19:25:13,5981,Fitness Loft,15,55,0,kvijay
+2026-10-02T19:25:14,5960,B&G Gym 1-3,132,100,0,kvijay
+2026-10-02T19:25:14,5979,Feature Gym,19,50,0,kvijay
+2026-10-02T19:25:15,5961,B&G Gym 4-6,45,100,0,kvijay
+2026-10-02T19:25:16,5993,Scifres,24,80,0,kvijay
+2026-10-02T19:25:16,7459,MP2,17,100,0,kvijay
+2026-10-02T19:25:17,5972,Climbing Wall,15,18,0,kvijay
+2026-10-02T19:25:18,5969,Bouldering Wall,20,26,0,kvijay
+2026-10-02T19:25:18,11623,Kilter Board Wall,4,20,0,kvijay
+2026-10-02T19:25:19,11620,East Fitness,22,208,0,kvijay
+2026-10-02T19:25:20,5990,Olympic Lifting Room,3,16,0,kvijay
+2026-10-02T19:25:20,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-02T19:25:21,11610,Climbing Cave,0,15,0,kvijay
+2026-10-02T19:25:22,6131,MP3,16,20,0,kvijay
+2026-10-02T19:25:22,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-02T19:25:23,6132,MP4,26,26,0,kvijay
+2026-10-02T19:25:24,11621,APGL,15,30,0,kvijay
+2026-10-02T19:25:25,5985,Lower Gym,71,282,0,kvijay
+2026-10-02T19:25:25,7290,Colby Fitness,80,380,0,kvijay
+2026-10-02T20:23:37,5994,TREC,48,300,0,kvijay
+2026-10-02T20:23:39,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-02T20:23:39,9553,Outdoor Pickleball,104,50,0,kvijay
+2026-10-02T21:44:01,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-02T21:44:02,6129,Upper Track (4th Floor),1,10,0,kvijay
+2026-10-02T21:44:03,5996,Upper Gym,47,100,0,kvijay
+2026-10-02T21:44:04,7451,MP6,4,45,0,kvijay
+2026-10-02T21:44:04,7452,MP7,6,45,0,kvijay
+2026-10-02T21:44:05,5995,Upper Fitness,5,46,0,kvijay
+2026-10-02T21:44:06,6130,MAC Court,40,100,0,kvijay
+2026-10-02T21:44:07,6157,East Mezzanine (3rd Floor),3,15,0,kvijay
+2026-10-02T21:44:08,5984,Atrium Track (3rd Floor),2,50,0,kvijay
+2026-10-02T21:44:08,6158,West Mezzanine (3rd Floor),5,25,0,kvijay
+2026-10-02T21:44:09,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-02T21:44:10,10219,Racquetball Courts 9-16,8,80,0,kvijay
+2026-10-02T21:44:11,6143,MP5,20,106,0,kvijay
+2026-10-02T21:44:11,7293,Fitness Pavilion,20,70,0,kvijay
+2026-10-02T21:44:12,5981,Fitness Loft,18,55,0,kvijay
+2026-10-02T21:44:13,5979,Feature Gym,10,50,0,kvijay
+2026-10-02T21:44:14,5960,B&G Gym 1-3,26,100,0,kvijay
+2026-10-02T21:44:15,5961,B&G Gym 4-6,31,100,0,kvijay
+2026-10-02T21:44:15,5993,Scifres,29,80,0,kvijay
+2026-10-02T21:44:16,7459,MP2,2,100,0,kvijay
+2026-10-02T21:44:17,5972,Climbing Wall,4,18,0,kvijay
+2026-10-02T21:44:18,5969,Bouldering Wall,10,26,0,kvijay
+2026-10-02T21:44:19,11620,East Fitness,15,208,0,kvijay
+2026-10-02T21:44:19,11623,Kilter Board Wall,3,20,0,kvijay
+2026-10-02T21:44:20,5990,Olympic Lifting Room,1,16,0,kvijay
+2026-10-02T21:44:21,5991,Racquetball Courts 2-3,13,20,0,kvijay
+2026-10-02T21:44:22,6142,Combative Arts Room,2,11,0,kvijay
+2026-10-02T21:44:22,11610,Climbing Cave,5,15,0,kvijay
+2026-10-02T21:44:23,6131,MP3,12,20,0,kvijay
+2026-10-02T21:44:24,6132,MP4,0,26,0,kvijay
+2026-10-02T21:44:25,11621,APGL,8,30,0,kvijay
+2026-10-02T21:44:26,5985,Lower Gym,85,282,0,kvijay
+2026-10-02T21:44:26,7290,Colby Fitness,125,380,0,kvijay
+2026-10-02T21:44:27,9552,Outdoor Tennis,6,50,0,kvijay
+2026-10-02T21:44:28,9553,Outdoor Pickleball,84,50,0,kvijay
+2026-10-03T08:50:30,5972,Climbing Wall,0,18,1,kvijay
+2026-10-03T08:50:37,11621,APGL,0,30,1,kvijay
+2026-10-03T08:50:40,5994,TREC,0,300,1,kvijay
+2026-10-03T09:59:11,5978,Faculty/Staff Workout Area,0,25,0,gymscrape
+2026-10-03T09:59:12,6129,Upper Track (4th Floor),0,10,0,gymscrape
+2026-10-03T09:59:14,5996,Upper Gym,6,100,0,gymscrape
+2026-10-03T09:59:15,7451,MP6,1,45,0,gymscrape
+2026-10-03T09:59:16,7452,MP7,0,45,0,gymscrape
+2026-10-03T09:59:17,5995,Upper Fitness,6,46,0,gymscrape
+2026-10-03T09:59:19,6130,MAC Court,16,100,0,gymscrape
+2026-10-03T09:59:20,6157,East Mezzanine (3rd Floor),0,15,0,gymscrape
+2026-10-03T09:59:21,5984,Atrium Track (3rd Floor),1,50,0,gymscrape
+2026-10-03T09:59:21,6158,West Mezzanine (3rd Floor),3,25,0,gymscrape
+2026-10-03T09:59:22,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-03T09:59:23,10219,Racquetball Courts 9-16,0,80,0,gymscrape
+2026-10-03T09:59:24,6143,MP5,0,106,0,gymscrape
+2026-10-03T09:59:25,7293,Fitness Pavilion,12,70,0,gymscrape
+2026-10-03T09:59:26,5981,Fitness Loft,7,55,0,gymscrape
+2026-10-03T09:59:27,5979,Feature Gym,7,50,0,gymscrape
+2026-10-03T09:59:28,5960,B&G Gym 1-3,3,100,0,gymscrape
+2026-10-03T09:59:29,5961,B&G Gym 4-6,8,100,0,gymscrape
+2026-10-03T09:59:30,5993,Scifres,8,80,0,gymscrape
+2026-10-03T09:59:32,7459,MP2,0,100,0,gymscrape
+2026-10-03T09:59:33,5969,Bouldering Wall,4,26,0,gymscrape
+2026-10-03T09:59:34,11623,Kilter Board Wall,1,20,0,gymscrape
+2026-10-03T09:59:35,11620,East Fitness,12,208,0,gymscrape
+2026-10-03T09:59:36,5990,Olympic Lifting Room,0,16,0,gymscrape
+2026-10-03T09:59:37,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-03T09:59:38,6142,Combative Arts Room,1,11,0,gymscrape
+2026-10-03T09:59:38,11610,Climbing Cave,2,15,0,gymscrape
+2026-10-03T09:59:39,6131,MP3,0,20,0,gymscrape
+2026-10-03T09:59:40,6132,MP4,0,26,0,gymscrape
+2026-10-03T09:59:41,5985,Lower Gym,39,282,0,gymscrape
+2026-10-03T09:59:41,7290,Colby Fitness,25,380,0,gymscrape
+2026-10-03T09:59:42,9552,Outdoor Tennis,3,50,0,gymscrape
+2026-10-03T09:59:43,9553,Outdoor Pickleball,67,50,0,gymscrape
+2026-10-03T10:46:48,5978,Faculty/Staff Workout Area,1,25,0,kvijay
+2026-10-03T10:46:49,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-03T10:46:50,5996,Upper Gym,39,100,0,kvijay
+2026-10-03T10:46:51,7451,MP6,18,45,0,kvijay
+2026-10-03T10:46:52,7452,MP7,20,45,0,kvijay
+2026-10-03T10:46:53,5995,Upper Fitness,9,46,0,kvijay
+2026-10-03T10:46:53,6130,MAC Court,23,100,0,kvijay
+2026-10-03T10:46:54,6157,East Mezzanine (3rd Floor),1,15,0,kvijay
+2026-10-03T10:46:55,5984,Atrium Track (3rd Floor),1,50,0,kvijay
+2026-10-03T10:46:56,6158,West Mezzanine (3rd Floor),3,25,0,kvijay
+2026-10-03T10:46:57,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-03T10:46:57,10219,Racquetball Courts 9-16,0,80,0,kvijay
+2026-10-03T10:46:58,6143,MP5,5,106,0,kvijay
+2026-10-03T10:47:00,7293,Fitness Pavilion,21,70,0,kvijay
+2026-10-03T10:47:01,5979,Feature Gym,17,50,0,kvijay
+2026-10-03T10:47:01,5981,Fitness Loft,10,55,0,kvijay
+2026-10-03T10:47:02,5960,B&G Gym 1-3,45,100,0,kvijay
+2026-10-03T10:47:03,5961,B&G Gym 4-6,42,100,0,kvijay
+2026-10-03T10:47:04,5993,Scifres,10,80,0,kvijay
+2026-10-03T10:47:05,7459,MP2,0,100,0,kvijay
+2026-10-03T10:47:06,5969,Bouldering Wall,10,26,0,kvijay
+2026-10-03T10:47:07,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-03T10:47:08,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-03T10:47:08,11620,East Fitness,10,208,0,kvijay
+2026-10-03T10:47:09,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-03T10:47:10,11610,Climbing Cave,2,15,0,kvijay
+2026-10-03T10:47:11,6131,MP3,3,20,0,kvijay
+2026-10-03T10:47:11,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-03T10:47:12,6132,MP4,2,26,0,kvijay
+2026-10-03T10:47:13,7290,Colby Fitness,68,380,0,kvijay
+2026-10-03T10:47:14,5985,Lower Gym,57,282,0,kvijay
+2026-10-03T10:47:14,9552,Outdoor Tennis,5,50,0,kvijay
+2026-10-03T10:47:15,9553,Outdoor Pickleball,72,50,0,kvijay
+2026-10-03T14:09:30,5994,TREC,30,300,0,kvijay
+2026-10-03T14:09:31,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-03T14:09:32,9553,Outdoor Pickleball,124,50,0,kvijay
+2026-10-03T14:23:40,5978,Faculty/Staff Workout Area,1,25,0,kvijay
+2026-10-03T14:23:41,6129,Upper Track (4th Floor),1,10,0,kvijay
+2026-10-03T14:23:42,5996,Upper Gym,16,100,0,kvijay
+2026-10-03T14:23:43,7451,MP6,2,45,0,kvijay
+2026-10-03T14:23:44,5995,Upper Fitness,7,46,0,kvijay
+2026-10-03T14:23:44,7452,MP7,8,45,0,kvijay
+2026-10-03T14:23:46,6130,MAC Court,29,100,0,kvijay
+2026-10-03T14:23:47,5984,Atrium Track (3rd Floor),2,50,0,kvijay
+2026-10-03T14:23:47,6157,East Mezzanine (3rd Floor),2,15,0,kvijay
+2026-10-03T14:23:48,6158,West Mezzanine (3rd Floor),0,25,0,kvijay
+2026-10-03T14:23:49,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-03T14:23:50,10219,Racquetball Courts 9-16,2,80,0,kvijay
+2026-10-03T14:23:51,6143,MP5,20,106,0,kvijay
+2026-10-03T14:23:51,7293,Fitness Pavilion,15,70,0,kvijay
+2026-10-03T14:23:52,5981,Fitness Loft,18,55,0,kvijay
+2026-10-03T14:23:53,5979,Feature Gym,7,50,0,kvijay
+2026-10-03T14:23:54,5960,B&G Gym 1-3,20,100,0,kvijay
+2026-10-03T14:23:55,5961,B&G Gym 4-6,23,100,0,kvijay
+2026-10-03T14:23:55,5993,Scifres,17,80,0,kvijay
+2026-10-03T14:23:56,7459,MP2,4,100,0,kvijay
+2026-10-03T14:23:57,5969,Bouldering Wall,19,26,0,kvijay
+2026-10-03T14:23:58,11623,Kilter Board Wall,1,20,0,kvijay
+2026-10-03T14:23:59,5990,Olympic Lifting Room,3,16,0,kvijay
+2026-10-03T14:23:59,11620,East Fitness,22,208,0,kvijay
+2026-10-03T14:24:00,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-03T14:24:01,11610,Climbing Cave,1,15,0,kvijay
+2026-10-03T14:24:02,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-03T14:24:03,6131,MP3,4,20,0,kvijay
+2026-10-03T14:24:04,6132,MP4,1,26,0,kvijay
+2026-10-03T14:24:04,11621,APGL,0,30,0,kvijay
+2026-10-03T14:24:05,7290,Colby Fitness,54,380,0,kvijay
+2026-10-03T14:24:06,5985,Lower Gym,42,282,0,kvijay
+2026-10-03T16:49:52,5978,Faculty/Staff Workout Area,4,25,0,kvijay
+2026-10-03T16:49:53,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-03T16:49:54,5996,Upper Gym,15,100,0,kvijay
+2026-10-03T16:49:55,7451,MP6,3,45,0,kvijay
+2026-10-03T16:49:56,5995,Upper Fitness,7,46,0,kvijay
+2026-10-03T16:49:56,7452,MP7,0,45,0,kvijay
+2026-10-03T16:49:57,6130,MAC Court,35,100,0,kvijay
+2026-10-03T16:49:58,6157,East Mezzanine (3rd Floor),3,15,0,kvijay
+2026-10-03T16:49:59,5984,Atrium Track (3rd Floor),2,50,0,kvijay
+2026-10-03T16:50:00,6158,West Mezzanine (3rd Floor),5,25,0,kvijay
+2026-10-03T16:50:01,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-03T16:50:02,10219,Racquetball Courts 9-16,7,80,0,kvijay
+2026-10-03T16:50:03,6143,MP5,16,106,0,kvijay
+2026-10-03T16:50:04,7293,Fitness Pavilion,22,70,0,kvijay
+2026-10-03T16:50:05,5981,Fitness Loft,23,55,0,kvijay
+2026-10-03T16:50:06,5960,B&G Gym 1-3,6,100,0,kvijay
+2026-10-03T16:50:06,5979,Feature Gym,12,50,0,kvijay
+2026-10-03T16:50:07,5961,B&G Gym 4-6,25,100,0,kvijay
+2026-10-03T16:50:08,5993,Scifres,21,80,0,kvijay
+2026-10-03T16:50:09,5972,Climbing Wall,4,18,0,kvijay
+2026-10-03T16:50:09,7459,MP2,8,100,0,kvijay
+2026-10-03T16:50:10,5969,Bouldering Wall,20,26,0,kvijay
+2026-10-03T16:50:11,11623,Kilter Board Wall,1,20,0,kvijay
+2026-10-03T16:50:12,11620,East Fitness,23,208,0,kvijay
+2026-10-03T16:50:13,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-03T16:50:14,5991,Racquetball Courts 2-3,2,20,0,kvijay
+2026-10-03T16:50:14,11610,Climbing Cave,0,15,0,kvijay
+2026-10-03T16:50:16,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-03T16:50:17,6131,MP3,5,20,0,kvijay
+2026-10-03T16:50:18,6132,MP4,0,26,0,kvijay
+2026-10-03T16:50:20,11621,APGL,14,30,0,kvijay
+2026-10-03T16:50:21,7290,Colby Fitness,67,380,0,kvijay
+2026-10-03T16:50:22,5985,Lower Gym,64,282,0,kvijay
+2026-10-03T17:07:31,5994,TREC,88,300,0,kvijay
+2026-10-03T17:07:31,9552,Outdoor Tennis,8,50,0,kvijay
+2026-10-03T17:07:32,9553,Outdoor Pickleball,100,50,0,kvijay
+2026-10-03T20:08:57,5994,TREC,48,300,0,kvijay
+2026-10-03T20:08:58,9552,Outdoor Tennis,8,50,0,kvijay
+2026-10-03T20:08:59,9553,Outdoor Pickleball,96,50,0,kvijay
+2026-10-03T20:22:09,5978,Faculty/Staff Workout Area,5,25,0,kvijay
+2026-10-03T20:22:10,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-03T20:22:11,5996,Upper Gym,17,100,0,kvijay
+2026-10-03T20:22:11,7451,MP6,0,45,0,kvijay
+2026-10-03T20:22:12,7452,MP7,0,45,0,kvijay
+2026-10-03T20:22:13,5995,Upper Fitness,2,46,0,kvijay
+2026-10-03T20:22:14,6130,MAC Court,41,100,0,kvijay
+2026-10-03T20:22:14,6157,East Mezzanine (3rd Floor),2,15,0,kvijay
+2026-10-03T20:22:15,5984,Atrium Track (3rd Floor),3,50,0,kvijay
+2026-10-03T20:22:16,5988,Mindfulness Room,2,20,0,kvijay
+2026-10-03T20:22:16,6158,West Mezzanine (3rd Floor),3,25,0,kvijay
+2026-10-03T20:22:17,10219,Racquetball Courts 9-16,12,80,0,kvijay
+2026-10-03T20:22:18,6143,MP5,0,106,0,kvijay
+2026-10-03T20:22:19,5981,Fitness Loft,11,55,0,kvijay
+2026-10-03T20:22:19,7293,Fitness Pavilion,20,70,0,kvijay
+2026-10-03T20:22:20,5979,Feature Gym,10,50,0,kvijay
+2026-10-03T20:22:21,5960,B&G Gym 1-3,26,100,0,kvijay
+2026-10-03T20:22:21,5961,B&G Gym 4-6,28,100,0,kvijay
+2026-10-03T20:22:22,5993,Scifres,15,80,0,kvijay
+2026-10-03T20:22:23,7459,MP2,0,100,0,kvijay
+2026-10-03T20:22:24,5969,Bouldering Wall,14,26,0,kvijay
+2026-10-03T20:22:24,5972,Climbing Wall,5,18,0,kvijay
+2026-10-03T20:22:25,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-03T20:22:26,5990,Olympic Lifting Room,3,16,0,kvijay
+2026-10-03T20:22:26,11620,East Fitness,14,208,0,kvijay
+2026-10-03T20:22:27,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-03T20:22:28,11610,Climbing Cave,1,15,0,kvijay
+2026-10-03T20:22:29,6131,MP3,2,20,0,kvijay
+2026-10-03T20:22:29,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-03T20:22:30,6132,MP4,0,26,0,kvijay
+2026-10-03T20:22:31,7290,Colby Fitness,57,380,0,kvijay
+2026-10-03T20:22:31,11621,APGL,11,30,0,kvijay
+2026-10-03T20:22:32,5985,Lower Gym,38,282,0,kvijay
+2026-10-03T21:25:20,5978,Faculty/Staff Workout Area,3,25,0,kvijay
+2026-10-03T21:25:21,6129,Upper Track (4th Floor),3,10,0,kvijay
+2026-10-03T21:25:22,5996,Upper Gym,23,100,0,kvijay
+2026-10-03T21:25:22,7451,MP6,0,45,0,kvijay
+2026-10-03T21:25:23,7452,MP7,0,45,0,kvijay
+2026-10-03T21:25:24,5995,Upper Fitness,8,46,0,kvijay
+2026-10-03T21:25:25,6130,MAC Court,38,100,0,kvijay
+2026-10-03T21:25:25,6157,East Mezzanine (3rd Floor),4,15,0,kvijay
+2026-10-03T21:25:26,5984,Atrium Track (3rd Floor),3,50,0,kvijay
+2026-10-03T21:25:27,5988,Mindfulness Room,2,20,0,kvijay
+2026-10-03T21:25:27,6158,West Mezzanine (3rd Floor),4,25,0,kvijay
+2026-10-03T21:25:28,10219,Racquetball Courts 9-16,22,80,0,kvijay
+2026-10-03T21:25:29,6143,MP5,0,106,0,kvijay
+2026-10-03T21:25:30,5981,Fitness Loft,12,55,0,kvijay
+2026-10-03T21:25:30,7293,Fitness Pavilion,17,70,0,kvijay
+2026-10-03T21:25:31,5979,Feature Gym,11,50,0,kvijay
+2026-10-03T21:25:32,5960,B&G Gym 1-3,17,100,0,kvijay
+2026-10-03T21:25:32,5961,B&G Gym 4-6,21,100,0,kvijay
+2026-10-03T21:25:33,5993,Scifres,15,80,0,kvijay
+2026-10-03T21:25:34,7459,MP2,0,100,0,kvijay
+2026-10-03T21:25:35,5969,Bouldering Wall,17,26,0,kvijay
+2026-10-03T21:25:35,5972,Climbing Wall,0,18,0,kvijay
+2026-10-03T21:25:36,11623,Kilter Board Wall,4,20,0,kvijay
+2026-10-03T21:25:37,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-03T21:25:37,11620,East Fitness,21,208,0,kvijay
+2026-10-03T21:25:38,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-03T21:25:39,11610,Climbing Cave,1,15,0,kvijay
+2026-10-03T21:25:40,6131,MP3,1,20,0,kvijay
+2026-10-03T21:25:40,6142,Combative Arts Room,2,11,0,kvijay
+2026-10-03T21:25:41,6132,MP4,1,26,0,kvijay
+2026-10-03T21:25:42,7290,Colby Fitness,68,380,0,kvijay
+2026-10-03T21:25:42,11621,APGL,12,30,0,kvijay
+2026-10-03T21:25:43,5985,Lower Gym,51,282,0,kvijay
+2026-10-04T10:46:55,5972,Climbing Wall,0,18,1,kvijay
+2026-10-04T10:47:03,11621,APGL,0,30,1,kvijay
+2026-10-04T10:47:05,5994,TREC,0,300,1,kvijay
+2026-10-04T11:46:50,11622,Cycling Studio,23,60,1,kvijay
+2026-10-04T12:42:01,5978,Faculty/Staff Workout Area,2,25,0,kvijay
+2026-10-04T12:42:03,5996,Upper Gym,18,100,0,kvijay
+2026-10-04T12:42:03,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-04T12:42:04,7451,MP6,0,45,0,kvijay
+2026-10-04T12:42:05,7452,MP7,1,45,0,kvijay
+2026-10-04T12:42:06,5995,Upper Fitness,6,46,0,kvijay
+2026-10-04T12:42:07,6130,MAC Court,18,100,0,kvijay
+2026-10-04T12:42:07,6157,East Mezzanine (3rd Floor),5,15,0,kvijay
+2026-10-04T12:42:08,5984,Atrium Track (3rd Floor),4,50,0,kvijay
+2026-10-04T12:42:09,6158,West Mezzanine (3rd Floor),6,25,0,kvijay
+2026-10-04T12:42:10,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-04T12:42:11,6143,MP5,10,106,0,kvijay
+2026-10-04T12:42:11,10219,Racquetball Courts 9-16,2,80,0,kvijay
+2026-10-04T12:42:12,7293,Fitness Pavilion,12,70,0,kvijay
+2026-10-04T12:42:13,5981,Fitness Loft,13,55,0,kvijay
+2026-10-04T12:42:14,5979,Feature Gym,66,50,0,kvijay
+2026-10-04T12:42:15,5960,B&G Gym 1-3,29,100,0,kvijay
+2026-10-04T12:42:15,5961,B&G Gym 4-6,2,100,0,kvijay
+2026-10-04T12:42:16,5993,Scifres,21,80,0,kvijay
+2026-10-04T12:42:17,7459,MP2,17,100,0,kvijay
+2026-10-04T12:42:18,5969,Bouldering Wall,8,26,0,kvijay
+2026-10-04T12:42:19,11620,East Fitness,15,208,0,kvijay
+2026-10-04T12:42:19,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-04T12:42:20,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-04T12:42:21,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-04T12:42:22,11610,Climbing Cave,0,15,0,kvijay
+2026-10-04T12:42:23,6131,MP3,0,20,0,kvijay
+2026-10-04T12:42:23,6142,Combative Arts Room,1,11,0,kvijay
+2026-10-04T12:42:24,6132,MP4,1,26,0,kvijay
+2026-10-04T12:42:25,7290,Colby Fitness,70,380,0,kvijay
+2026-10-04T12:42:26,5985,Lower Gym,59,282,0,kvijay
+2026-10-04T12:42:26,9552,Outdoor Tennis,0,50,0,kvijay
+2026-10-04T12:42:27,9553,Outdoor Pickleball,78,50,0,kvijay
+2026-10-04T13:11:34,5978,Faculty/Staff Workout Area,2,25,0,gymscrape
+2026-10-04T13:11:35,6129,Upper Track (4th Floor),0,10,0,gymscrape
+2026-10-04T13:11:36,5996,Upper Gym,16,100,0,gymscrape
+2026-10-04T13:11:37,7451,MP6,1,45,0,gymscrape
+2026-10-04T13:11:38,7452,MP7,0,45,0,gymscrape
+2026-10-04T13:11:39,5995,Upper Fitness,15,46,0,gymscrape
+2026-10-04T13:11:40,6130,MAC Court,16,100,0,gymscrape
+2026-10-04T13:11:41,6157,East Mezzanine (3rd Floor),0,15,0,gymscrape
+2026-10-04T13:11:42,5984,Atrium Track (3rd Floor),2,50,0,gymscrape
+2026-10-04T13:11:43,6158,West Mezzanine (3rd Floor),3,25,0,gymscrape
+2026-10-04T13:11:44,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-04T13:11:45,10219,Racquetball Courts 9-16,11,80,0,gymscrape
+2026-10-04T13:11:46,6143,MP5,9,106,0,gymscrape
+2026-10-04T13:11:48,5981,Fitness Loft,9,55,0,gymscrape
+2026-10-04T13:11:48,7293,Fitness Pavilion,14,70,0,gymscrape
+2026-10-04T13:11:49,5979,Feature Gym,64,50,0,gymscrape
+2026-10-04T13:11:50,5960,B&G Gym 1-3,23,100,0,gymscrape
+2026-10-04T13:11:52,5961,B&G Gym 4-6,10,100,0,gymscrape
+2026-10-04T13:11:53,5993,Scifres,17,80,0,gymscrape
+2026-10-04T13:11:54,7459,MP2,10,100,0,gymscrape
+2026-10-04T13:11:55,5969,Bouldering Wall,10,26,0,gymscrape
+2026-10-04T13:11:56,11623,Kilter Board Wall,0,20,0,gymscrape
+2026-10-04T13:11:57,5990,Olympic Lifting Room,0,16,0,gymscrape
+2026-10-04T13:11:57,11620,East Fitness,9,208,0,gymscrape
+2026-10-04T13:11:58,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-04T13:11:59,11610,Climbing Cave,0,15,0,gymscrape
+2026-10-04T13:12:00,6142,Combative Arts Room,2,11,0,gymscrape
+2026-10-04T13:12:01,6131,MP3,0,20,0,gymscrape
+2026-10-04T13:12:02,6132,MP4,14,26,0,gymscrape
+2026-10-04T13:12:03,7290,Colby Fitness,71,380,0,gymscrape
+2026-10-04T13:12:04,5985,Lower Gym,61,282,0,gymscrape
+2026-10-04T14:45:03,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-04T15:34:23,5978,Faculty/Staff Workout Area,7,25,0,kvijay
+2026-10-04T15:34:24,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-04T15:34:25,5996,Upper Gym,8,100,0,kvijay
+2026-10-04T15:34:26,7451,MP6,15,45,0,kvijay
+2026-10-04T15:34:27,5995,Upper Fitness,8,46,0,kvijay
+2026-10-04T15:34:27,7452,MP7,1,45,0,kvijay
+2026-10-04T15:34:28,6130,MAC Court,24,100,0,kvijay
+2026-10-04T15:34:29,6157,East Mezzanine (3rd Floor),2,15,0,kvijay
+2026-10-04T15:34:30,5984,Atrium Track (3rd Floor),2,50,0,kvijay
+2026-10-04T15:34:31,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-04T15:34:31,6158,West Mezzanine (3rd Floor),3,25,0,kvijay
+2026-10-04T15:34:32,10219,Racquetball Courts 9-16,5,80,0,kvijay
+2026-10-04T15:34:33,6143,MP5,8,106,0,kvijay
+2026-10-04T15:34:34,5981,Fitness Loft,16,55,0,kvijay
+2026-10-04T15:34:34,7293,Fitness Pavilion,13,70,0,kvijay
+2026-10-04T15:34:35,5979,Feature Gym,19,50,0,kvijay
+2026-10-04T15:34:36,5960,B&G Gym 1-3,6,100,0,kvijay
+2026-10-04T15:34:37,5961,B&G Gym 4-6,16,100,0,kvijay
+2026-10-04T15:34:37,5993,Scifres,13,80,0,kvijay
+2026-10-04T15:34:38,7459,MP2,0,100,0,kvijay
+2026-10-04T15:34:39,5969,Bouldering Wall,8,26,0,kvijay
+2026-10-04T15:34:40,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-04T15:34:40,11620,East Fitness,21,208,0,kvijay
+2026-10-04T15:34:41,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-04T15:34:42,11610,Climbing Cave,2,15,0,kvijay
+2026-10-04T15:34:43,6131,MP3,9,20,0,kvijay
+2026-10-04T15:34:43,6142,Combative Arts Room,1,11,0,kvijay
+2026-10-04T15:34:44,6132,MP4,16,26,0,kvijay
+2026-10-04T15:34:45,11621,APGL,7,30,0,kvijay
+2026-10-04T15:34:46,7290,Colby Fitness,71,380,0,kvijay
+2026-10-04T15:34:47,5985,Lower Gym,52,282,0,kvijay
+2026-10-04T15:34:47,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-04T15:34:48,9553,Outdoor Pickleball,30,50,0,kvijay
+2026-10-04T17:33:49,5978,Faculty/Staff Workout Area,3,25,0,kvijay
+2026-10-04T17:33:50,6129,Upper Track (4th Floor),2,10,0,kvijay
+2026-10-04T17:33:52,5996,Upper Gym,8,100,0,kvijay
+2026-10-04T17:33:54,7451,MP6,3,45,0,kvijay
+2026-10-04T17:33:55,7452,MP7,0,45,0,kvijay
+2026-10-04T17:33:56,5995,Upper Fitness,12,46,0,kvijay
+2026-10-04T17:33:56,6130,MAC Court,18,100,0,kvijay
+2026-10-04T17:33:57,6157,East Mezzanine (3rd Floor),3,15,0,kvijay
+2026-10-04T17:33:58,5984,Atrium Track (3rd Floor),3,50,0,kvijay
+2026-10-04T17:33:59,6158,West Mezzanine (3rd Floor),1,25,0,kvijay
+2026-10-04T17:34:00,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-04T17:34:01,10219,Racquetball Courts 9-16,5,80,0,kvijay
+2026-10-04T17:34:02,6143,MP5,0,106,1,kvijay
+2026-10-04T17:34:03,5981,Fitness Loft,11,55,0,kvijay
+2026-10-04T17:34:03,7293,Fitness Pavilion,13,70,0,kvijay
+2026-10-04T17:34:05,5979,Feature Gym,5,50,0,kvijay
+2026-10-04T17:34:06,5960,B&G Gym 1-3,7,100,0,kvijay
+2026-10-04T17:34:07,5961,B&G Gym 4-6,33,100,0,kvijay
+2026-10-04T17:34:07,5993,Scifres,16,80,0,kvijay
+2026-10-04T17:34:08,7459,MP2,3,100,0,kvijay
+2026-10-04T17:34:09,5972,Climbing Wall,16,18,0,kvijay
+2026-10-04T17:34:10,5969,Bouldering Wall,34,26,0,kvijay
+2026-10-04T17:34:10,11623,Kilter Board Wall,5,20,0,kvijay
+2026-10-04T17:34:11,11620,East Fitness,17,208,0,kvijay
+2026-10-04T17:34:12,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-04T17:34:13,5991,Racquetball Courts 2-3,2,20,0,kvijay
+2026-10-04T17:34:14,6142,Combative Arts Room,1,11,0,kvijay
+2026-10-04T17:34:14,11610,Climbing Cave,5,15,0,kvijay
+2026-10-04T17:34:15,6131,MP3,4,20,0,kvijay
+2026-10-04T17:34:16,6132,MP4,6,26,0,kvijay
+2026-10-04T17:34:17,11621,APGL,6,30,0,kvijay
+2026-10-04T17:34:18,7290,Colby Fitness,65,380,0,kvijay
+2026-10-04T17:34:19,5985,Lower Gym,50,282,0,kvijay
+2026-10-04T18:34:27,5994,TREC,28,300,0,kvijay
+2026-10-04T18:34:27,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-04T18:34:27,9553,Outdoor Pickleball,73,50,0,kvijay
+2026-10-04T21:45:39,5978,Faculty/Staff Workout Area,2,25,0,kvijay
+2026-10-04T21:45:39,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-04T21:45:40,5996,Upper Gym,34,100,0,kvijay
+2026-10-04T21:45:41,7451,MP6,0,45,0,kvijay
+2026-10-04T21:45:41,7452,MP7,0,45,0,kvijay
+2026-10-04T21:45:42,5995,Upper Fitness,11,46,0,kvijay
+2026-10-04T21:45:43,6130,MAC Court,35,100,0,kvijay
+2026-10-04T21:45:43,6157,East Mezzanine (3rd Floor),1,15,0,kvijay
+2026-10-04T21:45:44,5984,Atrium Track (3rd Floor),2,50,0,kvijay
+2026-10-04T21:45:45,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-04T21:45:45,6158,West Mezzanine (3rd Floor),1,25,0,kvijay
+2026-10-04T21:45:46,10219,Racquetball Courts 9-16,9,80,0,kvijay
+2026-10-04T21:45:47,6143,MP5,6,106,0,kvijay
+2026-10-04T21:45:47,7293,Fitness Pavilion,13,70,0,kvijay
+2026-10-04T21:45:48,5981,Fitness Loft,7,55,0,kvijay
+2026-10-04T21:45:49,5960,B&G Gym 1-3,12,100,0,kvijay
+2026-10-04T21:45:49,5979,Feature Gym,18,50,0,kvijay
+2026-10-04T21:45:50,5961,B&G Gym 4-6,27,100,0,kvijay
+2026-10-04T21:45:50,5993,Scifres,15,80,0,kvijay
+2026-10-04T21:45:51,7459,MP2,12,100,0,kvijay
+2026-10-04T21:45:52,5969,Bouldering Wall,14,26,0,kvijay
+2026-10-04T21:45:52,5972,Climbing Wall,8,18,0,kvijay
+2026-10-04T21:45:53,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-04T21:45:54,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-04T21:45:54,11620,East Fitness,16,208,0,kvijay
+2026-10-04T21:45:55,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-04T21:45:55,11610,Climbing Cave,0,15,0,kvijay
+2026-10-04T21:45:56,6142,Combative Arts Room,1,11,0,kvijay
+2026-10-04T21:45:57,6131,MP3,2,20,0,kvijay
+2026-10-04T21:45:57,6132,MP4,8,26,0,kvijay
+2026-10-04T21:45:58,11621,APGL,16,30,0,kvijay
+2026-10-04T21:45:59,5985,Lower Gym,45,282,0,kvijay
+2026-10-04T21:45:59,7290,Colby Fitness,57,380,0,kvijay
+2026-10-04T21:46:00,5994,TREC,12,300,1,kvijay
+2026-10-04T21:52:47,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-04T21:52:47,9553,Outdoor Pickleball,56,50,0,kvijay
+2026-10-04T22:40:24,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-04T22:40:25,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-04T22:40:26,5996,Upper Gym,28,100,0,kvijay
+2026-10-04T22:40:26,7451,MP6,1,45,0,kvijay
+2026-10-04T22:40:27,7452,MP7,0,45,0,kvijay
+2026-10-04T22:40:28,5995,Upper Fitness,3,46,0,kvijay
+2026-10-04T22:40:28,6130,MAC Court,17,100,0,kvijay
+2026-10-04T22:40:29,6157,East Mezzanine (3rd Floor),1,15,0,kvijay
+2026-10-04T22:40:30,5984,Atrium Track (3rd Floor),2,50,0,kvijay
+2026-10-04T22:40:30,6158,West Mezzanine (3rd Floor),0,25,0,kvijay
+2026-10-04T22:40:31,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-04T22:40:31,10219,Racquetball Courts 9-16,3,80,0,kvijay
+2026-10-04T22:40:32,6143,MP5,0,106,0,kvijay
+2026-10-04T22:40:33,5981,Fitness Loft,9,55,0,kvijay
+2026-10-04T22:40:33,7293,Fitness Pavilion,11,70,0,kvijay
+2026-10-04T22:40:34,5979,Feature Gym,21,50,0,kvijay
+2026-10-04T22:40:35,5960,B&G Gym 1-3,23,100,0,kvijay
+2026-10-04T22:40:35,5961,B&G Gym 4-6,24,100,0,kvijay
+2026-10-04T22:40:36,5993,Scifres,8,80,0,kvijay
+2026-10-04T22:40:37,5969,Bouldering Wall,10,26,0,kvijay
+2026-10-04T22:40:37,5972,Climbing Wall,5,18,0,kvijay
+2026-10-04T22:40:38,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-04T22:40:39,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-04T22:40:39,11620,East Fitness,14,208,0,kvijay
+2026-10-04T22:40:40,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-04T22:40:40,11610,Climbing Cave,0,15,0,kvijay
+2026-10-04T22:40:41,6142,Combative Arts Room,1,11,0,kvijay
+2026-10-04T22:40:42,6131,MP3,2,20,0,kvijay
+2026-10-04T22:40:42,6132,MP4,0,26,0,kvijay
+2026-10-04T22:40:43,11621,APGL,8,30,0,kvijay
+2026-10-04T22:40:44,5985,Lower Gym,33,282,0,kvijay
+2026-10-04T22:40:44,7290,Colby Fitness,53,380,0,kvijay
+2026-10-04T22:40:45,9553,Outdoor Pickleball,46,50,0,kvijay
+2026-10-05T06:40:55,5972,Climbing Wall,0,18,1,kvijay
+2026-10-05T06:41:02,11621,APGL,0,30,1,kvijay
+2026-10-05T13:28:39,11620,East Fitness,17,208,0,kvijay
+2026-10-05T13:28:44,11622,Cycling Studio,0,60,1,kvijay
+2026-10-05T14:14:06,5978,Faculty/Staff Workout Area,1,25,0,kvijay
+2026-10-05T14:14:07,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-05T14:14:08,5996,Upper Gym,3,100,0,kvijay
+2026-10-05T14:14:08,7451,MP6,0,45,0,kvijay
+2026-10-05T14:14:09,7452,MP7,0,45,0,kvijay
+2026-10-05T14:14:10,5995,Upper Fitness,8,46,0,kvijay
+2026-10-05T14:14:11,6130,MAC Court,2,100,0,kvijay
+2026-10-05T14:14:11,6157,East Mezzanine (3rd Floor),2,15,0,kvijay
+2026-10-05T14:14:12,5984,Atrium Track (3rd Floor),1,50,0,kvijay
+2026-10-05T14:14:13,6158,West Mezzanine (3rd Floor),3,25,0,kvijay
+2026-10-05T14:14:14,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-05T14:14:14,10219,Racquetball Courts 9-16,0,80,0,kvijay
+2026-10-05T14:14:15,6143,MP5,6,106,0,kvijay
+2026-10-05T14:14:16,5981,Fitness Loft,9,55,0,kvijay
+2026-10-05T14:14:16,7293,Fitness Pavilion,27,70,0,kvijay
+2026-10-05T14:14:17,5979,Feature Gym,0,50,0,kvijay
+2026-10-05T14:14:18,5960,B&G Gym 1-3,24,100,0,kvijay
+2026-10-05T14:14:18,5961,B&G Gym 4-6,2,100,0,kvijay
+2026-10-05T14:14:19,5993,Scifres,31,80,0,kvijay
+2026-10-05T14:14:20,7459,MP2,2,100,0,kvijay
+2026-10-05T14:14:21,5969,Bouldering Wall,11,26,0,kvijay
+2026-10-05T14:14:21,11623,Kilter Board Wall,3,20,0,kvijay
+2026-10-05T14:14:22,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-05T14:14:23,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-05T14:14:24,6142,Combative Arts Room,1,11,0,kvijay
+2026-10-05T14:14:24,11610,Climbing Cave,2,15,0,kvijay
+2026-10-05T14:14:25,6131,MP3,0,20,0,kvijay
+2026-10-05T14:14:27,6132,MP4,0,26,0,kvijay
+2026-10-05T14:14:28,7290,Colby Fitness,76,380,0,kvijay
+2026-10-05T14:14:29,5985,Lower Gym,69,282,0,kvijay
+2026-10-05T14:22:13,9552,Outdoor Tennis,2,50,0,kvijay
+2026-10-05T14:22:14,9553,Outdoor Pickleball,8,50,0,kvijay
+2026-10-05T19:22:44,5984,Atrium Track (3rd Floor),6,50,0,kvijay
+2026-10-05T20:13:35,5978,Faculty/Staff Workout Area,4,25,0,kvijay
+2026-10-05T20:13:36,6129,Upper Track (4th Floor),2,10,0,kvijay
+2026-10-05T20:13:37,5996,Upper Gym,5,100,0,kvijay
+2026-10-05T20:13:37,7451,MP6,15,45,0,kvijay
+2026-10-05T20:13:38,7452,MP7,15,45,0,kvijay
+2026-10-05T20:13:39,5995,Upper Fitness,21,46,0,kvijay
+2026-10-05T20:13:40,6130,MAC Court,38,100,0,kvijay
+2026-10-05T20:13:40,6157,East Mezzanine (3rd Floor),4,15,0,kvijay
+2026-10-05T20:13:41,6158,West Mezzanine (3rd Floor),8,25,0,kvijay
+2026-10-05T20:13:42,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-05T20:13:43,10219,Racquetball Courts 9-16,27,80,0,kvijay
+2026-10-05T20:13:45,6143,MP5,30,106,0,kvijay
+2026-10-05T20:13:46,7293,Fitness Pavilion,27,70,0,kvijay
+2026-10-05T20:13:47,5981,Fitness Loft,20,55,0,kvijay
+2026-10-05T20:13:48,5960,B&G Gym 1-3,29,100,0,kvijay
+2026-10-05T20:13:48,5979,Feature Gym,8,50,0,kvijay
+2026-10-05T20:13:49,5961,B&G Gym 4-6,28,100,0,kvijay
+2026-10-05T20:13:50,5993,Scifres,30,80,0,kvijay
+2026-10-05T20:13:52,5972,Climbing Wall,7,18,0,kvijay
+2026-10-05T20:13:52,7459,MP2,3,100,0,kvijay
+2026-10-05T20:13:53,5969,Bouldering Wall,15,26,0,kvijay
+2026-10-05T20:13:54,11623,Kilter Board Wall,2,20,0,kvijay
+2026-10-05T20:13:55,11620,East Fitness,29,208,0,kvijay
+2026-10-05T20:13:56,5990,Olympic Lifting Room,2,16,0,kvijay
+2026-10-05T20:13:57,5991,Racquetball Courts 2-3,2,20,0,kvijay
+2026-10-05T20:13:58,11610,Climbing Cave,0,15,0,kvijay
+2026-10-05T20:14:00,6142,Combative Arts Room,2,11,0,kvijay
+2026-10-05T20:14:01,6131,MP3,15,20,0,kvijay
+2026-10-05T20:14:02,6132,MP4,13,26,0,kvijay
+2026-10-05T20:14:03,11622,Cycling Studio,25,60,0,kvijay
+2026-10-05T20:14:04,11621,APGL,8,30,0,kvijay
+2026-10-05T20:14:05,7290,Colby Fitness,108,380,0,kvijay
+2026-10-05T20:14:06,5985,Lower Gym,103,282,0,kvijay
+2026-10-05T20:14:07,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-05T20:14:08,9553,Outdoor Pickleball,64,50,0,kvijay
+2026-10-05T20:28:46,5994,TREC,37,300,0,kvijay
+2026-10-05T21:29:00,11622,Cycling Studio,25,60,1,kvijay
+2026-10-05T21:29:03,5994,TREC,37,300,1,kvijay
+2026-10-05T23:07:06,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-05T23:07:07,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-05T23:07:08,5996,Upper Gym,16,100,0,kvijay
+2026-10-05T23:07:08,7451,MP6,6,45,0,kvijay
+2026-10-05T23:07:09,7452,MP7,1,45,0,kvijay
+2026-10-05T23:07:10,5995,Upper Fitness,8,46,0,kvijay
+2026-10-05T23:07:10,6130,MAC Court,18,100,0,kvijay
+2026-10-05T23:07:11,6157,East Mezzanine (3rd Floor),0,15,0,kvijay
+2026-10-05T23:07:12,5984,Atrium Track (3rd Floor),1,50,0,kvijay
+2026-10-05T23:07:13,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-05T23:07:13,6158,West Mezzanine (3rd Floor),4,25,0,kvijay
+2026-10-05T23:07:14,10219,Racquetball Courts 9-16,3,80,0,kvijay
+2026-10-05T23:07:15,6143,MP5,13,106,0,kvijay
+2026-10-05T23:07:16,5981,Fitness Loft,7,55,0,kvijay
+2026-10-05T23:07:16,7293,Fitness Pavilion,15,70,0,kvijay
+2026-10-05T23:07:17,5979,Feature Gym,12,50,0,kvijay
+2026-10-05T23:07:18,5960,B&G Gym 1-3,16,100,0,kvijay
+2026-10-05T23:07:18,5961,B&G Gym 4-6,12,100,0,kvijay
+2026-10-05T23:07:19,5993,Scifres,7,80,0,kvijay
+2026-10-05T23:07:20,7459,MP2,0,100,0,kvijay
+2026-10-05T23:07:21,5969,Bouldering Wall,13,26,0,kvijay
+2026-10-05T23:07:21,5972,Climbing Wall,2,18,1,kvijay
+2026-10-05T23:07:22,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-05T23:07:23,11620,East Fitness,8,208,0,kvijay
+2026-10-05T23:07:24,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-05T23:07:24,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-05T23:07:25,11610,Climbing Cave,0,15,0,kvijay
+2026-10-05T23:07:26,6131,MP3,2,20,0,kvijay
+2026-10-05T23:07:26,6142,Combative Arts Room,2,11,0,kvijay
+2026-10-05T23:07:27,6132,MP4,0,26,0,kvijay
+2026-10-05T23:07:28,7290,Colby Fitness,66,380,0,kvijay
+2026-10-05T23:07:28,11621,APGL,7,30,1,kvijay
+2026-10-05T23:07:29,5985,Lower Gym,49,282,0,kvijay
+2026-10-05T23:07:30,9552,Outdoor Tennis,6,50,0,kvijay
+2026-10-05T23:07:30,9553,Outdoor Pickleball,72,50,0,kvijay
+2026-10-06T08:32:04,11622,Cycling Studio,23,60,1,kvijay
+2026-10-06T09:48:33,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-06T09:48:34,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-06T09:48:35,5996,Upper Gym,5,100,0,kvijay
+2026-10-06T09:48:35,7451,MP6,0,45,0,kvijay
+2026-10-06T09:48:36,7452,MP7,2,45,0,kvijay
+2026-10-06T09:48:37,5995,Upper Fitness,16,46,0,kvijay
+2026-10-06T09:48:37,6130,MAC Court,0,100,0,kvijay
+2026-10-06T09:48:38,6157,East Mezzanine (3rd Floor),0,15,0,kvijay
+2026-10-06T09:48:39,5984,Atrium Track (3rd Floor),1,50,0,kvijay
+2026-10-06T09:48:39,6158,West Mezzanine (3rd Floor),9,25,0,kvijay
+2026-10-06T09:48:40,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-06T09:48:41,6143,MP5,0,106,0,kvijay
+2026-10-06T09:48:41,10219,Racquetball Courts 9-16,0,80,0,kvijay
+2026-10-06T09:48:42,7293,Fitness Pavilion,20,70,0,kvijay
+2026-10-06T09:48:43,5979,Feature Gym,3,50,0,kvijay
+2026-10-06T09:48:43,5981,Fitness Loft,18,55,0,kvijay
+2026-10-06T09:48:44,5960,B&G Gym 1-3,67,100,0,kvijay
+2026-10-06T09:48:45,5961,B&G Gym 4-6,81,100,0,kvijay
+2026-10-06T09:48:45,5993,Scifres,25,80,0,kvijay
+2026-10-06T09:48:47,5969,Bouldering Wall,2,26,0,kvijay
+2026-10-06T09:48:47,7459,MP2,2,100,0,kvijay
+2026-10-06T09:48:48,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-06T09:48:49,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-06T09:48:49,11620,East Fitness,27,208,0,kvijay
+2026-10-06T09:48:50,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-06T09:48:51,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-06T09:48:51,11610,Climbing Cave,1,15,0,kvijay
+2026-10-06T09:48:52,6131,MP3,0,20,0,kvijay
+2026-10-06T09:48:53,6132,MP4,0,26,0,kvijay
+2026-10-06T09:48:53,7290,Colby Fitness,86,380,0,kvijay
+2026-10-06T09:48:54,5985,Lower Gym,77,282,0,kvijay
+2026-10-06T09:48:55,9552,Outdoor Tennis,0,50,0,kvijay
+2026-10-06T09:48:56,9553,Outdoor Pickleball,0,50,0,kvijay
+2026-10-06T14:16:18,5994,TREC,18,300,1,kvijay
+2026-10-06T15:15:03,5978,Faculty/Staff Workout Area,2,25,0,kvijay
+2026-10-06T15:15:04,5996,Upper Gym,12,100,0,kvijay
+2026-10-06T15:15:04,6129,Upper Track (4th Floor),1,10,0,kvijay
+2026-10-06T15:15:05,7451,MP6,1,45,0,kvijay
+2026-10-06T15:15:06,5995,Upper Fitness,12,46,0,kvijay
+2026-10-06T15:15:06,7452,MP7,0,45,0,kvijay
+2026-10-06T15:15:07,6130,MAC Court,9,100,0,kvijay
+2026-10-06T15:15:08,5984,Atrium Track (3rd Floor),2,50,0,kvijay
+2026-10-06T15:15:08,6157,East Mezzanine (3rd Floor),1,15,0,kvijay
+2026-10-06T15:15:09,6158,West Mezzanine (3rd Floor),3,25,0,kvijay
+2026-10-06T15:15:10,5988,Mindfulness Room,3,20,0,kvijay
+2026-10-06T15:15:10,10219,Racquetball Courts 9-16,0,80,0,kvijay
+2026-10-06T15:15:11,6143,MP5,0,106,0,kvijay
+2026-10-06T15:15:12,5981,Fitness Loft,9,55,0,kvijay
+2026-10-06T15:15:12,7293,Fitness Pavilion,13,70,0,kvijay
+2026-10-06T15:15:13,5979,Feature Gym,5,50,0,kvijay
+2026-10-06T15:15:14,5960,B&G Gym 1-3,20,100,0,kvijay
+2026-10-06T15:15:14,5961,B&G Gym 4-6,11,100,0,kvijay
+2026-10-06T15:15:15,5993,Scifres,22,80,0,kvijay
+2026-10-06T15:15:16,5969,Bouldering Wall,9,26,0,kvijay
+2026-10-06T15:15:16,7459,MP2,0,100,0,kvijay
+2026-10-06T15:15:17,11620,East Fitness,21,208,0,kvijay
+2026-10-06T15:15:17,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-06T15:15:18,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-06T15:15:19,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-06T15:15:20,6142,Combative Arts Room,2,11,0,kvijay
+2026-10-06T15:15:20,11610,Climbing Cave,0,15,0,kvijay
+2026-10-06T15:15:21,6131,MP3,0,20,0,kvijay
+2026-10-06T15:15:22,6132,MP4,0,26,0,kvijay
+2026-10-06T15:15:22,11622,Cycling Studio,7,60,0,kvijay
+2026-10-06T15:15:23,7290,Colby Fitness,79,380,0,kvijay
+2026-10-06T15:15:24,5985,Lower Gym,71,282,0,kvijay
+2026-10-06T15:15:24,9552,Outdoor Tennis,2,50,0,kvijay
+2026-10-06T15:15:25,9553,Outdoor Pickleball,16,50,0,kvijay
+2026-10-06T16:19:51,11622,Cycling Studio,7,60,1,kvijay
+2026-10-06T18:14:15,5978,Faculty/Staff Workout Area,3,25,0,kvijay
+2026-10-06T18:14:16,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-06T18:14:17,5996,Upper Gym,13,100,0,kvijay
+2026-10-06T18:14:17,7451,MP6,26,45,0,kvijay
+2026-10-06T18:14:18,7452,MP7,7,45,0,kvijay
+2026-10-06T18:14:19,5995,Upper Fitness,17,46,0,kvijay
+2026-10-06T18:14:19,6130,MAC Court,8,100,0,kvijay
+2026-10-06T18:14:20,5984,Atrium Track (3rd Floor),4,50,0,kvijay
+2026-10-06T18:14:20,6157,East Mezzanine (3rd Floor),3,15,0,kvijay
+2026-10-06T18:14:21,6158,West Mezzanine (3rd Floor),5,25,0,kvijay
+2026-10-06T18:14:22,5988,Mindfulness Room,5,20,0,kvijay
+2026-10-06T18:14:22,10219,Racquetball Courts 9-16,9,80,0,kvijay
+2026-10-06T18:14:23,6143,MP5,35,106,0,kvijay
+2026-10-06T18:14:24,5981,Fitness Loft,27,55,0,kvijay
+2026-10-06T18:14:24,7293,Fitness Pavilion,21,70,0,kvijay
+2026-10-06T18:14:25,5979,Feature Gym,23,50,0,kvijay
+2026-10-06T18:14:26,5960,B&G Gym 1-3,20,100,0,kvijay
+2026-10-06T18:14:26,5961,B&G Gym 4-6,12,100,0,kvijay
+2026-10-06T18:14:27,5993,Scifres,34,80,0,kvijay
+2026-10-06T18:14:28,7459,MP2,17,100,0,kvijay
+2026-10-06T18:14:29,5972,Climbing Wall,6,18,0,kvijay
+2026-10-06T18:14:30,5969,Bouldering Wall,14,26,0,kvijay
+2026-10-06T18:14:30,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-06T18:14:31,5990,Olympic Lifting Room,5,16,0,kvijay
+2026-10-06T18:14:31,11620,East Fitness,27,208,0,kvijay
+2026-10-06T18:14:32,5991,Racquetball Courts 2-3,1,20,0,kvijay
+2026-10-06T18:14:33,6142,Combative Arts Room,3,11,0,kvijay
+2026-10-06T18:14:33,11610,Climbing Cave,0,15,0,kvijay
+2026-10-06T18:14:34,6131,MP3,8,20,0,kvijay
+2026-10-06T18:14:35,6132,MP4,5,26,0,kvijay
+2026-10-06T18:14:35,11621,APGL,5,30,0,kvijay
+2026-10-06T18:14:36,7290,Colby Fitness,106,380,0,kvijay
+2026-10-06T18:14:37,5985,Lower Gym,109,282,0,kvijay
+2026-10-06T18:25:16,5994,TREC,8,300,0,kvijay
+2026-10-06T18:25:16,9552,Outdoor Tennis,7,50,0,kvijay
+2026-10-06T18:25:17,9553,Outdoor Pickleball,36,50,0,kvijay
+2026-10-06T19:21:26,5978,Faculty/Staff Workout Area,4,25,0,gymscrape
+2026-10-06T19:21:27,5996,Upper Gym,13,100,0,gymscrape
+2026-10-06T19:21:27,6129,Upper Track (4th Floor),1,10,0,gymscrape
+2026-10-06T19:21:28,7451,MP6,20,45,0,gymscrape
+2026-10-06T19:21:29,5995,Upper Fitness,17,46,0,gymscrape
+2026-10-06T19:21:29,7452,MP7,9,45,0,gymscrape
+2026-10-06T19:21:30,6130,MAC Court,12,100,0,gymscrape
+2026-10-06T19:21:31,5984,Atrium Track (3rd Floor),3,50,0,gymscrape
+2026-10-06T19:21:31,6157,East Mezzanine (3rd Floor),5,15,0,gymscrape
+2026-10-06T19:21:32,6158,West Mezzanine (3rd Floor),10,25,0,gymscrape
+2026-10-06T19:21:33,5988,Mindfulness Room,1,20,0,gymscrape
+2026-10-06T19:21:33,10219,Racquetball Courts 9-16,25,80,0,gymscrape
+2026-10-06T19:21:34,6143,MP5,4,106,0,gymscrape
+2026-10-06T19:21:35,5981,Fitness Loft,31,55,0,gymscrape
+2026-10-06T19:21:35,7293,Fitness Pavilion,29,70,0,gymscrape
+2026-10-06T19:21:36,5960,B&G Gym 1-3,10,100,0,gymscrape
+2026-10-06T19:21:36,5979,Feature Gym,23,50,0,gymscrape
+2026-10-06T19:21:37,5961,B&G Gym 4-6,31,100,0,gymscrape
+2026-10-06T19:21:38,5993,Scifres,14,80,0,gymscrape
+2026-10-06T19:21:39,7459,MP2,15,100,0,gymscrape
+2026-10-06T19:21:40,5969,Bouldering Wall,13,26,0,gymscrape
+2026-10-06T19:21:40,5972,Climbing Wall,7,18,0,gymscrape
+2026-10-06T19:21:41,11623,Kilter Board Wall,1,20,0,gymscrape
+2026-10-06T19:21:42,11620,East Fitness,21,208,0,gymscrape
+2026-10-06T19:21:43,5990,Olympic Lifting Room,2,16,0,gymscrape
+2026-10-06T19:21:44,5991,Racquetball Courts 2-3,2,20,0,gymscrape
+2026-10-06T19:21:44,11610,Climbing Cave,0,15,0,gymscrape
+2026-10-06T19:21:45,6131,MP3,8,20,0,gymscrape
+2026-10-06T19:21:45,6142,Combative Arts Room,1,11,0,gymscrape
+2026-10-06T19:21:46,6132,MP4,20,26,0,gymscrape
+2026-10-06T19:21:47,7290,Colby Fitness,78,380,0,gymscrape
+2026-10-06T19:21:47,11621,APGL,10,30,0,gymscrape
+2026-10-06T19:21:48,5985,Lower Gym,71,282,0,gymscrape
+2026-10-06T19:24:25,5994,TREC,39,300,0,gymscrape
+2026-10-06T19:24:25,9552,Outdoor Tennis,5,50,0,gymscrape
+2026-10-06T19:24:26,9553,Outdoor Pickleball,50,50,0,gymscrape
+2026-10-06T21:37:17,5994,TREC,0,300,1,kvijay
+2026-10-06T22:34:46,5978,Faculty/Staff Workout Area,2,25,0,kvijay
+2026-10-06T22:34:47,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-06T22:34:48,5996,Upper Gym,32,100,0,kvijay
+2026-10-06T22:34:48,7451,MP6,22,45,0,kvijay
+2026-10-06T22:34:49,7452,MP7,3,45,0,kvijay
+2026-10-06T22:34:50,5995,Upper Fitness,10,46,0,kvijay
+2026-10-06T22:34:50,6130,MAC Court,43,100,0,kvijay
+2026-10-06T22:34:51,6157,East Mezzanine (3rd Floor),6,15,0,kvijay
+2026-10-06T22:34:52,5984,Atrium Track (3rd Floor),3,50,0,kvijay
+2026-10-06T22:34:52,6158,West Mezzanine (3rd Floor),3,25,0,kvijay
+2026-10-06T22:34:53,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-06T22:34:54,6143,MP5,20,106,0,kvijay
+2026-10-06T22:34:54,10219,Racquetball Courts 9-16,17,80,0,kvijay
+2026-10-06T22:34:55,7293,Fitness Pavilion,30,70,0,kvijay
+2026-10-06T22:34:56,5979,Feature Gym,20,50,0,kvijay
+2026-10-06T22:34:56,5981,Fitness Loft,20,55,0,kvijay
+2026-10-06T22:34:57,5960,B&G Gym 1-3,33,100,0,kvijay
+2026-10-06T22:34:58,5961,B&G Gym 4-6,27,100,0,kvijay
+2026-10-06T22:34:58,5993,Scifres,25,80,0,kvijay
+2026-10-06T22:34:59,7459,MP2,0,100,0,kvijay
+2026-10-06T22:35:00,5969,Bouldering Wall,15,26,0,kvijay
+2026-10-06T22:35:00,5972,Climbing Wall,8,18,0,kvijay
+2026-10-06T22:35:01,11623,Kilter Board Wall,3,20,0,kvijay
+2026-10-06T22:35:02,11620,East Fitness,18,208,0,kvijay
+2026-10-06T22:35:03,5990,Olympic Lifting Room,1,16,0,kvijay
+2026-10-06T22:35:03,5991,Racquetball Courts 2-3,2,20,0,kvijay
+2026-10-06T22:35:04,11610,Climbing Cave,10,15,0,kvijay
+2026-10-06T22:35:05,6142,Combative Arts Room,1,11,0,kvijay
+2026-10-06T22:35:06,6131,MP3,1,20,0,kvijay
+2026-10-06T22:35:07,6132,MP4,0,26,0,kvijay
+2026-10-06T22:35:07,11621,APGL,10,30,0,kvijay
+2026-10-06T22:35:08,7290,Colby Fitness,98,380,0,kvijay
+2026-10-06T22:35:09,5985,Lower Gym,86,282,0,kvijay
+2026-10-06T22:35:09,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-06T22:35:11,9553,Outdoor Pickleball,63,50,0,kvijay
+2026-10-06T23:13:28,5978,Faculty/Staff Workout Area,2,25,0,kvijay
+2026-10-06T23:13:29,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-06T23:13:30,5996,Upper Gym,31,100,0,kvijay
+2026-10-06T23:13:31,7451,MP6,7,45,0,kvijay
+2026-10-06T23:13:31,7452,MP7,0,45,0,kvijay
+2026-10-06T23:13:32,5995,Upper Fitness,12,46,0,kvijay
+2026-10-06T23:13:33,6130,MAC Court,16,100,0,kvijay
+2026-10-06T23:13:33,6157,East Mezzanine (3rd Floor),2,15,0,kvijay
+2026-10-06T23:13:34,5984,Atrium Track (3rd Floor),4,50,0,kvijay
+2026-10-06T23:13:35,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-06T23:13:35,6158,West Mezzanine (3rd Floor),2,25,0,kvijay
+2026-10-06T23:13:36,10219,Racquetball Courts 9-16,7,80,0,kvijay
+2026-10-06T23:13:37,6143,MP5,13,106,0,kvijay
+2026-10-06T23:13:37,7293,Fitness Pavilion,23,70,0,kvijay
+2026-10-06T23:13:38,5981,Fitness Loft,14,55,0,kvijay
+2026-10-06T23:13:39,5960,B&G Gym 1-3,31,100,0,kvijay
+2026-10-06T23:13:39,5979,Feature Gym,24,50,0,kvijay
+2026-10-06T23:13:40,5961,B&G Gym 4-6,29,100,0,kvijay
+2026-10-06T23:13:41,5993,Scifres,22,80,0,kvijay
+2026-10-06T23:13:41,7459,MP2,0,100,0,kvijay
+2026-10-06T23:13:42,5972,Climbing Wall,5,18,0,kvijay
+2026-10-06T23:13:43,5969,Bouldering Wall,12,26,0,kvijay
+2026-10-06T23:13:43,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-06T23:13:44,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-06T23:13:44,11620,East Fitness,15,208,0,kvijay
+2026-10-06T23:13:45,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-06T23:13:46,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-06T23:13:46,11610,Climbing Cave,4,15,0,kvijay
+2026-10-06T23:13:47,6131,MP3,3,20,0,kvijay
+2026-10-06T23:13:47,6132,MP4,0,26,0,kvijay
+2026-10-06T23:13:48,11621,APGL,7,30,0,kvijay
+2026-10-06T23:13:49,5985,Lower Gym,80,282,0,kvijay
+2026-10-06T23:13:49,7290,Colby Fitness,92,380,0,kvijay
+2026-10-06T23:13:50,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-06T23:13:51,9553,Outdoor Pickleball,62,50,0,kvijay
+2026-10-07T05:48:42,5960,B&G Gym 1-3,0,100,1,gymscrape
+2026-10-07T05:48:53,11621,APGL,0,30,1,kvijay
+2026-10-07T06:26:48,5978,Faculty/Staff Workout Area,0,25,0,gymscrape
+2026-10-07T06:26:49,6129,Upper Track (4th Floor),0,10,0,gymscrape
+2026-10-07T06:26:50,5996,Upper Gym,0,100,0,gymscrape
+2026-10-07T06:26:50,7451,MP6,0,45,0,gymscrape
+2026-10-07T06:26:51,7452,MP7,0,45,0,gymscrape
+2026-10-07T06:26:52,5995,Upper Fitness,5,46,0,gymscrape
+2026-10-07T06:26:52,6130,MAC Court,2,100,0,gymscrape
+2026-10-07T06:26:53,6157,East Mezzanine (3rd Floor),5,15,0,gymscrape
+2026-10-07T06:26:54,5984,Atrium Track (3rd Floor),3,50,0,gymscrape
+2026-10-07T06:26:55,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-07T06:26:55,6158,West Mezzanine (3rd Floor),2,25,0,gymscrape
+2026-10-07T06:26:56,10219,Racquetball Courts 9-16,0,80,0,gymscrape
+2026-10-07T06:26:57,6143,MP5,2,106,0,gymscrape
+2026-10-07T06:26:57,7293,Fitness Pavilion,9,70,0,gymscrape
+2026-10-07T06:26:58,5981,Fitness Loft,2,55,0,gymscrape
+2026-10-07T06:26:59,5979,Feature Gym,1,50,0,gymscrape
+2026-10-07T06:27:00,5961,B&G Gym 4-6,1,100,0,gymscrape
+2026-10-07T06:27:00,5993,Scifres,7,80,0,gymscrape
+2026-10-07T06:27:01,7459,MP2,0,100,0,gymscrape
+2026-10-07T06:27:02,5969,Bouldering Wall,0,26,0,gymscrape
+2026-10-07T06:27:02,5972,Climbing Wall,4,18,0,gymscrape
+2026-10-07T06:27:03,11623,Kilter Board Wall,0,20,0,gymscrape
+2026-10-07T06:27:04,5990,Olympic Lifting Room,0,16,0,gymscrape
+2026-10-07T06:27:04,11620,East Fitness,5,208,0,gymscrape
+2026-10-07T06:27:05,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-07T06:27:06,6142,Combative Arts Room,1,11,0,gymscrape
+2026-10-07T06:27:06,11610,Climbing Cave,0,15,0,gymscrape
+2026-10-07T06:27:07,6131,MP3,0,20,0,gymscrape
+2026-10-07T06:27:08,6132,MP4,0,26,0,gymscrape
+2026-10-07T06:27:08,7290,Colby Fitness,42,380,0,gymscrape
+2026-10-07T06:27:09,5985,Lower Gym,36,282,0,gymscrape
+2026-10-07T06:27:10,9552,Outdoor Tennis,0,50,0,gymscrape
+2026-10-07T06:27:10,9553,Outdoor Pickleball,0,50,0,gymscrape
+2026-10-07T07:26:08,5972,Climbing Wall,0,18,1,kvijay
+2026-10-07T09:29:24,11622,Cycling Studio,0,60,1,kvijay
+2026-10-07T10:42:12,5960,B&G Gym 1-3,250,100,0,kvijay
+2026-10-07T11:39:22,5978,Faculty/Staff Workout Area,1,25,0,kvijay
+2026-10-07T11:39:23,5996,Upper Gym,2,100,0,kvijay
+2026-10-07T11:39:23,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-07T11:39:24,7451,MP6,1,45,0,kvijay
+2026-10-07T11:39:25,7452,MP7,1,45,0,kvijay
+2026-10-07T11:39:26,5995,Upper Fitness,11,46,0,kvijay
+2026-10-07T11:39:26,6130,MAC Court,1,100,0,kvijay
+2026-10-07T11:39:27,6157,East Mezzanine (3rd Floor),4,15,0,kvijay
+2026-10-07T11:39:28,5984,Atrium Track (3rd Floor),0,50,0,kvijay
+2026-10-07T11:39:29,6158,West Mezzanine (3rd Floor),3,25,0,kvijay
+2026-10-07T11:39:30,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-07T11:39:30,10219,Racquetball Courts 9-16,0,80,0,kvijay
+2026-10-07T11:39:31,6143,MP5,2,106,0,kvijay
+2026-10-07T11:39:32,7293,Fitness Pavilion,21,70,0,kvijay
+2026-10-07T11:39:33,5981,Fitness Loft,13,55,0,kvijay
+2026-10-07T11:39:34,5979,Feature Gym,0,50,0,kvijay
+2026-10-07T11:39:35,5961,B&G Gym 4-6,7,100,0,kvijay
+2026-10-07T11:39:35,5993,Scifres,18,80,0,kvijay
+2026-10-07T11:39:36,7459,MP2,0,100,0,kvijay
+2026-10-07T11:39:37,5969,Bouldering Wall,4,26,0,kvijay
+2026-10-07T11:39:38,11620,East Fitness,5,208,0,kvijay
+2026-10-07T11:39:38,11623,Kilter Board Wall,1,20,0,kvijay
+2026-10-07T11:39:39,5990,Olympic Lifting Room,1,16,0,kvijay
+2026-10-07T11:39:40,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-07T11:39:40,11610,Climbing Cave,0,15,0,kvijay
+2026-10-07T11:39:41,6142,Combative Arts Room,1,11,0,kvijay
+2026-10-07T11:39:42,6131,MP3,0,20,0,kvijay
+2026-10-07T11:39:42,6132,MP4,0,26,0,kvijay
+2026-10-07T11:39:43,7290,Colby Fitness,54,380,0,kvijay
+2026-10-07T11:39:44,5985,Lower Gym,37,282,0,kvijay
+2026-10-07T11:39:45,9552,Outdoor Tennis,0,50,0,kvijay
+2026-10-07T11:39:45,9553,Outdoor Pickleball,10,50,0,kvijay
+2026-10-07T12:58:57,5978,Faculty/Staff Workout Area,1,25,0,gymscrape
+2026-10-07T12:58:58,5996,Upper Gym,3,100,0,gymscrape
+2026-10-07T12:58:58,6129,Upper Track (4th Floor),0,10,0,gymscrape
+2026-10-07T12:58:59,7451,MP6,0,45,0,gymscrape
+2026-10-07T12:59:00,7452,MP7,1,45,0,gymscrape
+2026-10-07T12:59:01,5995,Upper Fitness,12,46,0,gymscrape
+2026-10-07T12:59:01,6130,MAC Court,1,100,0,gymscrape
+2026-10-07T12:59:02,6157,East Mezzanine (3rd Floor),4,15,0,gymscrape
+2026-10-07T12:59:03,5984,Atrium Track (3rd Floor),0,50,0,gymscrape
+2026-10-07T12:59:04,6158,West Mezzanine (3rd Floor),2,25,0,gymscrape
+2026-10-07T12:59:05,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-07T12:59:05,10219,Racquetball Courts 9-16,0,80,0,gymscrape
+2026-10-07T12:59:06,6143,MP5,0,106,0,gymscrape
+2026-10-07T12:59:07,5981,Fitness Loft,10,55,0,gymscrape
+2026-10-07T12:59:07,7293,Fitness Pavilion,27,70,0,gymscrape
+2026-10-07T12:59:08,5979,Feature Gym,2,50,0,gymscrape
+2026-10-07T12:59:09,5960,B&G Gym 1-3,250,100,0,gymscrape
+2026-10-07T12:59:09,5961,B&G Gym 4-6,19,100,0,gymscrape
+2026-10-07T12:59:10,5993,Scifres,14,80,0,gymscrape
+2026-10-07T12:59:11,5969,Bouldering Wall,2,26,0,gymscrape
+2026-10-07T12:59:11,7459,MP2,0,100,0,gymscrape
+2026-10-07T12:59:12,11623,Kilter Board Wall,2,20,0,gymscrape
+2026-10-07T12:59:13,11620,East Fitness,11,208,0,gymscrape
+2026-10-07T12:59:15,5990,Olympic Lifting Room,0,16,0,gymscrape
+2026-10-07T12:59:16,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-07T12:59:18,11610,Climbing Cave,0,15,0,gymscrape
+2026-10-07T12:59:20,6142,Combative Arts Room,1,11,0,gymscrape
+2026-10-07T12:59:21,6131,MP3,0,20,0,gymscrape
+2026-10-07T12:59:23,6132,MP4,0,26,0,gymscrape
+2026-10-07T12:59:25,7290,Colby Fitness,43,380,0,gymscrape
+2026-10-07T12:59:26,5985,Lower Gym,39,282,0,gymscrape
+2026-10-07T13:09:54,9553,Outdoor Pickleball,4,50,0,gymscrape
+2026-10-07T17:25:41,5978,Faculty/Staff Workout Area,5,25,0,kvijay
+2026-10-07T17:25:42,6129,Upper Track (4th Floor),1,10,0,kvijay
+2026-10-07T17:25:43,5996,Upper Gym,11,100,0,kvijay
+2026-10-07T17:25:44,7451,MP6,0,45,0,kvijay
+2026-10-07T17:25:45,7452,MP7,0,45,0,kvijay
+2026-10-07T17:25:46,5995,Upper Fitness,23,46,0,kvijay
+2026-10-07T17:25:46,6130,MAC Court,18,100,0,kvijay
+2026-10-07T17:25:47,6157,East Mezzanine (3rd Floor),5,15,0,kvijay
+2026-10-07T17:25:48,5984,Atrium Track (3rd Floor),2,50,0,kvijay
+2026-10-07T17:25:48,6158,West Mezzanine (3rd Floor),7,25,0,kvijay
+2026-10-07T17:25:49,5988,Mindfulness Room,3,20,0,kvijay
+2026-10-07T17:25:50,6143,MP5,32,106,0,kvijay
+2026-10-07T17:25:50,10219,Racquetball Courts 9-16,2,80,0,kvijay
+2026-10-07T17:25:51,7293,Fitness Pavilion,23,70,0,kvijay
+2026-10-07T17:25:52,5979,Feature Gym,2,50,0,kvijay
+2026-10-07T17:25:52,5981,Fitness Loft,21,55,0,kvijay
+2026-10-07T17:25:53,5960,B&G Gym 1-3,16,100,0,kvijay
+2026-10-07T17:25:54,5961,B&G Gym 4-6,33,100,0,kvijay
+2026-10-07T17:25:54,5993,Scifres,26,80,0,kvijay
+2026-10-07T17:25:55,7459,MP2,3,100,0,kvijay
+2026-10-07T17:25:56,5969,Bouldering Wall,15,26,0,kvijay
+2026-10-07T17:25:56,5972,Climbing Wall,7,18,0,kvijay
+2026-10-07T17:25:57,11623,Kilter Board Wall,1,20,0,kvijay
+2026-10-07T17:25:58,11620,East Fitness,21,208,0,kvijay
+2026-10-07T17:25:59,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-07T17:25:59,5991,Racquetball Courts 2-3,3,20,0,kvijay
+2026-10-07T17:26:00,11610,Climbing Cave,0,15,0,kvijay
+2026-10-07T17:26:01,6131,MP3,3,20,0,kvijay
+2026-10-07T17:26:01,6142,Combative Arts Room,1,11,0,kvijay
+2026-10-07T17:26:02,6132,MP4,24,26,0,kvijay
+2026-10-07T17:26:03,7290,Colby Fitness,63,380,0,kvijay
+2026-10-07T17:26:03,11621,APGL,5,30,0,kvijay
+2026-10-07T17:26:04,5985,Lower Gym,71,282,0,kvijay
+2026-10-07T17:26:05,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-07T17:26:05,9553,Outdoor Pickleball,34,50,0,kvijay
+2026-10-07T18:06:07,5994,TREC,14,300,0,gymscrape
+2026-10-07T18:21:11,9552,Outdoor Tennis,8,50,0,gymscrape
+2026-10-07T18:21:12,9553,Outdoor Pickleball,71,50,0,gymscrape
+2026-10-07T18:38:43,5978,Faculty/Staff Workout Area,5,25,0,gymscrape
+2026-10-07T18:38:44,6129,Upper Track (4th Floor),0,10,0,gymscrape
+2026-10-07T18:38:45,5996,Upper Gym,21,100,0,gymscrape
+2026-10-07T18:38:46,7451,MP6,0,45,0,gymscrape
+2026-10-07T18:38:47,7452,MP7,10,45,0,gymscrape
+2026-10-07T18:38:48,5995,Upper Fitness,16,46,0,gymscrape
+2026-10-07T18:38:48,6130,MAC Court,35,100,0,gymscrape
+2026-10-07T18:38:49,6157,East Mezzanine (3rd Floor),2,15,0,gymscrape
+2026-10-07T18:38:50,5984,Atrium Track (3rd Floor),2,50,0,gymscrape
+2026-10-07T18:38:50,6158,West Mezzanine (3rd Floor),6,25,0,gymscrape
+2026-10-07T18:38:51,5988,Mindfulness Room,2,20,0,gymscrape
+2026-10-07T18:38:52,6143,MP5,30,106,0,gymscrape
+2026-10-07T18:38:52,10219,Racquetball Courts 9-16,15,80,0,gymscrape
+2026-10-07T18:38:53,7293,Fitness Pavilion,31,70,0,gymscrape
+2026-10-07T18:38:54,5979,Feature Gym,7,50,0,gymscrape
+2026-10-07T18:38:54,5981,Fitness Loft,15,55,0,gymscrape
+2026-10-07T18:38:55,5960,B&G Gym 1-3,30,100,0,gymscrape
+2026-10-07T18:38:56,5961,B&G Gym 4-6,29,100,0,gymscrape
+2026-10-07T18:38:56,5993,Scifres,31,80,0,gymscrape
+2026-10-07T18:38:58,5972,Climbing Wall,5,18,0,gymscrape
+2026-10-07T18:38:58,7459,MP2,0,100,0,gymscrape
+2026-10-07T18:38:59,5969,Bouldering Wall,22,26,0,gymscrape
+2026-10-07T18:39:00,11620,East Fitness,22,208,0,gymscrape
+2026-10-07T18:39:00,11623,Kilter Board Wall,0,20,0,gymscrape
+2026-10-07T18:39:01,5990,Olympic Lifting Room,1,16,0,gymscrape
+2026-10-07T18:39:02,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-07T18:39:02,11610,Climbing Cave,3,15,0,gymscrape
+2026-10-07T18:39:03,6142,Combative Arts Room,3,11,0,gymscrape
+2026-10-07T18:39:04,6131,MP3,10,20,0,gymscrape
+2026-10-07T18:39:04,6132,MP4,22,26,0,gymscrape
+2026-10-07T18:39:05,11622,Cycling Studio,9,60,0,gymscrape
+2026-10-07T18:39:06,11621,APGL,7,30,0,gymscrape
+2026-10-07T18:39:07,5985,Lower Gym,67,282,0,gymscrape
+2026-10-07T18:39:07,7290,Colby Fitness,64,380,0,gymscrape
+2026-10-07T20:14:52,5994,TREC,27,300,0,kvijay
+2026-10-07T20:14:54,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-07T20:14:56,9553,Outdoor Pickleball,65,50,0,kvijay
+2026-10-07T20:40:05,5978,Faculty/Staff Workout Area,3,25,0,kvijay
+2026-10-07T20:40:06,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-07T20:40:07,5996,Upper Gym,43,100,0,kvijay
+2026-10-07T20:40:07,7451,MP6,0,45,0,kvijay
+2026-10-07T20:40:09,5995,Upper Fitness,20,46,0,kvijay
+2026-10-07T20:40:09,7452,MP7,9,45,0,kvijay
+2026-10-07T20:40:10,6130,MAC Court,31,100,0,kvijay
+2026-10-07T20:40:11,6157,East Mezzanine (3rd Floor),0,15,0,kvijay
+2026-10-07T20:40:12,5984,Atrium Track (3rd Floor),2,50,0,kvijay
+2026-10-07T20:40:12,6158,West Mezzanine (3rd Floor),3,25,0,kvijay
+2026-10-07T20:40:13,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-07T20:40:14,6143,MP5,12,106,0,kvijay
+2026-10-07T20:40:14,10219,Racquetball Courts 9-16,18,80,0,kvijay
+2026-10-07T20:40:15,7293,Fitness Pavilion,37,70,0,kvijay
+2026-10-07T20:40:16,5981,Fitness Loft,15,55,0,kvijay
+2026-10-07T20:40:17,5979,Feature Gym,3,50,0,kvijay
+2026-10-07T20:40:18,5960,B&G Gym 1-3,38,100,0,kvijay
+2026-10-07T20:40:19,5961,B&G Gym 4-6,35,100,0,kvijay
+2026-10-07T20:40:20,5993,Scifres,26,80,0,kvijay
+2026-10-07T20:40:21,7459,MP2,0,100,0,kvijay
+2026-10-07T20:40:22,5969,Bouldering Wall,18,26,0,kvijay
+2026-10-07T20:40:22,5972,Climbing Wall,6,18,0,kvijay
+2026-10-07T20:40:23,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-07T20:40:24,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-07T20:40:24,11620,East Fitness,19,208,0,kvijay
+2026-10-07T20:40:25,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-07T20:40:26,11610,Climbing Cave,0,15,0,kvijay
+2026-10-07T20:40:27,6131,MP3,12,20,0,kvijay
+2026-10-07T20:40:27,6142,Combative Arts Room,6,11,0,kvijay
+2026-10-07T20:40:28,6132,MP4,5,26,0,kvijay
+2026-10-07T20:40:29,11621,APGL,7,30,0,kvijay
+2026-10-07T20:40:29,11622,Cycling Studio,12,60,0,kvijay
+2026-10-07T20:40:30,7290,Colby Fitness,76,380,0,kvijay
+2026-10-07T20:40:31,5985,Lower Gym,65,282,0,kvijay
+2026-10-07T21:59:44,11622,Cycling Studio,12,60,1,kvijay
+2026-10-07T21:59:46,5994,TREC,27,300,1,kvijay
+2026-10-07T22:27:37,5978,Faculty/Staff Workout Area,3,25,0,gymscrape
+2026-10-07T22:27:38,6129,Upper Track (4th Floor),0,10,0,gymscrape
+2026-10-07T22:27:39,5996,Upper Gym,28,100,0,gymscrape
+2026-10-07T22:27:40,7451,MP6,0,45,0,gymscrape
+2026-10-07T22:27:40,7452,MP7,7,45,0,gymscrape
+2026-10-07T22:27:41,5995,Upper Fitness,12,46,0,gymscrape
+2026-10-07T22:27:42,6130,MAC Court,51,100,0,gymscrape
+2026-10-07T22:27:43,6157,East Mezzanine (3rd Floor),3,15,0,gymscrape
+2026-10-07T22:27:44,5984,Atrium Track (3rd Floor),1,50,0,gymscrape
+2026-10-07T22:27:44,6158,West Mezzanine (3rd Floor),3,25,0,gymscrape
+2026-10-07T22:27:45,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-07T22:27:46,6143,MP5,19,106,0,gymscrape
+2026-10-07T22:27:46,10219,Racquetball Courts 9-16,0,80,0,gymscrape
+2026-10-07T22:27:47,7293,Fitness Pavilion,25,70,0,gymscrape
+2026-10-07T22:27:48,5979,Feature Gym,17,50,0,gymscrape
+2026-10-07T22:27:48,5981,Fitness Loft,7,55,0,gymscrape
+2026-10-07T22:27:49,5960,B&G Gym 1-3,28,100,0,gymscrape
+2026-10-07T22:27:50,5961,B&G Gym 4-6,18,100,0,gymscrape
+2026-10-07T22:27:50,5993,Scifres,19,80,0,gymscrape
+2026-10-07T22:27:51,7459,MP2,26,100,0,gymscrape
+2026-10-07T22:27:52,5969,Bouldering Wall,14,26,0,gymscrape
+2026-10-07T22:27:52,5972,Climbing Wall,7,18,0,gymscrape
+2026-10-07T22:27:53,11623,Kilter Board Wall,0,20,0,gymscrape
+2026-10-07T22:27:54,5990,Olympic Lifting Room,0,16,0,gymscrape
+2026-10-07T22:27:54,11620,East Fitness,8,208,0,gymscrape
+2026-10-07T22:27:55,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-07T22:27:56,6142,Combative Arts Room,2,11,0,gymscrape
+2026-10-07T22:27:56,11610,Climbing Cave,0,15,0,gymscrape
+2026-10-07T22:27:57,6131,MP3,0,20,0,gymscrape
+2026-10-07T22:27:58,6132,MP4,13,26,0,gymscrape
+2026-10-07T22:27:58,11621,APGL,8,30,0,gymscrape
+2026-10-07T22:27:59,7290,Colby Fitness,72,380,0,gymscrape
+2026-10-07T22:28:00,5985,Lower Gym,63,282,0,gymscrape
+2026-10-07T22:28:00,9552,Outdoor Tennis,5,50,0,gymscrape
+2026-10-07T22:28:01,9553,Outdoor Pickleball,88,50,0,gymscrape
+2026-10-07T23:38:02,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-07T23:38:03,5996,Upper Gym,17,100,0,kvijay
+2026-10-07T23:38:03,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-07T23:38:04,7451,MP6,2,45,0,kvijay
+2026-10-07T23:38:05,5995,Upper Fitness,7,46,0,kvijay
+2026-10-07T23:38:05,7452,MP7,3,45,0,kvijay
+2026-10-07T23:38:06,6130,MAC Court,18,100,0,kvijay
+2026-10-07T23:38:07,6157,East Mezzanine (3rd Floor),3,15,0,kvijay
+2026-10-07T23:38:08,5984,Atrium Track (3rd Floor),2,50,0,kvijay
+2026-10-07T23:38:08,6158,West Mezzanine (3rd Floor),0,25,0,kvijay
+2026-10-07T23:38:09,10219,Racquetball Courts 9-16,6,80,0,kvijay
+2026-10-07T23:38:10,6143,MP5,13,106,0,kvijay
+2026-10-07T23:38:10,7293,Fitness Pavilion,19,70,0,kvijay
+2026-10-07T23:38:11,5981,Fitness Loft,11,55,0,kvijay
+2026-10-07T23:38:12,5960,B&G Gym 1-3,19,100,0,kvijay
+2026-10-07T23:38:12,5979,Feature Gym,10,50,0,kvijay
+2026-10-07T23:38:13,5961,B&G Gym 4-6,15,100,0,kvijay
+2026-10-07T23:38:14,5993,Scifres,12,80,0,kvijay
+2026-10-07T23:38:14,7459,MP2,17,100,0,kvijay
+2026-10-07T23:38:15,5972,Climbing Wall,0,18,0,kvijay
+2026-10-07T23:38:16,5969,Bouldering Wall,9,26,0,kvijay
+2026-10-07T23:38:16,11623,Kilter Board Wall,2,20,0,kvijay
+2026-10-07T23:38:17,11620,East Fitness,6,208,0,kvijay
+2026-10-07T23:38:18,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-07T23:38:18,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-07T23:38:19,11610,Climbing Cave,2,15,0,kvijay
+2026-10-07T23:38:20,6131,MP3,6,20,0,kvijay
+2026-10-07T23:38:20,6142,Combative Arts Room,3,11,0,kvijay
+2026-10-07T23:38:21,6132,MP4,0,26,0,kvijay
+2026-10-07T23:38:22,7290,Colby Fitness,48,380,0,kvijay
+2026-10-07T23:38:22,11621,APGL,8,30,1,kvijay
+2026-10-07T23:38:23,5985,Lower Gym,34,282,0,kvijay
+2026-10-07T23:38:24,9552,Outdoor Tennis,6,50,0,kvijay
+2026-10-07T23:38:24,9553,Outdoor Pickleball,48,50,0,kvijay
+2026-10-08T05:52:34,5972,Climbing Wall,0,18,1,kvijay
+2026-10-08T09:11:05,11622,Cycling Studio,15,60,1,kvijay
+2026-10-08T10:04:00,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-08T10:04:01,6129,Upper Track (4th Floor),1,10,0,kvijay
+2026-10-08T10:04:02,5996,Upper Gym,0,100,0,kvijay
+2026-10-08T10:04:03,7451,MP6,1,45,0,kvijay
+2026-10-08T10:04:04,5995,Upper Fitness,13,46,0,kvijay
+2026-10-08T10:04:04,7452,MP7,3,45,0,kvijay
+2026-10-08T10:04:05,6130,MAC Court,0,100,0,kvijay
+2026-10-08T10:04:07,6157,East Mezzanine (3rd Floor),1,15,0,kvijay
+2026-10-08T10:04:08,5984,Atrium Track (3rd Floor),1,50,0,kvijay
+2026-10-08T10:04:09,6158,West Mezzanine (3rd Floor),3,25,0,kvijay
+2026-10-08T10:04:10,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-08T10:04:11,10219,Racquetball Courts 9-16,2,80,0,kvijay
+2026-10-08T10:04:12,6143,MP5,0,106,0,kvijay
+2026-10-08T10:04:13,7293,Fitness Pavilion,23,70,0,kvijay
+2026-10-08T10:04:14,5981,Fitness Loft,6,55,0,kvijay
+2026-10-08T10:04:15,5979,Feature Gym,2,50,0,kvijay
+2026-10-08T10:04:17,5960,B&G Gym 1-3,0,100,0,kvijay
+2026-10-08T10:04:17,5961,B&G Gym 4-6,4,100,0,kvijay
+2026-10-08T10:04:19,5993,Scifres,17,80,0,kvijay
+2026-10-08T10:04:21,7459,MP2,0,100,0,kvijay
+2026-10-08T10:04:23,5969,Bouldering Wall,9,26,0,kvijay
+2026-10-08T10:04:24,11623,Kilter Board Wall,1,20,0,kvijay
+2026-10-08T10:04:25,11620,East Fitness,18,208,0,kvijay
+2026-10-08T10:04:26,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-08T10:04:27,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-08T10:04:28,11610,Climbing Cave,0,15,0,kvijay
+2026-10-08T10:04:29,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-08T10:04:30,6131,MP3,0,20,0,kvijay
+2026-10-08T10:04:30,6132,MP4,0,26,0,kvijay
+2026-10-08T10:04:31,7290,Colby Fitness,68,380,0,kvijay
+2026-10-08T10:04:32,5985,Lower Gym,44,282,0,kvijay
+2026-10-08T11:38:56,5994,TREC,3,300,0,kvijay
+2026-10-08T11:38:56,9552,Outdoor Tennis,0,50,0,kvijay
+2026-10-08T11:38:56,9553,Outdoor Pickleball,7,50,0,kvijay
+2026-10-08T12:40:50,5978,Faculty/Staff Workout Area,2,25,0,gymscrape
+2026-10-08T12:40:52,6129,Upper Track (4th Floor),0,10,0,gymscrape
+2026-10-08T12:40:54,5996,Upper Gym,5,100,0,gymscrape
+2026-10-08T12:40:55,7451,MP6,25,45,0,gymscrape
+2026-10-08T12:40:56,7452,MP7,1,45,0,gymscrape
+2026-10-08T12:40:57,5995,Upper Fitness,12,46,0,gymscrape
+2026-10-08T12:40:58,6130,MAC Court,3,100,0,gymscrape
+2026-10-08T12:40:59,5984,Atrium Track (3rd Floor),1,50,0,gymscrape
+2026-10-08T12:40:59,6157,East Mezzanine (3rd Floor),2,15,0,gymscrape
+2026-10-08T12:41:00,6158,West Mezzanine (3rd Floor),7,25,0,gymscrape
+2026-10-08T12:41:01,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-08T12:41:02,6143,MP5,1,106,0,gymscrape
+2026-10-08T12:41:02,10219,Racquetball Courts 9-16,0,80,0,gymscrape
+2026-10-08T12:41:03,7293,Fitness Pavilion,24,70,0,gymscrape
+2026-10-08T12:41:04,5981,Fitness Loft,11,55,0,gymscrape
+2026-10-08T12:41:05,5960,B&G Gym 1-3,4,100,0,gymscrape
+2026-10-08T12:41:05,5979,Feature Gym,0,50,0,gymscrape
+2026-10-08T12:41:06,5961,B&G Gym 4-6,2,100,0,gymscrape
+2026-10-08T12:41:07,5993,Scifres,19,80,0,gymscrape
+2026-10-08T12:41:09,7459,MP2,4,100,0,gymscrape
+2026-10-08T12:41:10,5969,Bouldering Wall,11,26,0,gymscrape
+2026-10-08T12:41:11,11623,Kilter Board Wall,0,20,0,gymscrape
+2026-10-08T12:41:12,11620,East Fitness,13,208,0,gymscrape
+2026-10-08T12:41:13,5990,Olympic Lifting Room,0,16,0,gymscrape
+2026-10-08T12:41:14,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-08T12:41:15,11610,Climbing Cave,1,15,0,gymscrape
+2026-10-08T12:41:16,6142,Combative Arts Room,1,11,0,gymscrape
+2026-10-08T12:41:17,6131,MP3,0,20,0,gymscrape
+2026-10-08T12:41:18,6132,MP4,1,26,0,gymscrape
+2026-10-08T12:41:19,11622,Cycling Studio,12,60,0,gymscrape
+2026-10-08T12:41:20,7290,Colby Fitness,77,380,0,gymscrape
+2026-10-08T12:41:21,5985,Lower Gym,49,282,0,gymscrape
+2026-10-08T12:41:22,5994,TREC,18,300,0,gymscrape
+2026-10-08T12:41:23,9552,Outdoor Tennis,0,50,0,gymscrape
+2026-10-08T12:41:23,9553,Outdoor Pickleball,15,50,0,gymscrape
+2026-10-08T13:31:40,11622,Cycling Studio,12,60,1,kvijay
+2026-10-08T15:57:44,6157,East Mezzanine (3rd Floor),2,15,0,kvijay
+2026-10-08T15:57:45,5984,Atrium Track (3rd Floor),3,50,0,kvijay
+2026-10-08T15:57:46,6158,West Mezzanine (3rd Floor),6,25,0,kvijay
+2026-10-08T15:57:47,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-08T15:57:48,6143,MP5,1,106,0,kvijay
+2026-10-08T15:57:48,10219,Racquetball Courts 9-16,6,80,0,kvijay
+2026-10-08T15:57:49,7293,Fitness Pavilion,16,70,0,kvijay
+2026-10-08T15:57:50,5979,Feature Gym,4,50,0,kvijay
+2026-10-08T15:57:51,5960,B&G Gym 1-3,13,100,0,kvijay
+2026-10-08T15:57:51,5961,B&G Gym 4-6,16,100,0,kvijay
+2026-10-08T15:57:52,5993,Scifres,18,80,0,kvijay
+2026-10-08T15:57:57,5994,TREC,18,300,1,kvijay
+2026-10-08T16:18:08,7459,MP2,0,100,0,kvijay
+2026-10-08T16:18:09,5969,Bouldering Wall,5,26,0,kvijay
+2026-10-08T16:18:10,11620,East Fitness,21,208,0,kvijay
+2026-10-08T16:18:10,11623,Kilter Board Wall,2,20,0,kvijay
+2026-10-08T16:18:11,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-08T16:18:12,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-08T16:18:13,11610,Climbing Cave,1,15,0,kvijay
+2026-10-08T16:18:14,6131,MP3,1,20,0,kvijay
+2026-10-08T16:18:14,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-08T16:18:15,6132,MP4,0,26,0,kvijay
+2026-10-08T16:18:16,7290,Colby Fitness,65,380,0,kvijay
+2026-10-08T16:18:17,5985,Lower Gym,74,282,0,kvijay
+2026-10-08T16:18:17,9552,Outdoor Tennis,2,50,0,kvijay
+2026-10-08T16:18:18,9553,Outdoor Pickleball,23,50,0,kvijay
+2026-10-08T16:33:58,5978,Faculty/Staff Workout Area,6,25,0,kvijay
+2026-10-08T16:34:00,5996,Upper Gym,5,100,0,kvijay
+2026-10-08T16:34:00,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-08T16:34:01,7451,MP6,5,45,0,kvijay
+2026-10-08T16:34:02,7452,MP7,11,45,0,kvijay
+2026-10-08T16:34:04,5995,Upper Fitness,9,46,0,kvijay
+2026-10-08T16:34:05,6130,MAC Court,30,100,0,kvijay
+2026-10-08T16:34:07,5981,Fitness Loft,15,55,0,kvijay
+2026-10-08T20:22:05,5978,Faculty/Staff Workout Area,3,25,0,kvijay
+2026-10-08T20:22:06,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-08T20:22:07,5996,Upper Gym,26,100,0,kvijay
+2026-10-08T20:22:09,7451,MP6,4,45,0,kvijay
+2026-10-08T20:22:10,7452,MP7,14,45,0,kvijay
+2026-10-08T20:22:11,5995,Upper Fitness,16,46,0,kvijay
+2026-10-08T20:22:12,6130,MAC Court,40,100,0,kvijay
+2026-10-08T20:22:12,6157,East Mezzanine (3rd Floor),0,15,0,kvijay
+2026-10-08T20:22:15,5984,Atrium Track (3rd Floor),1,50,0,kvijay
+2026-10-08T20:22:15,6158,West Mezzanine (3rd Floor),7,25,0,kvijay
+2026-10-08T20:22:16,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-08T20:22:17,10219,Racquetball Courts 9-16,20,80,0,kvijay
+2026-10-08T20:22:18,6143,MP5,12,106,0,kvijay
+2026-10-08T20:22:20,7293,Fitness Pavilion,18,70,0,kvijay
+2026-10-08T20:22:21,5981,Fitness Loft,15,55,0,kvijay
+2026-10-08T20:22:23,5979,Feature Gym,14,50,0,kvijay
+2026-10-08T20:22:24,5960,B&G Gym 1-3,38,100,0,kvijay
+2026-10-08T20:22:25,5961,B&G Gym 4-6,28,100,0,kvijay
+2026-10-08T20:22:27,5993,Scifres,15,80,0,kvijay
+2026-10-08T20:22:29,7459,MP2,16,100,0,kvijay
+2026-10-08T20:22:31,5972,Climbing Wall,7,18,0,kvijay
+2026-10-08T20:22:32,5969,Bouldering Wall,16,26,0,kvijay
+2026-10-08T20:22:33,11623,Kilter Board Wall,1,20,0,kvijay
+2026-10-08T20:22:36,5990,Olympic Lifting Room,2,16,0,kvijay
+2026-10-08T20:22:36,11620,East Fitness,24,208,0,kvijay
+2026-10-08T20:22:37,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-08T20:22:38,11610,Climbing Cave,9,15,0,kvijay
+2026-10-08T20:22:40,6142,Combative Arts Room,2,11,0,kvijay
+2026-10-08T20:22:41,6131,MP3,5,20,0,kvijay
+2026-10-08T20:22:42,6132,MP4,12,26,0,kvijay
+2026-10-08T20:22:42,11622,Cycling Studio,9,60,0,kvijay
+2026-10-08T20:22:44,11621,APGL,8,30,0,kvijay
+2026-10-08T20:22:45,7290,Colby Fitness,85,380,0,kvijay
+2026-10-08T20:22:46,5985,Lower Gym,62,282,0,kvijay
+2026-10-08T20:52:20,5994,TREC,20,300,0,kvijay
+2026-10-08T20:52:21,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-08T20:52:22,9553,Outdoor Pickleball,47,50,0,kvijay
+2026-10-08T21:40:34,5978,Faculty/Staff Workout Area,0,25,0,gymscrape
+2026-10-08T21:40:35,6129,Upper Track (4th Floor),0,10,0,gymscrape
+2026-10-08T21:40:36,5996,Upper Gym,60,100,0,gymscrape
+2026-10-08T21:40:37,7451,MP6,22,45,0,gymscrape
+2026-10-08T21:40:38,7452,MP7,18,45,0,gymscrape
+2026-10-08T21:40:39,5995,Upper Fitness,9,46,0,gymscrape
+2026-10-08T21:40:39,6130,MAC Court,49,100,0,gymscrape
+2026-10-08T21:40:40,6157,East Mezzanine (3rd Floor),1,15,0,gymscrape
+2026-10-08T21:40:41,5984,Atrium Track (3rd Floor),2,50,0,gymscrape
+2026-10-08T21:40:42,6158,West Mezzanine (3rd Floor),2,25,0,gymscrape
+2026-10-08T21:40:43,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-08T21:40:43,10219,Racquetball Courts 9-16,16,80,0,gymscrape
+2026-10-08T21:40:44,6143,MP5,25,106,0,gymscrape
+2026-10-08T21:40:45,7293,Fitness Pavilion,22,70,0,gymscrape
+2026-10-08T21:40:46,5979,Feature Gym,14,50,0,gymscrape
+2026-10-08T21:40:46,5981,Fitness Loft,16,55,0,gymscrape
+2026-10-08T21:40:47,5960,B&G Gym 1-3,52,100,0,gymscrape
+2026-10-08T21:40:48,5961,B&G Gym 4-6,36,100,0,gymscrape
+2026-10-08T21:40:49,5993,Scifres,13,80,0,gymscrape
+2026-10-08T21:40:50,7459,MP2,0,100,0,gymscrape
+2026-10-08T21:40:51,5972,Climbing Wall,3,18,0,gymscrape
+2026-10-08T21:40:52,5969,Bouldering Wall,42,26,0,gymscrape
+2026-10-08T21:40:52,11623,Kilter Board Wall,3,20,0,gymscrape
+2026-10-08T21:40:53,11620,East Fitness,22,208,0,gymscrape
+2026-10-08T21:40:54,5990,Olympic Lifting Room,1,16,0,gymscrape
+2026-10-08T21:40:54,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-08T21:40:55,11610,Climbing Cave,1,15,0,gymscrape
+2026-10-08T21:40:56,6142,Combative Arts Room,2,11,0,gymscrape
+2026-10-08T21:40:57,6131,MP3,5,20,0,gymscrape
+2026-10-08T21:40:57,6132,MP4,0,26,0,gymscrape
+2026-10-08T21:40:58,11622,Cycling Studio,9,60,1,kvijay
+2026-10-08T21:40:59,7290,Colby Fitness,77,380,0,gymscrape
+2026-10-08T21:40:59,11621,APGL,12,30,0,gymscrape
+2026-10-08T21:41:00,5985,Lower Gym,68,282,0,gymscrape
+2026-10-08T21:41:01,9553,Outdoor Pickleball,79,50,0,gymscrape
+2026-10-08T23:24:38,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-08T23:24:39,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-08T23:24:40,5996,Upper Gym,34,100,0,kvijay
+2026-10-08T23:24:41,7451,MP6,0,45,0,kvijay
+2026-10-08T23:24:42,7452,MP7,0,45,0,kvijay
+2026-10-08T23:24:43,5995,Upper Fitness,2,46,0,kvijay
+2026-10-08T23:24:43,6130,MAC Court,24,100,0,kvijay
+2026-10-08T23:24:44,6157,East Mezzanine (3rd Floor),0,15,0,kvijay
+2026-10-08T23:24:45,5984,Atrium Track (3rd Floor),2,50,0,kvijay
+2026-10-08T23:24:45,6158,West Mezzanine (3rd Floor),3,25,0,kvijay
+2026-10-08T23:24:46,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-08T23:24:47,10219,Racquetball Courts 9-16,8,80,0,kvijay
+2026-10-08T23:24:48,6143,MP5,22,106,0,kvijay
+2026-10-08T23:24:48,7293,Fitness Pavilion,14,70,0,kvijay
+2026-10-08T23:24:50,5981,Fitness Loft,7,55,0,kvijay
+2026-10-08T23:24:51,5979,Feature Gym,10,50,0,kvijay
+2026-10-08T23:24:52,5960,B&G Gym 1-3,25,100,0,kvijay
+2026-10-08T23:24:53,5961,B&G Gym 4-6,30,100,0,kvijay
+2026-10-08T23:24:53,5993,Scifres,12,80,0,kvijay
+2026-10-08T23:24:54,7459,MP2,0,100,0,kvijay
+2026-10-08T23:24:55,5972,Climbing Wall,0,18,0,kvijay
+2026-10-08T23:24:56,5969,Bouldering Wall,19,26,0,kvijay
+2026-10-08T23:24:56,11623,Kilter Board Wall,1,20,0,kvijay
+2026-10-08T23:24:57,11620,East Fitness,13,208,0,kvijay
+2026-10-08T23:24:58,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-08T23:24:59,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-08T23:24:59,11610,Climbing Cave,1,15,0,kvijay
+2026-10-08T23:25:00,6142,Combative Arts Room,2,11,0,kvijay
+2026-10-08T23:25:01,6131,MP3,2,20,0,kvijay
+2026-10-08T23:25:02,6132,MP4,0,26,0,kvijay
+2026-10-08T23:25:02,11621,APGL,10,30,1,kvijay
+2026-10-08T23:25:03,7290,Colby Fitness,68,380,0,kvijay
+2026-10-08T23:25:04,5985,Lower Gym,57,282,0,kvijay
+2026-10-08T23:25:53,9553,Outdoor Pickleball,34,50,0,kvijay
+2026-10-09T05:50:26,5972,Climbing Wall,0,18,1,kvijay
+2026-10-09T05:50:35,5994,TREC,0,300,1,kvijay
+2026-10-09T09:14:20,11622,Cycling Studio,0,60,1,kvijay
+2026-10-09T10:12:59,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-09T10:13:00,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-09T10:13:01,5996,Upper Gym,5,100,0,kvijay
+2026-10-09T10:13:01,7451,MP6,0,45,0,kvijay
+2026-10-09T10:13:02,7452,MP7,3,45,0,kvijay
+2026-10-09T10:13:03,5995,Upper Fitness,8,46,0,kvijay
+2026-10-09T10:13:03,6130,MAC Court,5,100,0,kvijay
+2026-10-09T10:13:04,6157,East Mezzanine (3rd Floor),1,15,0,kvijay
+2026-10-09T10:13:05,5984,Atrium Track (3rd Floor),1,50,0,kvijay
+2026-10-09T10:13:06,5988,Mindfulness Room,1,20,0,kvijay
+2026-10-09T10:13:06,6158,West Mezzanine (3rd Floor),2,25,0,kvijay
+2026-10-09T10:13:07,10219,Racquetball Courts 9-16,1,80,0,kvijay
+2026-10-09T10:13:08,6143,MP5,0,106,0,kvijay
+2026-10-09T10:13:08,7293,Fitness Pavilion,25,70,0,kvijay
+2026-10-09T10:13:09,5981,Fitness Loft,6,55,0,kvijay
+2026-10-09T10:13:10,5979,Feature Gym,0,50,0,kvijay
+2026-10-09T10:13:11,5960,B&G Gym 1-3,7,100,0,kvijay
+2026-10-09T10:13:12,5961,B&G Gym 4-6,3,100,0,kvijay
+2026-10-09T10:13:13,5993,Scifres,12,80,0,kvijay
+2026-10-09T10:13:14,7459,MP2,0,100,0,kvijay
+2026-10-09T10:13:15,5969,Bouldering Wall,7,26,0,kvijay
+2026-10-09T10:13:15,11623,Kilter Board Wall,1,20,0,kvijay
+2026-10-09T10:13:16,11620,East Fitness,11,208,0,kvijay
+2026-10-09T10:13:17,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-09T10:13:18,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-09T10:13:18,11610,Climbing Cave,0,15,0,kvijay
+2026-10-09T10:13:19,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-09T10:13:20,6131,MP3,0,20,0,kvijay
+2026-10-09T10:13:21,6132,MP4,0,26,0,kvijay
+2026-10-09T10:13:22,5985,Lower Gym,63,282,0,kvijay
+2026-10-09T10:13:22,7290,Colby Fitness,76,380,0,kvijay
+2026-10-09T10:20:21,9552,Outdoor Tennis,2,50,0,kvijay
+2026-10-09T10:20:22,9553,Outdoor Pickleball,6,50,0,kvijay
+2026-10-09T11:19:59,5978,Faculty/Staff Workout Area,2,25,0,gymscrape
+2026-10-09T11:20:00,6129,Upper Track (4th Floor),0,10,0,gymscrape
+2026-10-09T11:20:01,5996,Upper Gym,3,100,0,gymscrape
+2026-10-09T11:20:01,7451,MP6,1,45,0,gymscrape
+2026-10-09T11:20:02,7452,MP7,3,45,0,gymscrape
+2026-10-09T11:20:03,5995,Upper Fitness,6,46,0,gymscrape
+2026-10-09T11:20:03,6130,MAC Court,13,100,0,gymscrape
+2026-10-09T11:20:04,6157,East Mezzanine (3rd Floor),2,15,0,gymscrape
+2026-10-09T11:20:05,5984,Atrium Track (3rd Floor),1,50,0,gymscrape
+2026-10-09T11:20:05,6158,West Mezzanine (3rd Floor),9,25,0,gymscrape
+2026-10-09T11:20:06,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-09T11:20:07,6143,MP5,0,106,0,gymscrape
+2026-10-09T11:20:07,10219,Racquetball Courts 9-16,0,80,0,gymscrape
+2026-10-09T11:20:08,7293,Fitness Pavilion,14,70,0,gymscrape
+2026-10-09T11:20:09,5979,Feature Gym,1,50,0,gymscrape
+2026-10-09T11:20:09,5981,Fitness Loft,15,55,0,gymscrape
+2026-10-09T11:20:10,5960,B&G Gym 1-3,6,100,0,gymscrape
+2026-10-09T11:20:11,5961,B&G Gym 4-6,17,100,0,gymscrape
+2026-10-09T11:20:12,5993,Scifres,22,80,0,gymscrape
+2026-10-09T11:20:12,7459,MP2,0,100,0,gymscrape
+2026-10-09T11:20:13,5969,Bouldering Wall,16,26,0,gymscrape
+2026-10-09T11:20:14,11623,Kilter Board Wall,1,20,0,gymscrape
+2026-10-09T11:20:15,5990,Olympic Lifting Room,0,16,0,gymscrape
+2026-10-09T11:20:15,11620,East Fitness,4,208,0,gymscrape
+2026-10-09T11:20:16,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-09T11:20:17,11610,Climbing Cave,1,15,0,gymscrape
+2026-10-09T11:20:18,6142,Combative Arts Room,1,11,0,gymscrape
+2026-10-09T11:20:19,6131,MP3,0,20,0,gymscrape
+2026-10-09T11:20:20,6132,MP4,0,26,0,gymscrape
+2026-10-09T11:20:20,7290,Colby Fitness,67,380,0,gymscrape
+2026-10-09T11:20:21,5985,Lower Gym,60,282,0,gymscrape
+2026-10-09T11:20:22,9552,Outdoor Tennis,2,50,0,gymscrape
+2026-10-09T11:20:23,9553,Outdoor Pickleball,6,50,0,gymscrape
+2026-10-09T13:19:09,11622,Cycling Studio,0,60,1,kvijay
+2026-10-09T15:21:54,5978,Faculty/Staff Workout Area,2,25,0,kvijay
+2026-10-09T15:21:55,6129,Upper Track (4th Floor),1,10,0,kvijay
+2026-10-09T15:21:56,5996,Upper Gym,4,100,0,kvijay
+2026-10-09T15:21:56,7451,MP6,0,45,0,kvijay
+2026-10-09T15:21:57,7452,MP7,0,45,0,kvijay
+2026-10-09T15:21:58,5995,Upper Fitness,10,46,0,kvijay
+2026-10-09T15:21:58,6130,MAC Court,12,100,0,kvijay
+2026-10-09T15:21:59,6157,East Mezzanine (3rd Floor),2,15,0,kvijay
+2026-10-09T15:22:00,5984,Atrium Track (3rd Floor),1,50,0,kvijay
+2026-10-09T15:22:00,6158,West Mezzanine (3rd Floor),2,25,0,kvijay
+2026-10-09T15:22:01,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-09T15:22:02,6143,MP5,0,106,0,kvijay
+2026-10-09T15:22:02,10219,Racquetball Courts 9-16,4,80,0,kvijay
+2026-10-09T15:22:03,7293,Fitness Pavilion,14,70,0,kvijay
+2026-10-09T15:22:04,5979,Feature Gym,4,50,0,kvijay
+2026-10-09T15:22:04,5981,Fitness Loft,11,55,0,kvijay
+2026-10-09T15:22:05,5960,B&G Gym 1-3,3,100,0,kvijay
+2026-10-09T15:22:06,5961,B&G Gym 4-6,24,100,0,kvijay
+2026-10-09T15:22:06,5993,Scifres,15,80,0,kvijay
+2026-10-09T15:22:07,7459,MP2,0,100,0,kvijay
+2026-10-09T15:22:08,5969,Bouldering Wall,7,26,0,kvijay
+2026-10-09T15:22:09,11620,East Fitness,15,208,0,kvijay
+2026-10-09T15:22:09,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-09T15:22:10,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-09T15:22:11,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-09T15:22:11,11610,Climbing Cave,1,15,0,kvijay
+2026-10-09T15:22:12,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-09T15:22:13,6131,MP3,1,20,0,kvijay
+2026-10-09T15:22:13,6132,MP4,0,26,0,kvijay
+2026-10-09T15:22:14,7290,Colby Fitness,68,380,0,kvijay
+2026-10-09T15:22:15,5985,Lower Gym,45,282,0,kvijay
+2026-10-09T15:22:15,9552,Outdoor Tennis,3,50,0,kvijay
+2026-10-09T15:22:16,9553,Outdoor Pickleball,12,50,0,kvijay
+2026-10-09T16:26:09,5978,Faculty/Staff Workout Area,1,25,0,gymscrape
+2026-10-09T16:26:10,6129,Upper Track (4th Floor),2,10,0,gymscrape
+2026-10-09T16:26:11,5996,Upper Gym,6,100,0,gymscrape
+2026-10-09T16:26:11,7451,MP6,0,45,0,gymscrape
+2026-10-09T16:26:12,7452,MP7,0,45,0,gymscrape
+2026-10-09T16:26:13,5995,Upper Fitness,4,46,0,gymscrape
+2026-10-09T16:26:13,6130,MAC Court,25,100,0,gymscrape
+2026-10-09T16:26:14,6157,East Mezzanine (3rd Floor),2,15,0,gymscrape
+2026-10-09T16:26:15,5984,Atrium Track (3rd Floor),3,50,0,gymscrape
+2026-10-09T16:26:16,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-09T16:26:16,6158,West Mezzanine (3rd Floor),3,25,0,gymscrape
+2026-10-09T16:26:17,10219,Racquetball Courts 9-16,3,80,0,gymscrape
+2026-10-09T16:26:18,6143,MP5,0,106,0,gymscrape
+2026-10-09T16:26:19,5981,Fitness Loft,11,55,0,gymscrape
+2026-10-09T16:26:19,7293,Fitness Pavilion,18,70,0,gymscrape
+2026-10-09T16:26:20,5979,Feature Gym,4,50,0,gymscrape
+2026-10-09T16:26:21,5960,B&G Gym 1-3,16,100,0,gymscrape
+2026-10-09T16:26:21,5961,B&G Gym 4-6,22,100,0,gymscrape
+2026-10-09T16:26:22,5993,Scifres,18,80,0,gymscrape
+2026-10-09T16:26:23,7459,MP2,0,100,0,gymscrape
+2026-10-09T16:26:24,5969,Bouldering Wall,10,26,0,gymscrape
+2026-10-09T16:26:24,5972,Climbing Wall,9,18,0,gymscrape
+2026-10-09T16:26:25,11623,Kilter Board Wall,1,20,0,gymscrape
+2026-10-09T16:26:26,5990,Olympic Lifting Room,4,16,0,gymscrape
+2026-10-09T16:26:26,11620,East Fitness,20,208,0,gymscrape
+2026-10-09T16:26:27,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-09T16:26:28,11610,Climbing Cave,2,15,0,gymscrape
+2026-10-09T16:26:29,6131,MP3,1,20,0,gymscrape
+2026-10-09T16:26:29,6142,Combative Arts Room,1,11,0,gymscrape
+2026-10-09T16:26:30,6132,MP4,1,26,0,gymscrape
+2026-10-09T16:26:31,11622,Cycling Studio,14,60,0,gymscrape
+2026-10-09T16:26:32,7290,Colby Fitness,56,380,0,gymscrape
+2026-10-09T16:26:32,11621,APGL,4,30,0,gymscrape
+2026-10-09T16:26:33,5985,Lower Gym,42,282,0,gymscrape
+2026-10-09T16:26:34,9552,Outdoor Tennis,3,50,0,gymscrape
+2026-10-09T16:26:34,9553,Outdoor Pickleball,33,50,0,gymscrape
+2026-10-09T17:57:02,11622,Cycling Studio,14,60,1,kvijay
+2026-10-09T18:45:48,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-09T19:19:38,5960,B&G Gym 1-3,38,100,0,kvijay
+2026-10-09T19:19:38,5961,B&G Gym 4-6,32,100,0,kvijay
+2026-10-09T19:19:38,5969,Bouldering Wall,20,26,0,kvijay
+2026-10-09T19:19:38,5972,Climbing Wall,8,18,0,kvijay
+2026-10-09T19:19:38,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-09T19:19:38,5979,Feature Gym,12,50,0,kvijay
+2026-10-09T19:19:38,5981,Fitness Loft,9,55,0,kvijay
+2026-10-09T19:19:38,5984,Atrium Track (3rd Floor),3,50,0,kvijay
+2026-10-09T19:19:38,5985,Lower Gym,76,282,0,kvijay
+2026-10-09T19:19:38,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-09T19:19:38,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-09T19:19:38,5993,Scifres,18,80,0,kvijay
+2026-10-09T19:19:38,5995,Upper Fitness,11,46,0,kvijay
+2026-10-09T19:19:38,5996,Upper Gym,23,100,0,kvijay
+2026-10-09T19:19:38,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-09T19:19:38,6130,MAC Court,38,100,0,kvijay
+2026-10-09T19:19:38,6131,MP3,3,20,0,kvijay
+2026-10-09T19:19:38,6132,MP4,0,26,0,kvijay
+2026-10-09T19:19:38,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-09T19:19:38,6143,MP5,11,106,0,kvijay
+2026-10-09T19:19:38,6157,East Mezzanine (3rd Floor),2,15,0,kvijay
+2026-10-09T19:19:38,6158,West Mezzanine (3rd Floor),3,25,0,kvijay
+2026-10-09T19:19:38,7290,Colby Fitness,82,380,0,kvijay
+2026-10-09T19:19:38,7293,Fitness Pavilion,22,70,0,kvijay
+2026-10-09T19:19:38,7451,MP6,0,45,0,kvijay
+2026-10-09T19:19:38,7452,MP7,0,45,0,kvijay
+2026-10-09T19:19:38,7459,MP2,18,100,0,kvijay
+2026-10-09T19:19:38,9552,Outdoor Tennis,4,50,0,kvijay
+2026-10-09T19:19:38,9553,Outdoor Pickleball,47,50,0,kvijay
+2026-10-09T19:19:38,10219,Racquetball Courts 9-16,12,80,0,kvijay
+2026-10-09T19:19:38,11610,Climbing Cave,2,15,0,kvijay
+2026-10-09T19:19:38,11620,East Fitness,15,208,0,kvijay
+2026-10-09T19:19:38,11621,APGL,12,30,0,kvijay
+2026-10-09T19:19:38,11623,Kilter Board Wall,1,20,0,kvijay
+2026-10-10T10:36:58,5972,Climbing Wall,5,18,1,kvijay
+2026-10-10T10:37:06,11621,APGL,0,30,1,kvijay
+2026-10-10T11:54:19,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-10T11:54:20,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-10T11:54:21,5996,Upper Gym,5,100,0,kvijay
+2026-10-10T11:54:22,7451,MP6,1,45,0,kvijay
+2026-10-10T11:54:22,7452,MP7,0,45,0,kvijay
+2026-10-10T11:54:23,5995,Upper Fitness,5,46,0,kvijay
+2026-10-10T11:54:24,6130,MAC Court,13,100,0,kvijay
+2026-10-10T11:54:25,5984,Atrium Track (3rd Floor),1,50,0,kvijay
+2026-10-10T11:54:25,6157,East Mezzanine (3rd Floor),1,15,0,kvijay
+2026-10-10T11:54:26,6158,West Mezzanine (3rd Floor),1,25,0,kvijay
+2026-10-10T11:54:27,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-10T11:54:27,10219,Racquetball Courts 9-16,1,80,0,kvijay
+2026-10-10T11:54:28,6143,MP5,0,106,0,kvijay
+2026-10-10T11:54:29,5981,Fitness Loft,6,55,0,kvijay
+2026-10-10T11:54:29,7293,Fitness Pavilion,14,70,0,kvijay
+2026-10-10T11:54:30,5979,Feature Gym,3,50,0,kvijay
+2026-10-10T11:54:31,5960,B&G Gym 1-3,3,100,0,kvijay
+2026-10-10T11:54:31,5961,B&G Gym 4-6,2,100,0,kvijay
+2026-10-10T11:54:32,5993,Scifres,14,80,0,kvijay
+2026-10-10T11:54:33,5969,Bouldering Wall,7,26,0,kvijay
+2026-10-10T11:54:33,7459,MP2,0,100,0,kvijay
+2026-10-10T11:54:34,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-10T11:54:35,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-10T11:54:35,11620,East Fitness,16,208,0,kvijay
+2026-10-10T11:54:36,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-10T11:54:37,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-10T11:54:37,11610,Climbing Cave,0,15,0,kvijay
+2026-10-10T11:54:38,6131,MP3,1,20,0,kvijay
+2026-10-10T11:54:39,6132,MP4,0,26,0,kvijay
+2026-10-10T11:54:39,7290,Colby Fitness,62,380,0,kvijay
+2026-10-10T11:54:40,5985,Lower Gym,36,282,0,kvijay
+2026-10-10T11:54:41,9552,Outdoor Tennis,2,50,0,kvijay
+2026-10-10T11:54:41,9553,Outdoor Pickleball,7,50,0,kvijay
+2026-10-10T12:50:04,5978,Faculty/Staff Workout Area,0,25,0,gymscrape
+2026-10-10T12:50:05,6129,Upper Track (4th Floor),1,10,0,gymscrape
+2026-10-10T12:50:06,5996,Upper Gym,6,100,0,gymscrape
+2026-10-10T12:50:06,7451,MP6,2,45,0,gymscrape
+2026-10-10T12:50:07,7452,MP7,1,45,0,gymscrape
+2026-10-10T12:50:08,5995,Upper Fitness,6,46,0,gymscrape
+2026-10-10T12:50:09,6130,MAC Court,12,100,0,gymscrape
+2026-10-10T12:50:10,5984,Atrium Track (3rd Floor),1,50,0,gymscrape
+2026-10-10T12:50:10,6157,East Mezzanine (3rd Floor),0,15,0,gymscrape
+2026-10-10T12:50:11,6158,West Mezzanine (3rd Floor),2,25,0,gymscrape
+2026-10-10T12:50:12,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-10T12:50:13,6143,MP5,1,106,0,gymscrape
+2026-10-10T12:50:13,10219,Racquetball Courts 9-16,0,80,0,gymscrape
+2026-10-10T12:50:14,7293,Fitness Pavilion,16,70,0,gymscrape
+2026-10-10T12:50:15,5979,Feature Gym,5,50,0,gymscrape
+2026-10-10T12:50:15,5981,Fitness Loft,9,55,0,gymscrape
+2026-10-10T12:50:16,5960,B&G Gym 1-3,6,100,0,gymscrape
+2026-10-10T12:50:17,5961,B&G Gym 4-6,4,100,0,gymscrape
+2026-10-10T12:50:17,5993,Scifres,15,80,0,gymscrape
+2026-10-10T12:50:18,7459,MP2,0,100,0,gymscrape
+2026-10-10T12:50:19,5969,Bouldering Wall,5,26,0,gymscrape
+2026-10-10T12:50:19,11623,Kilter Board Wall,1,20,0,gymscrape
+2026-10-10T12:50:20,11620,East Fitness,14,208,0,gymscrape
+2026-10-10T12:50:21,5990,Olympic Lifting Room,0,16,0,gymscrape
+2026-10-10T12:50:22,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-10T12:50:22,11610,Climbing Cave,0,15,0,gymscrape
+2026-10-10T12:50:23,6142,Combative Arts Room,1,11,0,gymscrape
+2026-10-10T12:50:24,6131,MP3,2,20,0,gymscrape
+2026-10-10T12:50:24,6132,MP4,1,26,0,gymscrape
+2026-10-10T12:50:25,7290,Colby Fitness,56,380,0,gymscrape
+2026-10-10T12:50:26,5985,Lower Gym,32,282,0,gymscrape
+2026-10-10T12:50:26,9552,Outdoor Tennis,0,50,0,gymscrape
+2026-10-10T12:50:27,9553,Outdoor Pickleball,10,50,0,gymscrape
+2026-10-10T15:53:23,5978,Faculty/Staff Workout Area,1,25,0,kvijay
+2026-10-10T15:53:24,5996,Upper Gym,39,100,0,kvijay
+2026-10-10T15:53:24,6129,Upper Track (4th Floor),1,10,0,kvijay
+2026-10-10T15:53:25,7451,MP6,1,45,0,kvijay
+2026-10-10T15:53:26,7452,MP7,3,45,0,kvijay
+2026-10-10T15:53:27,5995,Upper Fitness,4,46,0,kvijay
+2026-10-10T15:53:28,6130,MAC Court,61,100,0,kvijay
+2026-10-10T15:53:29,5984,Atrium Track (3rd Floor),3,50,0,kvijay
+2026-10-10T15:53:29,6157,East Mezzanine (3rd Floor),6,15,0,kvijay
+2026-10-10T15:53:30,6158,West Mezzanine (3rd Floor),2,25,0,kvijay
+2026-10-10T15:53:31,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-10T15:53:32,6143,MP5,1,106,0,kvijay
+2026-10-10T15:53:32,10219,Racquetball Courts 9-16,6,80,0,kvijay
+2026-10-10T15:53:33,7293,Fitness Pavilion,33,70,0,kvijay
+2026-10-10T15:53:34,5979,Feature Gym,12,50,0,kvijay
+2026-10-10T15:53:34,5981,Fitness Loft,8,55,0,kvijay
+2026-10-10T15:53:35,5960,B&G Gym 1-3,19,100,0,kvijay
+2026-10-10T15:53:36,5961,B&G Gym 4-6,20,100,0,kvijay
+2026-10-10T15:53:37,5993,Scifres,14,80,0,kvijay
+2026-10-10T15:53:37,7459,MP2,0,100,0,kvijay
+2026-10-10T15:53:38,5972,Climbing Wall,5,18,0,kvijay
+2026-10-10T15:53:39,5969,Bouldering Wall,14,26,0,kvijay
+2026-10-10T15:53:40,11620,East Fitness,17,208,0,kvijay
+2026-10-10T15:53:40,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-10T15:53:41,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-10T15:53:42,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-10T15:53:43,11610,Climbing Cave,0,15,0,kvijay
+2026-10-10T15:53:44,6131,MP3,4,20,0,kvijay
+2026-10-10T15:53:44,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-10T15:53:45,6132,MP4,0,26,0,kvijay
+2026-10-10T15:53:46,7290,Colby Fitness,83,380,0,kvijay
+2026-10-10T15:53:46,11621,APGL,4,30,0,kvijay
+2026-10-10T15:53:47,5985,Lower Gym,52,282,0,kvijay
+2026-10-10T15:55:43,9552,Outdoor Tennis,0,50,0,kvijay
+2026-10-10T15:55:44,9553,Outdoor Pickleball,48,50,0,kvijay
+2026-10-10T16:29:30,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-10T16:29:31,5996,Upper Gym,29,100,0,kvijay
+2026-10-10T16:29:31,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-10T16:29:32,7451,MP6,0,45,0,kvijay
+2026-10-10T16:29:33,5995,Upper Fitness,2,46,0,kvijay
+2026-10-10T16:29:33,7452,MP7,2,45,0,kvijay
+2026-10-10T16:29:34,6130,MAC Court,51,100,0,kvijay
+2026-10-10T16:29:35,5984,Atrium Track (3rd Floor),1,50,0,kvijay
+2026-10-10T16:29:35,6157,East Mezzanine (3rd Floor),4,15,0,kvijay
+2026-10-10T16:29:36,6158,West Mezzanine (3rd Floor),2,25,0,kvijay
+2026-10-10T16:29:37,10219,Racquetball Courts 9-16,0,80,0,kvijay
+2026-10-10T16:29:38,6143,MP5,0,106,0,kvijay
+2026-10-10T16:29:38,7293,Fitness Pavilion,27,70,0,kvijay
+2026-10-10T16:29:39,5981,Fitness Loft,11,55,0,kvijay
+2026-10-10T16:29:40,5960,B&G Gym 1-3,15,100,0,kvijay
+2026-10-10T16:29:40,5979,Feature Gym,8,50,0,kvijay
+2026-10-10T16:29:41,5961,B&G Gym 4-6,24,100,0,kvijay
+2026-10-10T16:29:42,5972,Climbing Wall,3,18,1,kvijay
+2026-10-10T16:29:42,7459,MP2,0,100,0,kvijay
+2026-10-10T16:29:43,5969,Bouldering Wall,9,26,0,kvijay
+2026-10-10T16:29:44,11623,Kilter Board Wall,3,20,0,kvijay
+2026-10-10T16:29:45,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-10T16:29:45,11620,East Fitness,14,208,0,kvijay
+2026-10-10T16:29:46,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-10T16:29:47,6142,Combative Arts Room,1,11,0,kvijay
+2026-10-10T16:29:47,11610,Climbing Cave,0,15,0,kvijay
+2026-10-10T16:29:48,6131,MP3,2,20,0,kvijay
+2026-10-10T16:29:49,6132,MP4,0,26,0,kvijay
+2026-10-10T16:29:49,11621,APGL,4,30,1,kvijay
+2026-10-10T16:29:50,7290,Colby Fitness,84,380,0,kvijay
+2026-10-10T16:29:51,5985,Lower Gym,62,282,0,kvijay
+2026-10-10T16:29:53,9553,Outdoor Pickleball,41,50,0,kvijay
+2026-10-11T11:27:31,7459,MP2,0,100,0,kvijay
+2026-10-11T12:34:35,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-11T12:34:35,6129,Upper Track (4th Floor),1,10,0,kvijay
+2026-10-11T12:34:36,5996,Upper Gym,13,100,0,kvijay
+2026-10-11T12:34:37,7451,MP6,0,45,0,kvijay
+2026-10-11T12:34:38,7452,MP7,0,45,0,kvijay
+2026-10-11T12:34:39,5995,Upper Fitness,1,46,0,kvijay
+2026-10-11T12:34:39,6130,MAC Court,6,100,0,kvijay
+2026-10-11T12:34:40,6157,East Mezzanine (3rd Floor),5,15,0,kvijay
+2026-10-11T12:34:41,5984,Atrium Track (3rd Floor),3,50,0,kvijay
+2026-10-11T12:34:41,6158,West Mezzanine (3rd Floor),0,25,0,kvijay
+2026-10-11T12:34:42,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-11T12:34:43,6143,MP5,3,106,0,kvijay
+2026-10-11T12:34:43,10219,Racquetball Courts 9-16,1,80,0,kvijay
+2026-10-11T12:34:44,7293,Fitness Pavilion,12,70,0,kvijay
+2026-10-11T12:34:45,5979,Feature Gym,0,50,0,kvijay
+2026-10-11T12:34:45,5981,Fitness Loft,3,55,0,kvijay
+2026-10-11T12:34:46,5960,B&G Gym 1-3,7,100,0,kvijay
+2026-10-11T12:34:47,5961,B&G Gym 4-6,1,100,0,kvijay
+2026-10-11T12:34:47,5993,Scifres,7,80,0,kvijay
+2026-10-11T12:34:48,5969,Bouldering Wall,12,26,0,kvijay
+2026-10-11T12:34:49,11620,East Fitness,13,208,0,kvijay
+2026-10-11T12:34:49,11623,Kilter Board Wall,1,20,0,kvijay
+2026-10-11T12:34:50,5990,Olympic Lifting Room,1,16,0,kvijay
+2026-10-11T12:34:51,5991,Racquetball Courts 2-3,3,20,0,kvijay
+2026-10-11T12:34:51,11610,Climbing Cave,2,15,0,kvijay
+2026-10-11T12:34:52,6142,Combative Arts Room,1,11,0,kvijay
+2026-10-11T12:34:53,6131,MP3,0,20,0,kvijay
+2026-10-11T12:34:53,6132,MP4,0,26,0,kvijay
+2026-10-11T12:34:54,11621,APGL,2,30,0,kvijay
+2026-10-11T12:34:55,5985,Lower Gym,37,282,0,kvijay
+2026-10-11T12:34:55,7290,Colby Fitness,45,380,0,kvijay
+2026-10-11T12:34:56,9552,Outdoor Tennis,0,50,0,kvijay
+2026-10-11T12:34:57,9553,Outdoor Pickleball,2,50,0,kvijay
+2026-10-11T13:17:06,5978,Faculty/Staff Workout Area,0,25,0,gymscrape
+2026-10-11T13:17:07,5996,Upper Gym,7,100,0,gymscrape
+2026-10-11T13:17:07,6129,Upper Track (4th Floor),0,10,0,gymscrape
+2026-10-11T13:17:08,7451,MP6,1,45,0,gymscrape
+2026-10-11T13:17:09,7452,MP7,0,45,0,gymscrape
+2026-10-11T13:17:10,5995,Upper Fitness,4,46,0,gymscrape
+2026-10-11T13:17:10,6130,MAC Court,5,100,0,gymscrape
+2026-10-11T13:17:11,6157,East Mezzanine (3rd Floor),0,15,0,gymscrape
+2026-10-11T13:17:12,5984,Atrium Track (3rd Floor),1,50,0,gymscrape
+2026-10-11T13:17:12,6158,West Mezzanine (3rd Floor),3,25,0,gymscrape
+2026-10-11T13:17:13,5988,Mindfulness Room,0,20,0,gymscrape
+2026-10-11T13:17:14,6143,MP5,4,106,0,gymscrape
+2026-10-11T13:17:14,10219,Racquetball Courts 9-16,4,80,0,gymscrape
+2026-10-11T13:17:15,7293,Fitness Pavilion,6,70,0,gymscrape
+2026-10-11T13:17:16,5979,Feature Gym,1,50,0,gymscrape
+2026-10-11T13:17:16,5981,Fitness Loft,5,55,0,gymscrape
+2026-10-11T13:17:17,5960,B&G Gym 1-3,6,100,0,gymscrape
+2026-10-11T13:17:18,5961,B&G Gym 4-6,2,100,0,gymscrape
+2026-10-11T13:17:18,5993,Scifres,6,80,0,gymscrape
+2026-10-11T13:17:19,7459,MP2,0,100,0,gymscrape
+2026-10-11T13:17:20,5969,Bouldering Wall,10,26,0,gymscrape
+2026-10-11T13:17:20,5972,Climbing Wall,6,18,0,gymscrape
+2026-10-11T13:17:21,11623,Kilter Board Wall,1,20,0,gymscrape
+2026-10-11T13:17:22,5990,Olympic Lifting Room,0,16,0,gymscrape
+2026-10-11T13:17:22,11620,East Fitness,8,208,0,gymscrape
+2026-10-11T13:17:23,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-11T13:17:24,6142,Combative Arts Room,0,11,0,gymscrape
+2026-10-11T13:17:24,11610,Climbing Cave,0,15,0,gymscrape
+2026-10-11T13:17:25,6131,MP3,0,20,0,gymscrape
+2026-10-11T13:17:26,6132,MP4,0,26,0,gymscrape
+2026-10-11T13:17:26,11621,APGL,4,30,0,gymscrape
+2026-10-11T13:17:27,7290,Colby Fitness,42,380,0,gymscrape
+2026-10-11T13:17:28,5985,Lower Gym,35,282,0,gymscrape
+2026-10-11T13:17:28,9552,Outdoor Tennis,0,50,0,gymscrape
+2026-10-11T13:17:29,9553,Outdoor Pickleball,5,50,0,gymscrape
+2026-10-11T16:02:18,5978,Faculty/Staff Workout Area,0,25,0,kvijay
+2026-10-11T16:02:19,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-11T16:02:20,5996,Upper Gym,17,100,0,kvijay
+2026-10-11T16:02:21,7451,MP6,2,45,0,kvijay
+2026-10-11T16:02:21,7452,MP7,0,45,0,kvijay
+2026-10-11T16:02:22,5995,Upper Fitness,6,46,0,kvijay
+2026-10-11T16:02:23,6130,MAC Court,17,100,0,kvijay
+2026-10-11T16:02:24,5984,Atrium Track (3rd Floor),0,50,0,kvijay
+2026-10-11T16:02:24,6157,East Mezzanine (3rd Floor),0,15,0,kvijay
+2026-10-11T16:02:25,6158,West Mezzanine (3rd Floor),0,25,0,kvijay
+2026-10-11T16:02:26,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-11T16:02:26,10219,Racquetball Courts 9-16,0,80,0,kvijay
+2026-10-11T16:02:27,6143,MP5,0,106,0,kvijay
+2026-10-11T16:02:28,5981,Fitness Loft,6,55,0,kvijay
+2026-10-11T16:02:28,7293,Fitness Pavilion,13,70,0,kvijay
+2026-10-11T16:02:29,5979,Feature Gym,12,50,0,kvijay
+2026-10-11T16:02:30,5960,B&G Gym 1-3,25,100,0,kvijay
+2026-10-11T16:02:31,5961,B&G Gym 4-6,17,100,0,kvijay
+2026-10-11T16:02:31,5993,Scifres,11,80,0,kvijay
+2026-10-11T16:02:32,7459,MP2,0,100,0,kvijay
+2026-10-11T16:02:33,5972,Climbing Wall,2,18,0,kvijay
+2026-10-11T16:02:34,5969,Bouldering Wall,12,26,0,kvijay
+2026-10-11T16:02:34,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-11T16:02:35,11620,East Fitness,7,208,0,kvijay
+2026-10-11T16:02:36,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-11T16:02:37,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-11T16:02:37,11610,Climbing Cave,1,15,0,kvijay
+2026-10-11T16:02:38,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-11T16:02:39,6131,MP3,2,20,0,kvijay
+2026-10-11T16:02:39,6132,MP4,1,26,0,kvijay
+2026-10-11T16:02:40,11621,APGL,6,30,0,kvijay
+2026-10-11T16:02:41,7290,Colby Fitness,58,380,0,kvijay
+2026-10-11T16:02:42,5985,Lower Gym,45,282,0,kvijay
+2026-10-11T16:02:42,9552,Outdoor Tennis,2,50,0,kvijay
+2026-10-11T16:02:43,9553,Outdoor Pickleball,39,50,0,kvijay
+2026-10-12T06:07:20,5972,Climbing Wall,0,18,1,kvijay
+2026-10-12T06:07:27,11621,APGL,0,30,1,kvijay
+2026-10-12T11:30:51,5978,Faculty/Staff Workout Area,1,25,0,kvijay
+2026-10-12T11:30:52,6129,Upper Track (4th Floor),0,10,0,kvijay
+2026-10-12T11:30:53,5996,Upper Gym,1,100,0,kvijay
+2026-10-12T11:30:53,7451,MP6,2,45,0,kvijay
+2026-10-12T11:30:54,7452,MP7,1,45,0,kvijay
+2026-10-12T11:30:55,5995,Upper Fitness,7,46,0,kvijay
+2026-10-12T11:30:56,6130,MAC Court,17,100,0,kvijay
+2026-10-12T11:30:57,6157,East Mezzanine (3rd Floor),1,15,0,kvijay
+2026-10-12T11:30:58,5984,Atrium Track (3rd Floor),2,50,0,kvijay
+2026-10-12T11:30:58,6158,West Mezzanine (3rd Floor),3,25,0,kvijay
+2026-10-12T11:30:59,5988,Mindfulness Room,0,20,0,kvijay
+2026-10-12T11:31:00,6143,MP5,0,106,0,kvijay
+2026-10-12T11:31:00,10219,Racquetball Courts 9-16,0,80,0,kvijay
+2026-10-12T11:31:01,5981,Fitness Loft,6,55,0,kvijay
+2026-10-12T11:31:01,7293,Fitness Pavilion,7,70,0,kvijay
+2026-10-12T11:31:02,5979,Feature Gym,2,50,0,kvijay
+2026-10-12T11:31:03,5960,B&G Gym 1-3,2,100,0,kvijay
+2026-10-12T11:31:04,5961,B&G Gym 4-6,1,100,0,kvijay
+2026-10-12T11:31:04,5993,Scifres,12,80,0,kvijay
+2026-10-12T11:31:05,7459,MP2,0,100,0,kvijay
+2026-10-12T11:31:06,5969,Bouldering Wall,3,26,0,kvijay
+2026-10-12T11:31:06,11623,Kilter Board Wall,0,20,0,kvijay
+2026-10-12T11:31:07,11620,East Fitness,11,208,0,kvijay
+2026-10-12T11:31:08,5990,Olympic Lifting Room,0,16,0,kvijay
+2026-10-12T11:31:08,5991,Racquetball Courts 2-3,0,20,0,kvijay
+2026-10-12T11:31:09,11610,Climbing Cave,0,15,0,kvijay
+2026-10-12T11:31:10,6131,MP3,0,20,0,kvijay
+2026-10-12T11:31:10,6142,Combative Arts Room,0,11,0,kvijay
+2026-10-12T11:31:11,6132,MP4,1,26,0,kvijay
+2026-10-12T11:31:12,5985,Lower Gym,31,282,0,kvijay
+2026-10-12T11:31:12,7290,Colby Fitness,37,380,0,kvijay
+2026-10-12T11:31:13,9552,Outdoor Tennis,0,50,0,kvijay
+2026-10-12T11:31:14,9553,Outdoor Pickleball,4,50,0,kvijay
+2026-10-12T13:48:53,5978,Faculty/Staff Workout Area,1,25,0,gymscrape
+2026-10-12T13:48:54,5996,Upper Gym,2,100,0,gymscrape
+2026-10-12T13:48:54,6129,Upper Track (4th Floor),0,10,0,gymscrape
+2026-10-12T13:48:56,7451,MP6,0,45,0,gymscrape
+2026-10-12T13:48:57,5995,Upper Fitness,7,46,0,gymscrape
+2026-10-12T13:48:57,7452,MP7,0,45,0,gymscrape
+2026-10-12T13:48:58,6130,MAC Court,16,100,0,gymscrape
+2026-10-12T13:48:59,5984,Atrium Track (3rd Floor),1,50,0,gymscrape
+2026-10-12T13:48:59,6157,East Mezzanine (3rd Floor),1,15,0,gymscrape
+2026-10-12T13:49:00,6158,West Mezzanine (3rd Floor),3,25,0,gymscrape
+2026-10-12T13:49:01,5988,Mindfulness Room,2,20,0,gymscrape
+2026-10-12T13:49:02,6143,MP5,0,106,0,gymscrape
+2026-10-12T13:49:02,10219,Racquetball Courts 9-16,0,80,0,gymscrape
+2026-10-12T13:49:03,7293,Fitness Pavilion,16,70,0,gymscrape
+2026-10-12T13:49:04,5979,Feature Gym,9,50,0,gymscrape
+2026-10-12T13:49:04,5981,Fitness Loft,2,55,0,gymscrape
+2026-10-12T13:49:05,5960,B&G Gym 1-3,5,100,0,gymscrape
+2026-10-12T13:49:06,5961,B&G Gym 4-6,6,100,0,gymscrape
+2026-10-12T13:49:07,5993,Scifres,12,80,0,gymscrape
+2026-10-12T13:49:07,7459,MP2,0,100,0,gymscrape
+2026-10-12T13:49:08,5969,Bouldering Wall,10,26,0,gymscrape
+2026-10-12T13:49:09,11623,Kilter Board Wall,0,20,0,gymscrape
+2026-10-12T13:49:10,11620,East Fitness,16,208,0,gymscrape
+2026-10-12T13:49:11,5990,Olympic Lifting Room,0,16,0,gymscrape
+2026-10-12T13:49:11,5991,Racquetball Courts 2-3,0,20,0,gymscrape
+2026-10-12T13:49:12,11610,Climbing Cave,1,15,0,gymscrape
+2026-10-12T13:49:13,6142,Combative Arts Room,0,11,0,gymscrape
+2026-10-12T13:49:14,6131,MP3,1,20,0,gymscrape
+2026-10-12T13:49:14,6132,MP4,0,26,0,gymscrape
+2026-10-12T13:49:15,7290,Colby Fitness,59,380,0,gymscrape
+2026-10-12T13:49:16,5985,Lower Gym,31,282,0,gymscrape
+2026-10-12T13:49:17,9552,Outdoor Tennis,5,50,0,gymscrape
+2026-10-12T13:49:17,9553,Outdoor Pickleball,12,50,0,gymscrape
+2026-10-12T15:47:35,5978,Faculty/Staff Workout Area,2,25,0,live
+2026-10-12T15:47:36,6129,Upper Track (4th Floor),0,10,0,live
+2026-10-12T15:47:37,5996,Upper Gym,11,100,0,live
+2026-10-12T15:47:38,7451,MP6,0,45,0,live
+2026-10-12T15:47:39,7452,MP7,1,45,0,live
+2026-10-12T15:47:40,5995,Upper Fitness,5,46,0,live
+2026-10-12T15:47:40,6130,MAC Court,28,100,0,live
+2026-10-12T15:47:41,6157,East Mezzanine (3rd Floor),2,15,0,live
+2026-10-12T15:47:42,5984,Atrium Track (3rd Floor),1,50,0,live
+2026-10-12T15:47:43,6158,West Mezzanine (3rd Floor),4,25,0,live
+2026-10-12T15:47:44,5988,Mindfulness Room,0,20,0,live
+2026-10-12T15:47:45,6143,MP5,8,106,0,live
+2026-10-12T15:47:45,10219,Racquetball Courts 9-16,3,80,0,live
+2026-10-12T15:47:47,7293,Fitness Pavilion,16,70,0,live
+2026-10-12T15:47:48,5981,Fitness Loft,7,55,0,live
+2026-10-12T15:47:49,5979,Feature Gym,6,50,0,live
+2026-10-12T15:47:50,5960,B&G Gym 1-3,11,100,0,live
+2026-10-12T15:47:51,5961,B&G Gym 4-6,24,100,0,live
+2026-10-12T15:47:52,5993,Scifres,18,80,0,live
+2026-10-12T15:47:53,7459,MP2,0,100,0,live
+2026-10-12T15:47:54,5969,Bouldering Wall,18,26,0,live
+2026-10-12T15:47:55,11620,East Fitness,22,208,0,live
+2026-10-12T15:47:55,11623,Kilter Board Wall,3,20,0,live
+2026-10-12T15:47:56,5990,Olympic Lifting Room,0,16,0,live
+2026-10-12T15:47:57,5991,Racquetball Courts 2-3,0,20,0,live
+2026-10-12T15:47:58,6142,Combative Arts Room,2,11,0,live
+2026-10-12T15:47:58,11610,Climbing Cave,2,15,0,live
+2026-10-12T15:47:59,6131,MP3,2,20,0,live
+2026-10-12T15:48:02,6132,MP4,0,26,0,live
+2026-10-12T15:48:03,7290,Colby Fitness,96,380,0,live
+2026-10-12T15:48:04,5985,Lower Gym,64,282,0,live
+2026-10-12T15:48:04,9552,Outdoor Tennis,2,50,0,live
+2026-10-12T15:48:05,9553,Outdoor Pickleball,14,50,0,live
