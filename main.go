@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"regexp"
 	"sort"
 	"strconv"
 	"strings"
@@ -298,40 +299,78 @@ func querySamples(db *sql.DB, areas []string, from, to string) ([]sample, error)
 }
 
 // History only changes once per poll, so computed responses are reused for one poll interval.
-// ponytail: unbounded map keyed by URL; fine for a few dozen areas, ranges and hours.
-var responseCache sync.Map
+// The cache is keyed only on validated parameters and wiped when it gets large, so junk URLs cannot grow it.
+var (
+	cacheLock     sync.Mutex
+	responseCache = map[string]cachedResponse{}
+)
+
+const maxCacheEntries = 2000
 
 type cachedResponse struct {
 	value any
 	built time.Time
 }
 
-func writeCached(writer http.ResponseWriter, request *http.Request, build func() (any, error)) {
-	key := request.URL.String()
-	if cached, ok := responseCache.Load(key); ok && time.Since(cached.(cachedResponse).built) < pollInterval {
-		writeJSON(writer, cached.(cachedResponse).value)
+var datePattern = regexp.MustCompile(`^\d{4}-\d{2}-\d{2}$`)
+
+type params struct {
+	areas    []string
+	from, to string
+}
+
+// parseParams accepts at most 5 areas and ISO dates; anything else is a 400.
+func parseParams(query url.Values) (params, error) {
+	result := params{areas: query["area"], from: "0000", to: "9999"}
+	if len(result.areas) > 5 {
+		return result, fmt.Errorf("too many areas")
+	}
+	for _, area := range result.areas {
+		if len(area) > 64 {
+			return result, fmt.Errorf("area name too long")
+		}
+	}
+	if from := query.Get("from"); from != "" {
+		if !datePattern.MatchString(from) {
+			return result, fmt.Errorf("from must be YYYY-MM-DD")
+		}
+		result.from = from
+	}
+	if to := query.Get("to"); to != "" {
+		if !datePattern.MatchString(to) {
+			return result, fmt.Errorf("to must be YYYY-MM-DD")
+		}
+		result.to = to + "T99"
+	}
+	return result, nil
+}
+
+func writeCached(writer http.ResponseWriter, key string, build func() (any, error)) {
+	cacheLock.Lock()
+	cached, ok := responseCache[key]
+	cacheLock.Unlock()
+	if ok && time.Since(cached.built) < pollInterval {
+		writeJSON(writer, cached.value)
 		return
 	}
 	value, err := build()
 	if err != nil {
-		http.Error(writer, err.Error(), 500)
+		serverError(writer, err)
 		return
 	}
-	responseCache.Store(key, cachedResponse{value, time.Now()})
+	cacheLock.Lock()
+	if len(responseCache) >= maxCacheEntries {
+		responseCache = map[string]cachedResponse{}
+	}
+	responseCache[key] = cachedResponse{value, time.Now()}
+	cacheLock.Unlock()
 	writeJSON(writer, value)
 }
 
-func dateRange(query url.Values) (string, string) {
-	from, to := query.Get("from"), query.Get("to")
-	if from == "" {
-		from = "0000"
-	}
-	if to == "" {
-		to = "9999"
-	} else {
-		to += "T99"
-	}
-	return from, to
+// serverError logs the detail and sends the client nothing internal.
+func serverError(writer http.ResponseWriter, err error) {
+	log.Printf("request failed: %v", err)
+	http.Error(writer, "internal error", http.StatusInternalServerError)
 }
 
 func writeJSON(writer http.ResponseWriter, value any) {
@@ -341,21 +380,22 @@ func writeJSON(writer http.ResponseWriter, value any) {
 }
 
 func serve(db *sql.DB, address string) {
-	http.HandleFunc("GET /{$}", func(writer http.ResponseWriter, request *http.Request) {
+	mux := http.NewServeMux()
+	mux.HandleFunc("GET /{$}", func(writer http.ResponseWriter, request *http.Request) {
 		writer.Header().Set("Content-Type", "text/html; charset=utf-8")
 		writer.Write(indexHTML)
 	})
 
-	http.HandleFunc("GET /api/semesters", func(writer http.ResponseWriter, request *http.Request) {
+	mux.HandleFunc("GET /api/semesters", func(writer http.ResponseWriter, request *http.Request) {
 		writeJSON(writer, semesters)
 	})
 
-	http.HandleFunc("GET /api/live", func(writer http.ResponseWriter, request *http.Request) {
+	mux.HandleFunc("GET /api/live", func(writer http.ResponseWriter, request *http.Request) {
 		rows, err := db.Query(`SELECT l.name, r.count, r.capacity, r.closed, r.ts FROM locations l
 			JOIN readings r ON r.location_id = l.id AND r.ts = (SELECT max(ts) FROM readings WHERE location_id = l.id)
 			WHERE r.ts > ? ORDER BY l.name`, time.Now().AddDate(0, 0, -4).Format("2006-01-02"))
 		if err != nil {
-			http.Error(writer, err.Error(), 500)
+			serverError(writer, err)
 			return
 		}
 		defer rows.Close()
@@ -376,44 +416,31 @@ func serve(db *sql.DB, address string) {
 		json.NewEncoder(writer).Encode(areas)
 	})
 
-	http.HandleFunc("GET /api/areas", func(writer http.ResponseWriter, request *http.Request) {
-		rows, err := db.Query(`SELECT name FROM locations GROUP BY name ORDER BY name`)
+	// /api/heatmap?area=Lower%20Gym&area=Upper%20Gym&from=2026-08-24&to=2026-12-12; no area means the whole building.
+	mux.HandleFunc("GET /api/heatmap", func(writer http.ResponseWriter, request *http.Request) {
+		parsed, err := parseParams(request.URL.Query())
 		if err != nil {
-			http.Error(writer, err.Error(), 500)
+			http.Error(writer, err.Error(), http.StatusBadRequest)
 			return
 		}
-		defer rows.Close()
-		names := []string{}
-		for rows.Next() {
-			var name string
-			rows.Scan(&name)
-			names = append(names, name)
-		}
-		writeJSON(writer, names)
-	})
-
-	// /api/heatmap?area=Lower%20Gym&area=Upper%20Gym&from=2026-08-24&to=2026-12-12; no area means the whole building.
-	http.HandleFunc("GET /api/heatmap", func(writer http.ResponseWriter, request *http.Request) {
-		writeCached(writer, request, func() (any, error) {
-			from, to := dateRange(request.URL.Query())
-			samples, err := querySamples(db, request.URL.Query()["area"], from, to)
+		key := fmt.Sprintf("heatmap|%q|%s|%s", parsed.areas, parsed.from, parsed.to)
+		writeCached(writer, key, func() (any, error) {
+			samples, err := querySamples(db, parsed.areas, parsed.from, parsed.to)
 			return heatmap(samples), err
 		})
 	})
 
 	// /api/day?day=1: every area's typical 24 hours for one weekday, keyed by area name.
-	http.HandleFunc("GET /api/day", func(writer http.ResponseWriter, request *http.Request) {
-		writeCached(writer, request, func() (any, error) {
-			query := request.URL.Query()
-			weekday, err := strconv.Atoi(query.Get("day"))
-			if err != nil || weekday < 0 || weekday > 6 {
-				return nil, fmt.Errorf("day must be 0-6")
-			}
-			from, to := dateRange(query)
+	mux.HandleFunc("GET /api/day", func(writer http.ResponseWriter, request *http.Request) {
+		weekday, err := strconv.Atoi(request.URL.Query().Get("day"))
+		if err != nil || weekday < 0 || weekday > 6 {
+			http.Error(writer, "day must be 0-6", http.StatusBadRequest)
+			return
+		}
+		writeCached(writer, fmt.Sprintf("day|%d", weekday), func() (any, error) {
 			rows, err := db.Query(`SELECT l.name, r.location_id, r.ts, r.count, r.capacity FROM readings r
 				JOIN locations l ON l.id = r.location_id
-				WHERE r.closed = 0 AND r.ts >= ? AND r.ts <= ? AND strftime('%w', substr(r.ts, 1, 10)) = ?`,
-				from, to, strconv.Itoa(weekday))
+				WHERE r.closed = 0 AND strftime('%w', substr(r.ts, 1, 10)) = ?`, strconv.Itoa(weekday))
 			if err != nil {
 				return nil, err
 			}
@@ -436,11 +463,16 @@ func serve(db *sql.DB, address string) {
 	})
 
 	// /api/today?area=...: hourly totals so far for the current campus date, indexed by hour.
-	http.HandleFunc("GET /api/today", func(writer http.ResponseWriter, request *http.Request) {
-		today := time.Now().In(campus).Format("2006-01-02")
-		samples, err := querySamples(db, request.URL.Query()["area"], today, today+"T99")
+	mux.HandleFunc("GET /api/today", func(writer http.ResponseWriter, request *http.Request) {
+		parsed, err := parseParams(request.URL.Query())
 		if err != nil {
-			http.Error(writer, err.Error(), 500)
+			http.Error(writer, err.Error(), http.StatusBadRequest)
+			return
+		}
+		today := time.Now().In(campus).Format("2006-01-02")
+		samples, err := querySamples(db, parsed.areas, today, today+"T99")
+		if err != nil {
+			serverError(writer, err)
 			return
 		}
 		var hours [24]*float64
@@ -453,8 +485,29 @@ func serve(db *sql.DB, address string) {
 		json.NewEncoder(writer).Encode(map[string]any{"date": today, "hours": hours})
 	})
 
+	server := &http.Server{
+		Addr:              address,
+		Handler:           securityHeaders(mux),
+		ReadHeaderTimeout: 5 * time.Second,
+		ReadTimeout:       10 * time.Second,
+		WriteTimeout:      30 * time.Second,
+		IdleTimeout:       60 * time.Second,
+		MaxHeaderBytes:    16 << 10,
+	}
 	log.Printf("listening on %s", address)
-	log.Fatal(http.ListenAndServe(address, nil))
+	log.Fatal(server.ListenAndServe())
+}
+
+func securityHeaders(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		header := writer.Header()
+		header.Set("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline'; "+
+			"style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; "+
+			"img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'")
+		header.Set("X-Content-Type-Options", "nosniff")
+		header.Set("Referrer-Policy", "no-referrer")
+		next.ServeHTTP(writer, request)
+	})
 }
 
 func main() {

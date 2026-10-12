@@ -1,6 +1,10 @@
 package main
 
-import "testing"
+import (
+	"net/url"
+	"strings"
+	"testing"
+)
 
 func TestHeatmap(t *testing.T) {
 	grid := heatmap([]sample{
@@ -19,5 +23,22 @@ func TestHeatmap(t *testing.T) {
 	}
 	if grid[2][17] != nil {
 		t.Fatal("tuesday should be empty")
+	}
+}
+
+func TestParseParams(t *testing.T) {
+	good := url.Values{"area": {"Lower Gym"}, "from": {"2026-08-24"}, "to": {"2026-12-12"}}
+	if parsed, err := parseParams(good); err != nil || parsed.to != "2026-12-12T99" {
+		t.Fatalf("got %+v, %v", parsed, err)
+	}
+	for _, bad := range []url.Values{
+		{"from": {"2026-08-24' OR 1=1"}},
+		{"to": {"9999"}},
+		{"area": {"a", "b", "c", "d", "e", "f"}},
+		{"area": {strings.Repeat("x", 65)}},
+	} {
+		if _, err := parseParams(bad); err == nil {
+			t.Fatalf("accepted %v", bad)
+		}
 	}
 }

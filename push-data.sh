@@ -3,6 +3,6 @@
 set -eu
 cd "$HOME/PurdueGymData"
 git pull -q --rebase
-DB_PATH="$HOME/corec-tracker/corec.db" "$HOME/corec-tracker/corec-tracker" export data
+DB_PATH="$HOME/corec-tracker/data/corec.db" "$HOME/corec-tracker/corec-tracker" export data
 git add data
 git diff --cached --quiet || { git commit -qm "Data through $(date -u +%F)"; git push -q; }
