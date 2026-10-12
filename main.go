@@ -7,8 +7,10 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"net/url"
 	"os"
 	"sort"
+	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -295,13 +297,41 @@ func querySamples(db *sql.DB, areas []string, from, to string) ([]sample, error)
 	return samples, rows.Err()
 }
 
-// History only changes once per poll, so grids are reused for one poll interval.
-// ponytail: unbounded map keyed by query string; fine for a handful of areas and ranges.
-var heatmapCache sync.Map
+// History only changes once per poll, so computed responses are reused for one poll interval.
+// ponytail: unbounded map keyed by URL; fine for a few dozen areas, ranges and hours.
+var responseCache sync.Map
 
-type cachedGrid struct {
-	grid  [7][24]*cell
+type cachedResponse struct {
+	value any
 	built time.Time
+}
+
+func writeCached(writer http.ResponseWriter, request *http.Request, build func() (any, error)) {
+	key := request.URL.String()
+	if cached, ok := responseCache.Load(key); ok && time.Since(cached.(cachedResponse).built) < pollInterval {
+		writeJSON(writer, cached.(cachedResponse).value)
+		return
+	}
+	value, err := build()
+	if err != nil {
+		http.Error(writer, err.Error(), 500)
+		return
+	}
+	responseCache.Store(key, cachedResponse{value, time.Now()})
+	writeJSON(writer, value)
+}
+
+func dateRange(query url.Values) (string, string) {
+	from, to := query.Get("from"), query.Get("to")
+	if from == "" {
+		from = "0000"
+	}
+	if to == "" {
+		to = "9999"
+	} else {
+		to += "T99"
+	}
+	return from, to
 }
 
 func writeJSON(writer http.ResponseWriter, value any) {
@@ -364,29 +394,48 @@ func serve(db *sql.DB, address string) {
 
 	// /api/heatmap?area=Lower%20Gym&area=Upper%20Gym&from=2026-08-24&to=2026-12-12; no area means the whole building.
 	http.HandleFunc("GET /api/heatmap", func(writer http.ResponseWriter, request *http.Request) {
-		query := request.URL.Query()
-		from, to := query.Get("from"), query.Get("to")
-		if from == "" {
-			from = "0000"
-		}
-		if to == "" {
-			to = "9999"
-		} else {
-			to += "T99"
-		}
-		key := request.URL.RawQuery
-		if cached, ok := heatmapCache.Load(key); ok && time.Since(cached.(cachedGrid).built) < pollInterval {
-			writeJSON(writer, cached.(cachedGrid).grid)
-			return
-		}
-		samples, err := querySamples(db, query["area"], from, to)
-		if err != nil {
-			http.Error(writer, err.Error(), 500)
-			return
-		}
-		grid := heatmap(samples)
-		heatmapCache.Store(key, cachedGrid{grid, time.Now()})
-		writeJSON(writer, grid)
+		writeCached(writer, request, func() (any, error) {
+			from, to := dateRange(request.URL.Query())
+			samples, err := querySamples(db, request.URL.Query()["area"], from, to)
+			return heatmap(samples), err
+		})
+	})
+
+	// /api/typical?day=1&hour=17: every area's typical cell for one weekday and hour, keyed by area name.
+	http.HandleFunc("GET /api/typical", func(writer http.ResponseWriter, request *http.Request) {
+		writeCached(writer, request, func() (any, error) {
+			query := request.URL.Query()
+			weekday, errDay := strconv.Atoi(query.Get("day"))
+			hour, errHour := strconv.Atoi(query.Get("hour"))
+			if errDay != nil || errHour != nil || weekday < 0 || weekday > 6 || hour < 0 || hour > 23 {
+				return nil, fmt.Errorf("day must be 0-6 and hour 0-23")
+			}
+			from, to := dateRange(query)
+			rows, err := db.Query(`SELECT l.name, r.location_id, r.ts, r.count, r.capacity FROM readings r
+				JOIN locations l ON l.id = r.location_id
+				WHERE r.closed = 0 AND r.ts >= ? AND r.ts <= ? AND substr(r.ts, 12, 2) = ? AND strftime('%w', substr(r.ts, 1, 10)) = ?`,
+				from, to, fmt.Sprintf("%02d", hour), strconv.Itoa(weekday))
+			if err != nil {
+				return nil, err
+			}
+			defer rows.Close()
+			byArea := map[string][]sample{}
+			for rows.Next() {
+				var name string
+				var item sample
+				if err := rows.Scan(&name, &item.locationID, &item.ts, &item.count, &item.capacity); err != nil {
+					return nil, err
+				}
+				byArea[name] = append(byArea[name], item)
+			}
+			typical := map[string]*cell{}
+			for name, samples := range byArea {
+				if found := heatmap(samples)[weekday][hour]; found != nil {
+					typical[name] = found
+				}
+			}
+			return typical, rows.Err()
+		})
 	})
 
 	// /api/today?area=...: hourly totals so far for the current campus date, indexed by hour.

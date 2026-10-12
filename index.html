@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f6f6f4; --surface: #ffffff; --surface-2: #fafaf8; --border: #e3e3df; --border-strong: #cfcfca;
+    --bg: #f6f6f4; --surface: #ffffff; --border: #e3e3df; --border-strong: #cfcfca;
     --ink: #0b0b0b; --ink-2: #4f4f4a; --ink-3: #8a8a84;
     --gold: #a87f00; --gold-fill: #cfb991;
     --typical: #5f5f5f; --band: rgba(95, 95, 95, 0.12); --track: #ececea;
@@ -19,7 +19,7 @@
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #070707; --surface: #101010; --surface-2: #141414; --border: #232323; --border-strong: #333;
+      --bg: #070707; --surface: #101010; --border: #232323; --border-strong: #333;
       --ink: #f4f4f1; --ink-2: #b3b3ad; --ink-3: #75756f;
       --gold: #daaa00; --gold-fill: #cfb991;
       --typical: #9a9a9a; --band: rgba(154, 154, 154, 0.14); --track: #222;
@@ -27,102 +27,96 @@
     }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.5 Inter, system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.45 Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .mono { font-family: var(--mono); font-feature-settings: "tnum"; }
 
   header { border-bottom: 1px solid var(--border); background: var(--surface); }
   header::before { content: ""; display: block; height: 3px; background: var(--gold-fill); }
-  .bar { max-width: 1180px; margin: 0 auto; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
-  .mark { width: 28px; height: 28px; border-radius: 6px; background: var(--ink); color: var(--gold-fill);
-    display: grid; place-items: center; font: 700 12px var(--mono); flex: none; }
+  .bar { max-width: 1180px; margin: 0 auto; padding: 12px 16px; display: flex; align-items: center; gap: 10px; }
+  .mark { width: 26px; height: 26px; border-radius: 6px; background: var(--ink); color: var(--gold-fill);
+    display: grid; place-items: center; font: 700 11px var(--mono); flex: none; }
   .brand { font-weight: 650; letter-spacing: -0.01em; }
-  .brand small { display: block; font-weight: 400; color: var(--ink-3); font-size: 12px; margin-top: -2px; }
   .status { margin-left: auto; display: flex; align-items: center; gap: 8px; border: 1px solid var(--border);
-    border-radius: 999px; padding: 5px 12px; font-size: 12px; color: var(--ink-2); background: var(--surface-2); white-space: nowrap; }
+    border-radius: 999px; padding: 4px 12px; font: 12px var(--mono); color: var(--ink-3); white-space: nowrap; }
+  .status b { color: var(--ink); font-weight: 600; }
   .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-3); }
   .open .dot { background: var(--gold); animation: pulse 2s infinite; }
-  .status b { color: var(--ink); font-weight: 600; letter-spacing: 0.04em; }
   @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(218, 170, 0, .5); } 100% { box-shadow: 0 0 0 8px rgba(218, 170, 0, 0); } }
   @media (prefers-reduced-motion: reduce) { .open .dot { animation: none; } }
 
-  main { max-width: 1180px; margin: 0 auto; padding: 20px 16px 48px; }
-  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 12px; }
+  main { max-width: 1180px; margin: 0 auto; padding: 16px 16px 40px; }
   .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; min-width: 0; }
-  .kpi { padding: 16px 18px; }
   .label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
-  .big { font: 600 34px/1.1 var(--mono); letter-spacing: -0.02em; margin: 8px 0 2px; }
-  .big small { font-size: 14px; color: var(--ink-3); font-weight: 400; letter-spacing: 0; }
-  .hint { color: var(--ink-2); font-size: 13px; }
-  .hint .up { color: var(--gold); font-weight: 600; }
+  :where(button.card) { all: unset; box-sizing: border-box; display: block; cursor: pointer; background: var(--surface);
+    border: 1px solid var(--border); border-radius: 10px; min-width: 0; }
+  button.card:hover { border-color: var(--border-strong); }
+  button.card[aria-pressed=true] { border-color: var(--gold); box-shadow: inset 0 0 0 1px var(--gold); }
+  button.card:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
-  .segments { display: flex; gap: 2px; height: 18px; margin-top: 12px; }
+  .segments { position: relative; display: flex; gap: 2px; height: 8px; }
   .segments i { flex: 1; border-radius: 2px; background: var(--track); }
   .segments i.on { background: var(--gold-fill); }
-  .seg-scale { display: flex; justify-content: space-between; font: 11px var(--mono); color: var(--ink-3); margin-top: 4px; }
+  .segments .usual { position: absolute; top: -3px; bottom: -3px; width: 2px; margin-left: -1px; background: var(--ink); border-radius: 1px; }
 
-  .panel-head { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 12px; padding: 16px 18px 0; }
+  .hero { width: 100%; padding: 18px 20px; display: grid; grid-template-columns: auto auto 1fr; gap: 6px 36px; align-items: end; }
+  .hero .num { font: 600 44px/1 var(--mono); letter-spacing: -0.03em; margin-top: 6px; }
+  .hero .num small { font-size: 16px; color: var(--ink-3); font-weight: 400; letter-spacing: 0; }
+  .hero .usual-num { color: var(--ink-3); }
+  .delta { font: 600 13px var(--mono); color: var(--ink-3); align-self: end; padding-bottom: 6px; }
+  .delta.up { color: var(--gold); }
+  .hero .segments { grid-column: 1 / -1; height: 18px; margin-top: 12px; }
+
+  .section-label { margin: 22px 2px 8px; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
+  .tile { padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+  .tile .name { font-weight: 600; font-size: 13px; }
+  .tile .members { font: 11px var(--mono); color: var(--ink-3); margin-top: -4px; }
+  .tile .count { font: 600 22px/1 var(--mono); letter-spacing: -0.02em; }
+  .tile .count small { font-size: 12px; color: var(--ink-3); font-weight: 400; }
+  .tile .meta { display: flex; justify-content: space-between; font: 11px var(--mono); color: var(--ink-3); }
+  .tile .meta .up { color: var(--gold); }
+  .tile.closed .name, .tile.closed .count { color: var(--ink-3); }
+
+  .panel-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 14px 18px 0; }
   .panel-head h2 { font-size: 15px; margin: 0; font-weight: 600; }
-  .panel-head p { margin: 2px 0 0; color: var(--ink-3); font-size: 13px; }
   .controls { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; }
   select { font: 500 13px Inter, sans-serif; color: var(--ink); background-color: var(--surface); border: 1px solid var(--border-strong);
-    border-radius: 7px; padding: 6px 28px 6px 10px; appearance: none; cursor: pointer; max-width: 100%;
+    border-radius: 7px; padding: 5px 26px 5px 10px; appearance: none; cursor: pointer; max-width: 100%;
     background-image: linear-gradient(45deg, transparent 50%, var(--ink-3) 50%), linear-gradient(135deg, var(--ink-3) 50%, transparent 50%);
-    background-position: calc(100% - 14px) 52%, calc(100% - 10px) 52%; background-size: 4px 4px; background-repeat: no-repeat; }
-  select:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
-
-  .tabs { display: flex; border-bottom: 1px solid var(--border); margin: 14px 0 0; padding: 0 18px; overflow-x: auto; scrollbar-width: none; }
-  .tabs button { all: unset; cursor: pointer; padding: 10px 14px 9px; font-weight: 500; color: var(--ink-3); white-space: nowrap;
-    border-bottom: 2px solid transparent; margin-bottom: -1px; }
-  .tabs button small { display: block; font: 11px var(--mono); color: var(--ink-3); }
-  .tabs button[aria-selected=true] { color: var(--ink); border-bottom-color: var(--gold); }
-  .tabs button:hover { color: var(--ink); }
-
-  .chart-wrap { padding: 14px 18px 6px; }
-  .legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 12px; color: var(--ink-2); margin-bottom: 8px; }
+    background-position: calc(100% - 13px) 52%, calc(100% - 9px) 52%; background-size: 4px 4px; background-repeat: no-repeat; }
+  select:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+  .legend { display: flex; gap: 14px; font-size: 12px; color: var(--ink-2); padding: 10px 18px 0; }
   .legend span { display: inline-flex; align-items: center; gap: 6px; }
-  .key-line { width: 18px; border-top: 2px solid var(--gold); }
-  .key-dash { width: 18px; border-top: 2px dashed var(--typical); }
-  .key-band { width: 14px; height: 10px; background: var(--band); border-radius: 2px; }
+  .key-line { width: 16px; border-top: 2px solid var(--gold); }
+  .key-ghost { width: 16px; height: 10px; background: var(--band); border-top: 2px dashed var(--typical); }
   svg text { font: 11px var(--mono); fill: var(--ink-3); }
-  #chart { display: block; width: 100%; height: 300px; }
-  .callout { border-top: 1px solid var(--border); padding: 12px 18px; color: var(--ink-2); font-size: 13px; }
-  .callout b { color: var(--ink); }
+  #chart { display: block; width: 100%; height: 300px; padding: 0 0 0; }
+  .chart-wrap { padding: 6px 18px 14px; }
 
-  .two { display: grid; grid-template-columns: 1.6fr 1fr; gap: 12px; margin-top: 12px; }
-  .heat-wrap { padding: 14px 18px 16px; overflow-x: auto; }
-  table.heat { border-collapse: separate; border-spacing: 2px; width: 100%; min-width: 520px; table-layout: fixed; }
+  .two { display: grid; grid-template-columns: 1.7fr 1fr; gap: 8px; margin-top: 8px; }
+  .heat-wrap { padding: 12px 18px 16px; overflow-x: auto; }
+  table.heat { border-collapse: separate; border-spacing: 2px; width: 100%; min-width: 500px; table-layout: fixed; }
   .heat th { font: 400 11px var(--mono); color: var(--ink-3); text-align: left; white-space: nowrap; }
   .heat th[scope=row] { width: 36px; }
-  .heat td { height: 24px; border-radius: 3px; background: var(--track); }
+  .heat td { height: 22px; border-radius: 3px; background: var(--track); }
   .heat td:hover { outline: 1.5px solid var(--ink); outline-offset: -1px; }
-  .ramp-key { display: flex; align-items: center; gap: 8px; font: 11px var(--mono); color: var(--ink-3); margin-top: 10px; }
-  .ramp-key i { width: 120px; height: 8px; border-radius: 2px; background: linear-gradient(90deg, var(--heat-low), var(--heat-high)); }
-
-  .times { list-style: none; margin: 0; padding: 6px 18px 14px; }
-  .times li { display: flex; justify-content: space-between; align-items: baseline; padding: 7px 0; border-top: 1px solid var(--border); font-size: 13px; }
+  .times { list-style: none; margin: 0; padding: 8px 18px 14px; }
+  .times li { display: flex; justify-content: space-between; padding: 7px 0; border-top: 1px solid var(--border); font-size: 13px; }
   .times li:first-child { border-top: 0; }
-  .times .rank { color: var(--ink-3); font: 11px var(--mono); width: 24px; display: inline-block; }
-  .times .v { font: 12px var(--mono); color: var(--ink-2); }
-  .sub-label { padding: 12px 18px 0; }
-
-  .areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0 28px; padding: 8px 18px 14px; }
-  .area { all: unset; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 10px 0;
-    border-top: 1px solid var(--border); }
-  .area:hover .area-name { color: var(--gold); }
-  .area-name { font-weight: 500; }
-  .area-val { font: 12px var(--mono); color: var(--ink-2); text-align: right; }
-  .area .segments { grid-column: 1 / -1; height: 8px; margin-top: 2px; gap: 1.5px; }
-  .area.closed .area-name, .area.closed .area-val { color: var(--ink-3); }
+  .times .v { font: 12px var(--mono); color: var(--ink-3); }
 
   #tip { position: fixed; pointer-events: none; z-index: 10; display: none; background: var(--ink); color: var(--bg);
-    font: 12px/1.5 var(--mono); padding: 8px 10px; border-radius: 6px; white-space: nowrap; }
-  footer { color: var(--ink-3); font-size: 12px; margin-top: 24px; line-height: 1.7; }
-  footer a { color: var(--ink-2); }
+    font: 12px/1.5 var(--mono); padding: 7px 10px; border-radius: 6px; white-space: nowrap; }
+  footer { color: var(--ink-3); font: 11px var(--mono); margin-top: 20px; }
+  footer a { color: var(--ink-3); }
 
-  @media (max-width: 860px) {
-    .kpis, .two { grid-template-columns: 1fr; }
+  @media (max-width: 760px) {
+    .two { grid-template-columns: 1fr; }
+    .hero { grid-template-columns: auto auto; gap: 6px 24px; }
+    .hero .num { font-size: 36px; }
+    .delta { grid-column: 1 / -1; padding: 0; }
+    .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .controls { margin-left: 0; }
-    .status .when { display: none; }
   }
 </style>
 </head>
@@ -130,79 +124,50 @@
 <header>
   <div class="bar">
     <div class="mark" aria-hidden="true">CR</div>
-    <div class="brand">CoRec Pulse<small>Purdue CoRec crowd levels · unofficial</small></div>
-    <div class="status" id="status"><i class="dot"></i><b id="status-text">…</b><span class="when" id="status-when"></span></div>
+    <div class="brand">CoRec Pulse</div>
+    <div class="status" id="status"><i class="dot"></i><b id="status-text">…</b><span id="status-when"></span></div>
   </div>
 </header>
 
 <main>
-  <section class="kpis">
-    <div class="card kpi">
-      <div class="label">In the CoRec now</div>
-      <div class="big" id="now-count">–</div>
-      <div class="hint" id="now-hint">&nbsp;</div>
-      <div class="segments" id="now-segments" aria-hidden="true"></div>
-      <div class="seg-scale"><span id="now-pct">0%</span><span>100%</span></div>
-    </div>
-    <div class="card kpi">
-      <div class="label" id="next-label">In an hour</div>
-      <div class="big" id="next-count">–</div>
-      <div class="hint" id="next-hint">&nbsp;</div>
-    </div>
-    <div class="card kpi">
-      <div class="label">Quietest time left today</div>
-      <div class="big" id="quiet-time">–</div>
-      <div class="hint" id="quiet-hint">&nbsp;</div>
-    </div>
-  </section>
+  <button class="card hero" id="hero" aria-pressed="true">
+    <div><div class="label">Now</div><div class="num" id="now-count">–</div></div>
+    <div><div class="label" id="usual-label">Usually</div><div class="num usual-num" id="usual-count">–</div></div>
+    <div class="delta" id="now-delta"></div>
+    <div class="segments" id="now-segments" aria-hidden="true"></div>
+  </button>
 
-  <section class="card">
+  <div id="sections"></div>
+
+  <section class="card" style="margin-top:22px">
     <div class="panel-head">
-      <div>
-        <h2 id="chart-title">Today vs a typical day</h2>
-        <p>People in the area by hour. Typical is the median across the selected range.</p>
-      </div>
+      <h2 id="chart-title">Whole building</h2>
       <div class="controls">
-        <select id="area-select" aria-label="Any single area"><option value="">Any single area…</option></select>
         <select id="day-select" aria-label="Day of week"></select>
         <select id="range-select" aria-label="Date range"></select>
       </div>
     </div>
-    <div class="tabs" role="tablist" id="tabs"></div>
-    <div class="chart-wrap">
-      <div class="legend" id="legend"></div>
-      <svg id="chart" role="img" aria-label="People by hour chart"></svg>
-    </div>
-    <div class="callout" id="callout">&nbsp;</div>
+    <div class="legend" id="legend"></div>
+    <div class="chart-wrap"><svg id="chart" role="img" aria-label="People by hour"></svg></div>
   </section>
 
   <div class="two">
     <section class="card">
-      <div class="panel-head"><div><h2>Weekly pattern</h2><p id="heat-sub">Median % full by weekday and hour.</p></div></div>
-      <div class="heat-wrap">
-        <table class="heat" id="heat"></table>
-        <div class="ramp-key"><span>0%</span><i></i><span id="ramp-high"></span><span>· blank = closed / no data</span></div>
-      </div>
+      <div class="panel-head"><h2>Week</h2></div>
+      <div class="heat-wrap"><table class="heat" id="heat"></table></div>
     </section>
     <section class="card">
-      <div class="panel-head"><div><h2>Best and worst times</h2><p>For the selected area and range.</p></div></div>
-      <div class="label sub-label">Quietest</div><ul class="times" id="quiet"></ul>
-      <div class="label sub-label">Busiest</div><ul class="times" id="busy"></ul>
+      <div class="panel-head"><h2>Quietest</h2></div>
+      <ul class="times" id="quiet"></ul>
     </section>
   </div>
 
-  <section class="card" style="margin-top:12px">
-    <div class="panel-head"><div><h2>Live by area</h2><p>Current count against capacity. Select an area to chart it.</p></div></div>
-    <div class="areas" id="areas"></div>
-  </section>
-
   <footer>
-    Counts come from RecWell's public facility feed, polled every 10 minutes. History back to Aug 2022 comes from
-    <a href="https://github.com/Jake-Verburgt/corec-usage">Jake-Verburgt/corec-usage</a>,
-    <a href="https://github.com/im-kvijay/corec-tracker">im-kvijay/corec-tracker</a> and
-    <a href="https://github.com/elliottbmiller/gymScrape">elliottbmiller/gymScrape</a> (nothing exists for Jan 2023 to Sep 2024).
-    Data and code: <a href="https://github.com/joeykokinda/PurdueGymData">github.com/joeykokinda/PurdueGymData</a>.
-    Not affiliated with Purdue University.
+    Unofficial · RecWell live feed + history from
+    <a href="https://github.com/Jake-Verburgt/corec-usage">Jake-Verburgt</a>,
+    <a href="https://github.com/im-kvijay/corec-tracker">im-kvijay</a>,
+    <a href="https://github.com/elliottbmiller/gymScrape">elliottbmiller</a> ·
+    <a href="https://github.com/joeykokinda/PurdueGymData">data &amp; code</a>
   </footer>
 </main>
 <div id="tip" role="tooltip"></div>
@@ -211,22 +176,27 @@
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const dayOrder = [1, 2, 3, 4, 5, 6, 0];
 const hourOrder = [...Array(24).keys()].map(hour => (hour + 5) % 24);
-const groups = [
-  { label: "Whole building", areas: [] },
-  { label: "Weights", areas: ["Colby Fitness", "East Fitness", "Upper Fitness", "Fitness Loft", "Fitness Pavilion", "Scifres", "Olympic Lifting Room"] },
-  { label: "Basketball", areas: ["B&G Gym 1-3", "B&G Gym 4-6", "Lower Gym", "Upper Gym", "Feature Gym"] },
-  { label: "Climbing", areas: ["Bouldering Wall", "Climbing Wall", "Kilter Board Wall", "Climbing Cave"] },
-  { label: "Colby Fitness", areas: ["Colby Fitness"] },
-  { label: "Lower Gym", areas: ["Lower Gym"] },
-];
+
+// Tiles in display order. A tile with several areas is shown as their total.
+const sections = [
+  ["Fitness", ["Colby Fitness", "East Fitness", "Upper Fitness", "Fitness Loft", "Fitness Pavilion", "Scifres", "Olympic Lifting Room", "Faculty/Staff Workout Area"]],
+  ["Courts", [{ label: "Basketball", areas: ["Feature Gym", "B&G Gym 1-3", "B&G Gym 4-6"], short: "Feature + B&G 1–6" },
+    "Lower Gym", "Upper Gym", "MAC Court", { label: "Racquetball", areas: ["Racquetball Courts 2-3", "Racquetball Courts 9-16"], short: "Courts 2–3 + 9–16" }]],
+  ["Climbing", ["Bouldering Wall", "Kilter Board Wall", "Climbing Wall", "Climbing Cave"]],
+  ["Studios & rooms", ["MP2", "MP3", "MP4", "MP5", "MP6", "MP7", "Combative Arts Room", "Cycling Studio", "Mindfulness Room", "APGL"]],
+  ["Tracks & mezzanines", ["Upper Track (4th Floor)", "Atrium Track (3rd Floor)", "East Mezzanine (3rd Floor)", "West Mezzanine (3rd Floor)"]],
+  ["Outdoor & other", ["Outdoor Tennis", "Outdoor Pickleball", "TREC"]],
+].map(([title, tiles]) => [title, tiles.map(tile => typeof tile === "string" ? { label: tile, areas: [tile] } : tile)]);
+const building = { label: "Whole building", areas: [] };
+
 const element = id => document.getElementById(id);
 const getJSON = url => fetch(url).then(response => response.json());
 const hourLabel = hour => `${hour % 12 || 12} ${hour < 12 ? "AM" : "PM"}`;
 const shortHour = hour => `${hour % 12 || 12}${hour < 12 ? "a" : "p"}`;
 const fmt = number => Math.round(number).toLocaleString();
 const areaQuery = areas => areas.map(area => "area=" + encodeURIComponent(area)).join("&");
+const escapeHTML = text => text.replace(/[&<>"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[char]);
 
-// Campus clock, regardless of the viewer's timezone.
 function campusNow() {
   const parts = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: "America/Indiana/Indianapolis",
     weekday: "long", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
@@ -235,151 +205,158 @@ function campusNow() {
     iso: `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}` };
 }
 
-const state = { group: groups[0], weekday: campusNow().weekday, range: "|", live: [], grid: null, buildingGrid: null, today: null };
+const state = { tile: building, weekday: campusNow().weekday, range: "|", live: [], typical: {}, buildingGrid: null, grid: null, today: null };
 
-function segmentsHTML(fraction, count) {
+function segmentsHTML(fraction, count, usualFraction) {
   const filled = Math.round(Math.min(1, Math.max(0, fraction)) * count);
-  return Array.from({ length: count }, (_, index) => `<i class="${index < filled ? "on" : ""}"></i>`).join("");
+  let html = Array.from({ length: count }, (_, index) => `<i class="${index < filled ? "on" : ""}"></i>`).join("");
+  if (usualFraction != null) html += `<b class="usual" style="left:${Math.min(100, usualFraction * 100)}%"></b>`;
+  return html;
+}
+
+function liveFor(tile) {
+  const names = new Set(tile.areas);
+  const open = state.live.filter(area => area.fresh && (!names.size || names.has(area.name)));
+  const capacity = state.live.filter(area => !names.size || names.has(area.name)).reduce((sum, area) => sum + area.capacity, 0);
+  return { open: open.length > 0, count: open.reduce((sum, area) => sum + area.count, 0), capacity };
+}
+
+// ponytail: a group's usual is the sum of its members' medians, not the median of their sums.
+function usualFor(tile) {
+  const cells = tile.areas.map(area => state.typical[area]).filter(Boolean);
+  return cells.length ? cells.reduce((sum, cell) => sum + cell.count, 0) : null;
+}
+
+// Percentages on tiny counts are noise, so small areas show the difference in people instead.
+function deltaHTML(count, usual) {
+  if (usual == null) return "";
+  const small = usual < 10;
+  const change = small ? Math.round(count - usual) : Math.round((count / usual - 1) * 100);
+  return `<span class="${change > 0 ? "up" : ""}">${change > 0 ? "▲" : change < 0 ? "▼" : "="} ${Math.abs(change)}${small ? "" : "%"}</span>`;
 }
 
 async function init() {
-  const [semesters, areas] = await Promise.all([getJSON("/api/semesters"), getJSON("/api/areas")]);
+  const semesters = await getJSON("/api/semesters");
   const now = campusNow();
   const today = now.iso.slice(0, 10);
-  // All time is the default: the current semester has too few days for stable curves until it is well underway.
   element("range-select").add(new Option("All time", "|"));
   for (const semester of semesters) {
     const current = semester.start <= today && today <= semester.end;
     element("range-select").add(new Option(semester.name + (current ? " (now)" : ""), `${semester.start}|${semester.end}`));
   }
-  for (const area of areas) element("area-select").add(new Option(area, area));
   for (const index of dayOrder) element("day-select").add(new Option(index === now.weekday ? `${days[index]} (today)` : days[index], index));
 
   const params = new URLSearchParams(location.search);
   if (params.has("range")) state.range = params.get("range");
   if (params.has("day")) state.weekday = +params.get("day");
-  if (params.has("area")) {
-    const names = params.getAll("area");
-    state.group = groups.find(group => group.areas.join() === names.join()) || { label: names[0], areas: names };
-  }
+  if (params.has("tile")) state.tile = sections.flatMap(([, tiles]) => tiles).find(tile => tile.label === params.get("tile")) || building;
   element("range-select").value = state.range;
   element("day-select").value = state.weekday;
 
   element("range-select").onchange = event => { state.range = event.target.value; loadHistory(); };
-  element("day-select").onchange = event => { state.weekday = +event.target.value; renderChart(); syncURL(); };
-  element("area-select").onchange = event => event.target.value && selectGroup({ label: event.target.value, areas: [event.target.value] });
+  element("day-select").onchange = event => { state.weekday = +event.target.value; syncURL(); renderChart(); };
+  element("hero").onclick = () => select(building);
 
-  renderTabs();
   await Promise.all([loadLive(), loadHistory()]);
   setInterval(loadLive, 5 * 60 * 1000);
   addEventListener("resize", renderChart);
 }
 
 function syncURL() {
-  const query = [areaQuery(state.group.areas), "day=" + state.weekday, "range=" + encodeURIComponent(state.range)].filter(Boolean).join("&");
-  history.replaceState(null, "", "?" + query);
+  const params = new URLSearchParams();
+  if (state.tile !== building) params.set("tile", state.tile.label);
+  if (state.weekday !== campusNow().weekday) params.set("day", state.weekday);
+  if (state.range !== "|") params.set("range", state.range);
+  history.replaceState(null, "", params.size ? "?" + params : location.pathname);
 }
 
-function renderTabs() {
-  const tabs = groups.some(group => group.label === state.group.label) ? groups : [...groups, state.group];
-  element("tabs").replaceChildren(...tabs.map(group => {
-    const button = document.createElement("button");
-    button.role = "tab";
-    button.setAttribute("aria-selected", group.label === state.group.label);
-    const live = liveFor(group);
-    button.innerHTML = `<span></span><small>${live.open ? `${fmt(live.count)} now` : "closed"}</small>`;
-    button.firstChild.textContent = group.label;
-    button.onclick = () => selectGroup(group);
-    return button;
-  }));
-  element("area-select").value = state.group.areas.length === 1 ? state.group.areas[0] : "";
-}
-
-function selectGroup(group) {
-  state.group = group;
-  renderTabs();
-  loadArea();
-}
-
-function liveFor(group) {
-  const names = new Set(group.areas);
-  const open = state.live.filter(area => area.fresh && (!names.size || names.has(area.name)));
-  return { open: open.length > 0, count: open.reduce((sum, area) => sum + area.count, 0),
-    capacity: open.reduce((sum, area) => sum + area.capacity, 0) };
+function select(tile) {
+  state.tile = tile;
+  renderLive();
+  loadTile();
+  element("chart-title").scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
 async function loadLive() {
-  const nowMs = Date.parse(campusNow().iso + "Z");
-  state.live = (await getJSON("/api/live")).map(area => ({ ...area,
-    // An area counts as open if it is not flagged closed and has reported within the last 3 hours.
-    fresh: !area.closed && nowMs - Date.parse(area.updated + "Z") < 3 * 3600e3 }));
-  const building = liveFor(groups[0]);
+  const now = campusNow();
+  const nowMs = Date.parse(now.iso + "Z");
+  const [live, typical] = await Promise.all([getJSON("/api/live"), getJSON(`/api/typical?day=${now.weekday}&hour=${now.hour}`)]);
+  // An area counts as open if it is not flagged closed and has reported within the last 3 hours.
+  state.live = live.map(area => ({ ...area, fresh: !area.closed && nowMs - Date.parse(area.updated + "Z") < 3 * 3600e3 }));
+  state.typical = typical;
+  const whole = liveFor(building);
   const newest = state.live.map(area => area.updated).sort().pop();
-  element("status").classList.toggle("open", building.open);
-  element("status-text").textContent = building.open ? "OPEN" : "CLOSED";
+  element("status").classList.toggle("open", whole.open);
+  element("status-text").textContent = whole.open ? "OPEN" : "CLOSED";
   if (newest) {
     const hour = +newest.slice(11, 13);
-    element("status-when").textContent = `updated ${hour % 12 || 12}:${newest.slice(14, 16)} ${hour < 12 ? "AM" : "PM"}`;
+    element("status-when").textContent = `${hour % 12 || 12}:${newest.slice(14, 16)} ${hour < 12 ? "AM" : "PM"}`;
   }
-  renderTabs();
-  renderAreas();
-  renderKPIs();
-  if (state.today) renderChart();
+  renderLive();
+  if (state.today) loadTile();
+}
+
+function renderLive() {
+  const now = campusNow();
+  const whole = liveFor(building);
+  const usual = state.buildingGrid?.[now.weekday][now.hour]?.count;
+  element("hero").setAttribute("aria-pressed", state.tile === building);
+  element("now-count").innerHTML = whole.open ? `${fmt(whole.count)}<small> / ${fmt(whole.capacity)}</small>` : "Closed";
+  element("usual-label").textContent = `Usually · ${days[now.weekday].slice(0, 3)} ${hourLabel(now.hour)}`;
+  element("usual-count").textContent = usual ? fmt(usual) : "–";
+  element("now-delta").innerHTML = whole.open ? deltaHTML(whole.count, usual) : "";
+  element("now-segments").innerHTML = segmentsHTML(whole.capacity ? whole.count / whole.capacity : 0, 50,
+    usual && whole.capacity ? usual / whole.capacity : null);
+
+  const listed = new Set(sections.flatMap(([, tiles]) => tiles.flatMap(tile => tile.areas)));
+  const extra = state.live.filter(area => !listed.has(area.name)).map(area => ({ label: area.name, areas: [area.name] }));
+  const allSections = extra.length ? [...sections, ["Other", extra]] : sections;
+  element("sections").replaceChildren(...allSections.flatMap(([title, tiles]) => {
+    const present = tiles.filter(tile => state.live.some(area => tile.areas.includes(area.name)));
+    if (!present.length) return [];
+    const label = document.createElement("div");
+    label.className = "label section-label";
+    label.textContent = title;
+    const grid = document.createElement("div");
+    grid.className = "tiles";
+    grid.append(...present.map(tile => {
+      const live = liveFor(tile);
+      const usual = usualFor(tile);
+      const button = document.createElement("button");
+      button.className = "card tile" + (live.open ? "" : " closed");
+      button.setAttribute("aria-pressed", state.tile.label === tile.label);
+      const fraction = live.capacity ? live.count / live.capacity : 0;
+      button.innerHTML = `<div class="name">${escapeHTML(tile.label)}</div>` +
+        (tile.short ? `<div class="members">${escapeHTML(tile.short)}</div>` : "") +
+        `<div class="count">${live.open ? `${live.count}<small> / ${live.capacity}</small>` : "Closed"}</div>
+        <div class="segments">${segmentsHTML(live.open ? fraction : 0, 24, usual != null && live.capacity ? usual / live.capacity : null)}</div>
+        <div class="meta"><span>usually ${usual != null ? fmt(usual) : "–"}</span><span>${live.open ? deltaHTML(live.count, usual) : ""}</span></div>`;
+      button.onclick = () => select(tile);
+      return button;
+    }));
+    return [label, grid];
+  }));
 }
 
 async function loadHistory() {
   const [from, to] = state.range.split("|");
   state.buildingGrid = await getJSON(`/api/heatmap?from=${from}&to=${to}`);
-  renderKPIs();
-  await loadArea();
+  renderLive();
+  await loadTile();
 }
 
-async function loadArea() {
+async function loadTile() {
   syncURL();
   const [from, to] = state.range.split("|");
-  const query = areaQuery(state.group.areas);
+  const query = areaQuery(state.tile.areas);
   [state.grid, state.today] = await Promise.all([
     getJSON(`/api/heatmap?${query}&from=${from}&to=${to}`),
     getJSON(`/api/today?${query}`),
   ]);
+  element("chart-title").textContent = state.tile.short ? `${state.tile.label} · ${state.tile.short}` : state.tile.label;
   renderChart();
   renderHeatmap();
   renderTimes();
-}
-
-function renderKPIs() {
-  const building = liveFor(groups[0]);
-  const now = campusNow();
-  element("now-count").innerHTML = building.open ? `${fmt(building.count)} <small>people</small>` : "Closed";
-  element("now-hint").textContent = building.open ? `across open areas · capacity ${fmt(building.capacity)}` : "No area is reporting right now";
-  const fraction = building.capacity ? building.count / building.capacity : 0;
-  element("now-segments").innerHTML = segmentsHTML(fraction, 40);
-  element("now-pct").textContent = `${Math.round(fraction * 100)}%`;
-
-  const grid = state.buildingGrid;
-  if (!grid) return;
-  const row = grid[now.weekday];
-  const nextHour = (now.hour + 1) % 24;
-  element("next-label").textContent = `At ${hourLabel(nextHour)}`;
-  const typicalNow = row[now.hour], typicalNext = row[nextHour];
-  if (!typicalNext) {
-    element("next-count").textContent = "Closed";
-    element("next-hint").textContent = "Usually no one is reporting at that hour";
-  } else {
-    // Scale today's live count by the usual hour-to-hour change; fall back to the typical value.
-    const ratio = typicalNow && typicalNow.count > 0 ? typicalNext.count / typicalNow.count : null;
-    const expected = building.open && ratio ? building.count * ratio : typicalNext.count;
-    const change = ratio ? Math.round((ratio - 1) * 100) : null;
-    element("next-count").innerHTML = `~${fmt(expected)} <small>people</small>`;
-    element("next-hint").innerHTML = change === null ? `Typical ${days[now.weekday]} at ${hourLabel(nextHour)}` :
-      `<span class="${change > 0 ? "up" : ""}">${change > 0 ? "▲" : change < 0 ? "▼" : "■"} ${Math.abs(change)}%</span> ${change > 0 ? "busier" : change < 0 ? "quieter" : "same"} than this hour usually`;
-  }
-
-  const remaining = hourOrder.slice(hourOrder.indexOf(now.hour) + 1).map(hour => ({ hour, cell: row[hour] }))
-    .filter(entry => entry.cell && entry.cell.days >= 2);
-  const quietest = remaining.sort((a, b) => a.cell.pct - b.cell.pct)[0];
-  element("quiet-time").textContent = quietest ? hourLabel(quietest.hour) : "–";
-  element("quiet-hint").textContent = quietest ? `typically ${Math.round(quietest.cell.pct)}% full, ~${fmt(quietest.cell.count)} people` : "Nothing left today";
 }
 
 function pathFrom(points) {
@@ -397,25 +374,17 @@ function renderChart() {
   if (!state.grid) return;
   const svg = element("chart");
   const width = svg.clientWidth, height = 300;
-  const margin = { top: 12, right: 12, bottom: 26, left: 44 };
+  const margin = { top: 14, right: 8, bottom: 24, left: 40 };
   const row = state.grid[state.weekday];
   const now = campusNow();
   const isToday = state.weekday === now.weekday;
   const todayHours = isToday && state.today ? state.today.hours : Array(24).fill(null);
   const hours = hourOrder.filter(hour => row[hour] || todayHours[hour] != null);
-  const label = state.group.label;
   const dayName = days[state.weekday];
+  element("legend").innerHTML = (isToday ? `<span><i class="key-line"></i>Today</span>` : "") + `<span><i class="key-ghost"></i>Typical ${dayName}</span>`;
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  if (!hours.length) { svg.innerHTML = `<text x="${width / 2}" y="${height / 2}" text-anchor="middle">No data</text>`; return; }
 
-  element("chart-title").textContent = `${label}: ${isToday ? "today vs a typical " + dayName : "typical " + dayName}`;
-  element("legend").innerHTML = (isToday ? `<span><i class="key-line"></i>Today</span>` : "") +
-    `<span><i class="key-dash"></i>Typical ${dayName} (median)</span><span><i class="key-band"></i>Middle 50% of ${dayName}s</span>`;
-
-  if (!hours.length) {
-    svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
-    svg.innerHTML = `<text x="${width / 2}" y="${height / 2}" text-anchor="middle">No data for this area and range</text>`;
-    element("callout").innerHTML = "&nbsp;";
-    return;
-  }
   const maxValue = Math.max(1, ...hours.map(hour => Math.max(row[hour]?.high || 0, todayHours[hour] || 0)));
   const step = niceStep(maxValue / 4);
   const yMax = Math.ceil(maxValue / step) * step;
@@ -430,35 +399,32 @@ function renderChart() {
   }
   const labelEvery = width < 520 ? 3 : 2;
   hours.forEach((hour, index) => {
-    if (index % labelEvery === 0) markup += `<text x="${x(index)}" y="${height - 6}" text-anchor="middle">${shortHour(hour)}</text>`;
+    if (index % labelEvery === 0) markup += `<text x="${x(index)}" y="${height - 4}" text-anchor="middle">${shortHour(hour)}</text>`;
   });
 
+  // The ghost: middle 50% band and dashed median of past days, drawn behind today's line.
   const bandTop = [], bandBottom = [], typical = [], today = [];
   hours.forEach((hour, index) => {
     const cell = row[hour];
     typical.push(cell ? [x(index), y(cell.count)] : null);
     if (cell) { bandTop.push([x(index), y(cell.high)]); bandBottom.unshift([x(index), y(cell.low)]); }
-    today.push(todayHours[hour] != null ? [x(index), y(todayHours[hour])] : null);
+    if (todayHours[hour] != null) today.push([x(index), y(todayHours[hour])]);
   });
   if (bandTop.length) markup += `<path d="M${[...bandTop, ...bandBottom].map(point => point.join(",")).join("L")}Z" fill="var(--band)"/>`;
   markup += `<path d="${pathFrom(typical)}" fill="none" stroke="var(--typical)" stroke-width="2" stroke-dasharray="5 4" stroke-linejoin="round"/>`;
   if (isToday) {
-    // Today can skip hours when the feed was slow, so connect across gaps and dot each real reading.
-    const todayPoints = today.filter(Boolean);
-    markup += `<path d="${pathFrom(todayPoints)}" fill="none" stroke="var(--gold)" stroke-width="2.25" stroke-linejoin="round" stroke-linecap="round"/>`;
-    markup += todayPoints.map(point => `<circle cx="${point[0]}" cy="${point[1]}" r="2.5" fill="var(--gold)"/>`).join("");
     const nowIndex = hours.indexOf(now.hour);
     if (nowIndex >= 0) {
       const nowX = x(nowIndex) + (now.minute / 60) * spacing;
       markup += `<line x1="${nowX}" x2="${nowX}" y1="${margin.top}" y2="${height - margin.bottom}" stroke="var(--ink)" stroke-dasharray="2 3"/>`;
-      markup += `<text x="${nowX + 5}" y="${margin.top + 10}" style="fill:var(--ink);font-weight:600">NOW</text>`;
+      markup += `<text x="${nowX + 5}" y="${margin.top + 6}" style="fill:var(--ink);font-weight:600">NOW</text>`;
     }
-    const last = today.filter(Boolean).pop();
-    if (last) markup += `<circle cx="${last[0]}" cy="${last[1]}" r="4.5" fill="var(--gold)" stroke="var(--surface)" stroke-width="2"/>`;
+    // Today can skip hours when the feed was slow, so connect across gaps and dot each real reading.
+    markup += `<path d="${pathFrom(today)}" fill="none" stroke="var(--gold)" stroke-width="2.25" stroke-linejoin="round" stroke-linecap="round"/>`;
+    markup += today.map((point, index) => `<circle cx="${point[0]}" cy="${point[1]}" r="${index === today.length - 1 ? 4.5 : 2.5}" fill="var(--gold)" ${index === today.length - 1 ? 'stroke="var(--surface)" stroke-width="2"' : ""}/>`).join("");
   }
   markup += `<line id="cross" y1="${margin.top}" y2="${height - margin.bottom}" stroke="var(--ink-3)" visibility="hidden"/>`;
   markup += `<rect id="hit" x="${margin.left - spacing / 2}" y="0" width="${width - margin.left - margin.right + spacing}" height="${height}" fill="transparent"/>`;
-  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
   svg.innerHTML = markup;
 
   const hit = svg.querySelector("#hit"), cross = svg.querySelector("#cross"), tip = element("tip");
@@ -467,22 +433,14 @@ function renderChart() {
     const index = Math.max(0, Math.min(hours.length - 1, Math.round((event.clientX - box.left - margin.left) / spacing)));
     const hour = hours[index], cell = row[hour];
     cross.setAttribute("x1", x(index)); cross.setAttribute("x2", x(index)); cross.setAttribute("visibility", "visible");
-    tip.innerHTML = `<b>${dayName.slice(0, 3)} ${hourLabel(hour)}</b><br>` +
-      (cell ? `Typical ${fmt(cell.count)} (${fmt(cell.low)}–${fmt(cell.high)})<br>${Math.round(cell.pct)}% full · ${cell.days} days` : "No history") +
-      (isToday && todayHours[hour] != null ? `<br>Today ${fmt(todayHours[hour])}` : "");
+    tip.innerHTML = `<b>${dayName.slice(0, 3)} ${hourLabel(hour)}</b>` +
+      (isToday && todayHours[hour] != null ? `<br>Today ${fmt(todayHours[hour])}` : "") +
+      (cell ? `<br>Typical ${fmt(cell.count)} (${fmt(cell.low)}–${fmt(cell.high)})` : "");
     tip.style.display = "block";
     tip.style.left = Math.min(event.clientX + 14, innerWidth - tip.offsetWidth - 8) + "px";
     tip.style.top = event.clientY + 14 + "px";
   };
   hit.onmouseleave = () => { tip.style.display = "none"; cross.setAttribute("visibility", "hidden"); };
-
-  const nextHour = (now.hour + 1) % 24;
-  const reliable = hours.filter(hour => row[hour] && row[hour].days >= 2);
-  const peak = [...reliable].sort((a, b) => row[b].count - row[a].count)[0];
-  const calm = [...reliable].sort((a, b) => row[a].count - row[b].count)[0];
-  element("callout").innerHTML = (isToday && row[nextHour]
-    ? `At <b>${hourLabel(nextHour)}</b> on a ${dayName}, ${label} usually has <b>~${fmt(row[nextHour].count)}</b> people (${Math.round(row[nextHour].pct)}% full). `
-    : "") + (peak != null ? `Peak around <b>${hourLabel(peak)}</b>, calmest around <b>${hourLabel(calm)}</b>.` : "&nbsp;");
 }
 
 function cellsOf(grid) {
@@ -495,17 +453,15 @@ function renderHeatmap() {
   const cells = cellsOf(state.grid);
   const hours = hourOrder.filter(hour => cells.some(cell => cell.hour === hour));
   const maxPct = Math.max(1, ...cells.map(cell => cell.pct));
-  element("heat-sub").textContent = `${state.group.label}, median % full by weekday and hour.`;
-  element("ramp-high").textContent = `${Math.round(maxPct)}%`;
   const table = element("heat");
-  if (!cells.length) { table.innerHTML = `<tr><td style="background:none;color:var(--ink-3)">No data for this range.</td></tr>`; return; }
+  if (!cells.length) { table.innerHTML = `<tr><td style="background:none;color:var(--ink-3)">No data</td></tr>`; return; }
   let html = `<thead><tr><th></th>${hours.map(hour => `<th scope="col" aria-label="${hourLabel(hour)}">${hour % 3 === 0 ? shortHour(hour) : ""}</th>`).join("")}</tr></thead><tbody>`;
   for (const weekday of dayOrder) {
     html += `<tr><th scope="row">${days[weekday].slice(0, 3)}</th>`;
     for (const hour of hours) {
       const cell = state.grid[weekday][hour];
       if (!cell) { html += `<td aria-label="${days[weekday]} ${hourLabel(hour)}: no data"></td>`; continue; }
-      const text = `${days[weekday].slice(0, 3)} ${hourLabel(hour)} · ${Math.round(cell.pct)}% · ~${fmt(cell.count)} people`;
+      const text = `${days[weekday].slice(0, 3)} ${hourLabel(hour)} · ~${fmt(cell.count)} · ${Math.round(cell.pct)}%`;
       html += `<td style="background:color-mix(in oklab, var(--heat-high) ${Math.round(100 * cell.pct / maxPct)}%, var(--heat-low))" data-tip="${text}" aria-label="${text}"></td>`;
     }
     html += "</tr>";
@@ -515,28 +471,12 @@ function renderHeatmap() {
 
 function renderTimes() {
   const cells = cellsOf(state.grid);
-  // Hours with few samples are usually opening or closing time, so they are left out of the rankings.
+  // Hours with few samples are usually opening or closing time, so they are left out of the ranking.
   const maxDays = Math.max(0, ...cells.map(cell => cell.days));
-  const ranked = cells.filter(cell => cell.days >= Math.max(2, maxDays * 0.4)).sort((a, b) => a.pct - b.pct);
-  const list = (id, items) => element(id).innerHTML = items.length ? items.map((cell, index) =>
-    `<li><span><span class="rank">${String(index + 1).padStart(2, "0")}</span>${days[cell.weekday].slice(0, 3)} ${hourLabel(cell.hour)}</span><span class="v">${Math.round(cell.pct)}% · ~${fmt(cell.count)}</span></li>`
-  ).join("") : `<li class="v">Not enough data yet</li>`;
-  list("quiet", ranked.slice(0, 5));
-  list("busy", ranked.slice(-5).reverse());
-}
-
-function renderAreas() {
-  const sorted = [...state.live].sort((a, b) => (b.fresh - a.fresh) || (b.count / b.capacity - a.count / a.capacity));
-  element("areas").replaceChildren(...sorted.map(area => {
-    const button = document.createElement("button");
-    button.className = "area" + (area.fresh ? "" : " closed");
-    const fraction = area.capacity ? area.count / area.capacity : 0;
-    button.innerHTML = `<span class="area-name"></span><span class="area-val">${area.fresh ? `${area.count}/${area.capacity} · ${Math.round(fraction * 100)}%` : "closed"}</span>
-      <div class="segments">${segmentsHTML(area.fresh ? fraction : 0, 30)}</div>`;
-    button.querySelector(".area-name").textContent = area.name;
-    button.onclick = () => { selectGroup({ label: area.name, areas: [area.name] }); scrollTo({ top: 0, behavior: "smooth" }); };
-    return button;
-  }));
+  const ranked = cells.filter(cell => cell.days >= Math.max(2, maxDays * 0.4)).sort((a, b) => a.pct - b.pct).slice(0, 7);
+  element("quiet").innerHTML = ranked.length ? ranked.map(cell =>
+    `<li><span>${days[cell.weekday].slice(0, 3)} ${hourLabel(cell.hour)}</span><span class="v">~${fmt(cell.count)} · ${Math.round(cell.pct)}%</span></li>`
+  ).join("") : `<li class="v">No data</li>`;
 }
 
 document.addEventListener("mousemove", event => {
