@@ -501,9 +501,9 @@ func serve(db *sql.DB, address string) {
 func securityHeaders(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
 		header := writer.Header()
-		header.Set("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline'; "+
+		header.Set("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; "+
 			"style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; "+
-			"img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'")
+			"img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'none'; form-action 'none'")
 		header.Set("X-Content-Type-Options", "nosniff")
 		header.Set("Referrer-Policy", "no-referrer")
 		next.ServeHTTP(writer, request)
