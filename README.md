@@ -4,7 +4,8 @@ How busy each area of Purdue's CoRec is, live and historically. Live at **https:
 
 ## Data
 
-`data/readings.csv.gz`: every headcount reading for every CoRec area, Aug 2022 to now (nothing exists for Jan 2023 to Sep 2024).
+`data/YYYY-MM.csv`: every headcount reading for every CoRec area, one file per month, Aug 2022 to now
+(nothing exists for Jan 2023 to Sep 2024). Updated nightly.
 
 | column | meaning |
 |---|---|
@@ -24,6 +25,7 @@ Sources: RecWell's public feed (`live`, polled every 10 min), plus earlier logs 
 ```sh
 go build && ./corec-tracker          # polls the feed and serves the site on :8080
 ./corec-tracker jake corec_usage.db  # one-time imports: jake | kvijay | gymscrape
+./corec-tracker export data          # write data/YYYY-MM.csv
 ```
 
 Not affiliated with Purdue.

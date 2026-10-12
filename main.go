@@ -464,7 +464,7 @@ func main() {
 	databasePath := envOr("DB_PATH", "corec.db")
 	db := openDB(databasePath)
 	if len(os.Args) > 1 {
-		runImport(db, os.Args[1:])
+		runCommand(db, os.Args[1:])
 		return
 	}
 	go pollForever(db)

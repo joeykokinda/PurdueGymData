@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path/filepath"
 	"strconv"
 )
 
@@ -15,10 +16,19 @@ import (
 //	corec-tracker jake    corec_usage.db   github.com/Jake-Verburgt/corec-usage
 //	corec-tracker kvijay  corec.db         github.com/im-kvijay/corec-tracker
 //	corec-tracker gymscrape occupancy.csv  github.com/elliottbmiller/gymScrape
-func runImport(db *sql.DB, arguments []string) {
+//
+// `corec-tracker export data` writes every reading as one CSV per month (data/2026-10.csv).
+// Output is deterministic, so rerunning it only changes the months that got new readings.
+func runCommand(db *sql.DB, arguments []string) {
 	kind, path := arguments[0], ""
 	if len(arguments) > 1 {
 		path = arguments[1]
+	}
+	if kind == "export" {
+		if err := exportMonths(db, path); err != nil {
+			log.Fatal(err)
+		}
+		return
 	}
 	var readings []reading
 	var err error
@@ -94,4 +104,55 @@ func csvReadings(path string) ([]reading, error) {
 			count, capacity, record[column["is_closed"]] == "true"})
 	}
 	return readings, nil
+}
+
+func exportMonths(db *sql.DB, directory string) error {
+	if directory == "" {
+		return fmt.Errorf("usage: corec-tracker export <directory>")
+	}
+	if err := os.MkdirAll(directory, 0o755); err != nil {
+		return err
+	}
+	rows, err := db.Query(`SELECT r.ts, r.location_id, l.name, r.count, r.capacity, r.closed, r.source
+		FROM readings r JOIN locations l ON l.id = r.location_id ORDER BY r.ts, r.location_id`)
+	if err != nil {
+		return err
+	}
+	defer rows.Close()
+	var file *os.File
+	var writer *csv.Writer
+	month := ""
+	closeMonth := func() error {
+		if file == nil {
+			return nil
+		}
+		writer.Flush()
+		if err := writer.Error(); err != nil {
+			return err
+		}
+		return file.Close()
+	}
+	for rows.Next() {
+		var ts, name, source string
+		var locationID, count, capacity, closed int
+		if err := rows.Scan(&ts, &locationID, &name, &count, &capacity, &closed, &source); err != nil {
+			return err
+		}
+		if ts[:7] != month {
+			if err := closeMonth(); err != nil {
+				return err
+			}
+			month = ts[:7]
+			if file, err = os.Create(filepath.Join(directory, month+".csv")); err != nil {
+				return err
+			}
+			writer = csv.NewWriter(file)
+			writer.Write([]string{"ts", "location_id", "area", "count", "capacity", "closed", "source"})
+		}
+		writer.Write([]string{ts, strconv.Itoa(locationID), name, strconv.Itoa(count), strconv.Itoa(capacity), strconv.Itoa(closed), source})
+	}
+	if err := rows.Err(); err != nil {
+		return err
+	}
+	return closeMonth()
 }

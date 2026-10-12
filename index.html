@@ -58,8 +58,9 @@
   .segments i.on { background: var(--gold-fill); }
   .segments .usual { position: absolute; top: -3px; bottom: -3px; width: 2px; margin-left: -1px; background: var(--ink); border-radius: 1px; }
 
-  .hero { width: 100%; padding: 18px 20px; display: grid; grid-template-columns: auto auto 1fr; gap: 6px 36px; align-items: end; }
-  .hero .num { font: 600 44px/1 var(--mono); letter-spacing: -0.03em; margin-top: 6px; }
+  .hero { width: 100%; padding: 18px 20px; display: grid; grid-template-columns: auto auto auto 1fr; gap: 6px 36px; align-items: end; }
+  .hero .num { font: 600 44px/1 var(--mono); letter-spacing: -0.03em; margin-top: 6px; white-space: nowrap; }
+  .hero .label { white-space: nowrap; }
   .hero .num small { font-size: 16px; color: var(--ink-3); font-weight: 400; letter-spacing: 0; }
   .hero .usual-num { color: var(--ink-3); }
   .delta { font: 600 13px var(--mono); color: var(--ink-3); align-self: end; padding-bottom: 6px; }
@@ -106,10 +107,17 @@
   .heat th[scope=row] { width: 36px; }
   .heat td { height: 22px; border-radius: 3px; background: var(--track); }
   .heat td:hover { outline: 1.5px solid var(--ink); outline-offset: -1px; }
-  .times { list-style: none; margin: 0; padding: 8px 18px 14px; }
-  .times li { display: flex; justify-content: space-between; padding: 7px 0; border-top: 1px solid var(--border); font-size: 13px; }
-  .times li:first-child { border-top: 0; }
-  .times .v { font: 12px var(--mono); color: var(--ink-3); }
+  .trend.up { color: var(--gold); }
+  .extremes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 12px 18px 4px; }
+  .extremes div { border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; }
+  .extremes b { display: block; font: 600 20px/1.2 var(--mono); margin-top: 4px; }
+  .extremes span.v { font: 12px var(--mono); color: var(--ink-3); }
+  .hours { list-style: none; margin: 0; padding: 8px 18px 14px; }
+  .hours li { display: grid; grid-template-columns: 52px 1fr 44px; align-items: center; gap: 10px; padding: 3px 0; font: 12px var(--mono); color: var(--ink-2); }
+  .hours li i { height: 8px; border-radius: 2px; background: var(--track); overflow: hidden; }
+  .hours li i b { display: block; height: 100%; background: var(--gold-fill); border-radius: 2px; }
+  .hours li span:last-child { text-align: right; }
+  .hours li.min, .hours li.max { color: var(--ink); font-weight: 600; }
 
   #tip { position: fixed; pointer-events: none; z-index: 10; display: none; background: var(--ink); color: var(--bg);
     font: 12px/1.5 var(--mono); padding: 7px 10px; border-radius: 6px; white-space: nowrap; }
@@ -119,8 +127,9 @@
   @media (max-width: 760px) {
     main { padding: 12px 12px 32px; }
     .two { grid-template-columns: 1fr; }
-    .hero { grid-template-columns: auto auto; gap: 6px 24px; padding: 16px; }
-    .hero .num { font-size: 34px; }
+    .hero { grid-template-columns: repeat(3, auto); justify-content: space-between; gap: 6px 16px; padding: 16px; }
+    .hero .num { font-size: 28px; }
+    .hero .num small { font-size: 12px; }
     .delta { grid-column: 1 / -1; padding: 0; }
     .tiles { grid-template-columns: 1fr; gap: 6px; }
     .tile { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px 12px; padding: 10px 12px; }
@@ -138,7 +147,8 @@
     .panel-head { padding: 12px 14px 0; }
     .legend { padding: 8px 14px 0; }
     .chart-wrap { padding: 6px 8px 10px; }
-    .times { padding: 6px 14px 12px; }
+    .extremes { padding: 10px 14px 4px; }
+    .hours { padding: 6px 14px 12px; }
   }
 </style>
 </head>
@@ -155,6 +165,7 @@
   <button class="card hero" id="hero" aria-pressed="true">
     <div><div class="label">Now</div><div class="num" id="now-count">–</div></div>
     <div><div class="label" id="usual-label">Usually</div><div class="num usual-num" id="usual-count">–</div></div>
+    <div><div class="label" id="next-label">Next hour</div><div class="num usual-num" id="next-count">–</div></div>
     <div class="delta" id="now-delta"></div>
     <div class="segments" id="now-segments" aria-hidden="true"></div>
   </button>
@@ -179,8 +190,12 @@
       <div class="heat-wrap"><table class="heat" id="heat"></table></div>
     </section>
     <section class="card">
-      <div class="panel-head"><h2>Quietest</h2></div>
-      <ul class="times" id="quiet"></ul>
+      <div class="panel-head"><h2>Rest of today</h2></div>
+      <div class="extremes">
+        <div><span class="label">Quietest</span><b id="rest-min">–</b><span class="v" id="rest-min-v"></span></div>
+        <div><span class="label">Busiest</span><b id="rest-max">–</b><span class="v" id="rest-max-v"></span></div>
+      </div>
+      <ul class="hours" id="rest"></ul>
     </section>
   </div>
 
@@ -230,7 +245,7 @@ function campusNow() {
 const mobile = matchMedia("(max-width: 760px)").matches;
 // On phones the long tail of rooms starts folded so the chart is reachable.
 const folded = new Set(mobile ? ["Studios & rooms", "Tracks & mezzanines", "Outdoor & other", "Other"] : []);
-const state = { tile: building, weekday: campusNow().weekday, range: "|", live: [], typical: {}, buildingGrid: null, grid: null, today: null };
+const state = { tile: building, weekday: campusNow().weekday, range: "|", live: [], typical: {}, typicalNext: {}, buildingGrid: null, grid: null, today: null };
 
 function segmentsHTML(fraction, count, usualFraction) {
   const filled = Math.round(Math.min(1, Math.max(0, fraction)) * count);
@@ -246,13 +261,23 @@ function liveFor(tile) {
   return { open: open.length > 0, count: open.reduce((sum, area) => sum + area.count, 0), capacity };
 }
 
+const nextHourOf = now => ({ weekday: now.hour === 23 ? (now.weekday + 1) % 7 : now.weekday, hour: (now.hour + 1) % 24 });
+
 // ponytail: a group's usual is the sum of its members' medians, not the median of their sums.
-function usualFor(tile) {
-  const cells = tile.areas.map(area => state.typical[area]).filter(Boolean);
+function usualFor(tile, typical = state.typical) {
+  const cells = tile.areas.map(area => typical[area]).filter(Boolean);
   return cells.length ? cells.reduce((sum, cell) => sum + cell.count, 0) : null;
 }
 
 // Percentages on tiny counts are noise, so small areas show the difference in people instead.
+// Where the area usually heads over the next hour; changes under 10% (or 2 people) read as flat.
+function trendHTML(usual, next) {
+  if (usual == null || next == null) return "";
+  const change = next - usual;
+  const flat = Math.abs(change) < Math.max(2, usual * 0.1);
+  return ` <span class="trend ${!flat && change > 0 ? "up" : ""}">${flat ? "→" : change > 0 ? "↗" : "↘"} ${fmt(next)}</span>`;
+}
+
 function deltaHTML(count, usual) {
   if (usual == null) return "";
   const small = usual < 10;
@@ -305,10 +330,13 @@ function select(tile) {
 async function loadLive() {
   const now = campusNow();
   const nowMs = Date.parse(now.iso + "Z");
-  const [live, typical] = await Promise.all([getJSON("/api/live"), getJSON(`/api/typical?day=${now.weekday}&hour=${now.hour}`)]);
+  const next = nextHourOf(now);
+  const [live, typical, typicalNext] = await Promise.all([getJSON("/api/live"),
+    getJSON(`/api/typical?day=${now.weekday}&hour=${now.hour}`), getJSON(`/api/typical?day=${next.weekday}&hour=${next.hour}`)]);
   // An area counts as open if it is not flagged closed and has reported within the last 3 hours.
   state.live = live.map(area => ({ ...area, fresh: !area.closed && nowMs - Date.parse(area.updated + "Z") < 3 * 3600e3 }));
   state.typical = typical;
+  state.typicalNext = typicalNext;
   const whole = liveFor(building);
   const newest = state.live.map(area => area.updated).sort().pop();
   element("status").classList.toggle("open", whole.open);
@@ -327,9 +355,13 @@ function renderLive() {
   const usual = state.buildingGrid?.[now.weekday][now.hour]?.count;
   element("hero").setAttribute("aria-pressed", state.tile === building);
   element("now-count").innerHTML = whole.open ? `${fmt(whole.count)}<small> / ${fmt(whole.capacity)}</small>` : "Closed";
-  element("usual-label").textContent = `Usually · ${days[now.weekday].slice(0, 3)} ${hourLabel(now.hour)}`;
+  element("usual-label").textContent = `Usual · ${hourLabel(now.hour)}`;
   element("usual-count").textContent = usual ? fmt(usual) : "–";
   element("now-delta").innerHTML = whole.open ? deltaHTML(whole.count, usual) : "";
+  const next = nextHourOf(now);
+  const usualNext = state.buildingGrid?.[next.weekday][next.hour]?.count;
+  element("next-label").textContent = `Usual · ${hourLabel(next.hour)}`;
+  element("next-count").innerHTML = usualNext ? fmt(usualNext) : "–";
   element("now-segments").innerHTML = segmentsHTML(whole.capacity ? whole.count / whole.capacity : 0, 50,
     usual && whole.capacity ? usual / whole.capacity : null);
 
@@ -359,7 +391,7 @@ function renderLive() {
         (tile.short ? `<div class="members">${escapeHTML(tile.short)}</div>` : "") +
         `<div class="count">${live.open ? `${live.count}<small> / ${live.capacity}</small>` : "Closed"}</div>
         <div class="segments">${segmentsHTML(live.open ? fraction : 0, 24, usual != null && live.capacity ? usual / live.capacity : null)}</div>
-        <div class="meta"><span>usually ${usual != null ? fmt(usual) : "–"}</span><span>${live.open ? deltaHTML(live.count, usual) : ""}</span></div>`;
+        <div class="meta"><span>usually ${usual != null ? fmt(usual) : "–"}${trendHTML(usual, usualFor(tile, state.typicalNext))}</span><span>${live.open ? deltaHTML(live.count, usual) : ""}</span></div>`;
       button.onclick = () => select(tile);
       return button;
     }));
@@ -500,13 +532,22 @@ function renderHeatmap() {
 }
 
 function renderTimes() {
-  const cells = cellsOf(state.grid);
-  // Hours with few samples are usually opening or closing time, so they are left out of the ranking.
-  const maxDays = Math.max(0, ...cells.map(cell => cell.days));
-  const ranked = cells.filter(cell => cell.days >= Math.max(2, maxDays * 0.4)).sort((a, b) => a.pct - b.pct).slice(0, 7);
-  element("quiet").innerHTML = ranked.length ? ranked.map(cell =>
-    `<li><span>${days[cell.weekday].slice(0, 3)} ${hourLabel(cell.hour)}</span><span class="v">~${fmt(cell.count)} · ${Math.round(cell.pct)}%</span></li>`
-  ).join("") : `<li class="v">No data</li>`;
+  const now = campusNow();
+  const row = state.grid[now.weekday];
+  const maxDays = Math.max(0, ...row.map(cell => cell?.days || 0));
+  // Hours seen on few days are usually opening or closing time, so they are left out.
+  const rest = hourOrder.slice(hourOrder.indexOf(now.hour) + 1)
+    .filter(hour => row[hour] && row[hour].days >= Math.max(2, maxDays * 0.4)).map(hour => ({ hour, ...row[hour] }));
+  const quietest = rest.reduce((best, entry) => !best || entry.count < best.count ? entry : best, null);
+  const busiest = rest.reduce((best, entry) => !best || entry.count > best.count ? entry : best, null);
+  element("rest-min").textContent = quietest ? hourLabel(quietest.hour) : "–";
+  element("rest-min-v").textContent = quietest ? `~${fmt(quietest.count)}` : "";
+  element("rest-max").textContent = busiest ? hourLabel(busiest.hour) : "–";
+  element("rest-max-v").textContent = busiest ? `~${fmt(busiest.count)}` : "";
+  const top = Math.max(1, ...rest.map(entry => entry.count));
+  element("rest").innerHTML = rest.map(entry =>
+    `<li class="${entry === quietest ? "min" : entry === busiest ? "max" : ""}"><span>${hourLabel(entry.hour)}</span><i><b style="width:${Math.round(100 * entry.count / top)}%"></b></i><span>~${fmt(entry.count)}</span></li>`
+  ).join("");
 }
 
 document.addEventListener("mousemove", event => {
