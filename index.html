@@ -66,7 +66,13 @@
   .delta.up { color: var(--gold); }
   .hero .segments { grid-column: 1 / -1; height: 18px; margin-top: 12px; }
 
-  .section-label { margin: 22px 2px 8px; }
+  .section { margin-top: 18px; }
+  .section summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 8px; padding: 4px 2px 8px; }
+  .section summary::-webkit-details-marker { display: none; }
+  .section summary::before { content: "▸"; font-size: 10px; transition: transform .15s; }
+  .section[open] summary::before { transform: rotate(90deg); }
+  .section summary .total { margin-left: auto; font: 11px var(--mono); letter-spacing: 0; text-transform: none; }
+  .section summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
   .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
   .tile { padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
   .tile .name { font-weight: 600; font-size: 13px; }
@@ -90,7 +96,7 @@
   .key-line { width: 16px; border-top: 2px solid var(--gold); }
   .key-ghost { width: 16px; height: 10px; background: var(--band); border-top: 2px dashed var(--typical); }
   svg text { font: 11px var(--mono); fill: var(--ink-3); }
-  #chart { display: block; width: 100%; height: 300px; padding: 0 0 0; }
+  #chart { display: block; width: 100%; height: 300px; }
   .chart-wrap { padding: 6px 18px 14px; }
 
   .two { display: grid; grid-template-columns: 1.7fr 1fr; gap: 8px; margin-top: 8px; }
@@ -111,12 +117,28 @@
   footer a { color: var(--ink-3); }
 
   @media (max-width: 760px) {
+    main { padding: 12px 12px 32px; }
     .two { grid-template-columns: 1fr; }
-    .hero { grid-template-columns: auto auto; gap: 6px 24px; }
-    .hero .num { font-size: 36px; }
+    .hero { grid-template-columns: auto auto; gap: 6px 24px; padding: 16px; }
+    .hero .num { font-size: 34px; }
     .delta { grid-column: 1 / -1; padding: 0; }
-    .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .controls { margin-left: 0; }
+    .tiles { grid-template-columns: 1fr; gap: 6px; }
+    .tile { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px 12px; padding: 10px 12px; }
+    .tile .name { grid-column: 1; grid-row: 1; }
+    .tile .count { grid-column: 2; grid-row: 1; font-size: 17px; text-align: right; }
+    .tile .members { grid-column: 1 / -1; grid-row: 2; margin: -4px 0 0; }
+    .tile .segments, .tile .meta { grid-column: 1 / -1; }
+    .controls { margin-left: 0; width: 100%; }
+    .controls select { flex: 1; }
+    #chart { height: 240px; }
+    .heat-wrap { padding: 10px 12px 14px; }
+    table.heat { min-width: 0; border-spacing: 1px; }
+    .heat td { height: 18px; border-radius: 2px; }
+    .heat th[scope=row] { width: 30px; }
+    .panel-head { padding: 12px 14px 0; }
+    .legend { padding: 8px 14px 0; }
+    .chart-wrap { padding: 6px 8px 10px; }
+    .times { padding: 6px 14px 12px; }
   }
 </style>
 </head>
@@ -205,6 +227,9 @@ function campusNow() {
     iso: `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}` };
 }
 
+const mobile = matchMedia("(max-width: 760px)").matches;
+// On phones the long tail of rooms starts folded so the chart is reachable.
+const folded = new Set(mobile ? ["Studios & rooms", "Tracks & mezzanines", "Outdoor & other", "Other"] : []);
 const state = { tile: building, weekday: campusNow().weekday, range: "|", live: [], typical: {}, buildingGrid: null, grid: null, today: null };
 
 function segmentsHTML(fraction, count, usualFraction) {
@@ -314,9 +339,13 @@ function renderLive() {
   element("sections").replaceChildren(...allSections.flatMap(([title, tiles]) => {
     const present = tiles.filter(tile => state.live.some(area => tile.areas.includes(area.name)));
     if (!present.length) return [];
-    const label = document.createElement("div");
-    label.className = "label section-label";
-    label.textContent = title;
+    const section = document.createElement("details");
+    section.className = "section";
+    section.open = !folded.has(title);
+    section.ontoggle = () => section.open ? folded.delete(title) : folded.add(title);
+    const total = present.reduce((sum, tile) => sum + liveFor(tile).count, 0);
+    section.innerHTML = `<summary class="label"><span></span><span class="total">${fmt(total)} now</span></summary>`;
+    section.querySelector("summary span").textContent = title;
     const grid = document.createElement("div");
     grid.className = "tiles";
     grid.append(...present.map(tile => {
@@ -334,7 +363,8 @@ function renderLive() {
       button.onclick = () => select(tile);
       return button;
     }));
-    return [label, grid];
+    section.append(grid);
+    return [section];
   }));
 }
 
@@ -374,7 +404,7 @@ function renderChart() {
   if (!state.grid) return;
   const svg = element("chart");
   const width = svg.clientWidth, height = 300;
-  const margin = { top: 14, right: 8, bottom: 24, left: 40 };
+  const margin = { top: 14, right: 16, bottom: 24, left: 40 };
   const row = state.grid[state.weekday];
   const now = campusNow();
   const isToday = state.weekday === now.weekday;
@@ -397,7 +427,7 @@ function renderChart() {
     markup += `<line x1="${margin.left}" x2="${width - margin.right}" y1="${y(value)}" y2="${y(value)}" stroke="var(--grid)" ${value ? 'stroke-dasharray="3 3"' : ""}/>`;
     markup += `<text x="${margin.left - 8}" y="${y(value) + 4}" text-anchor="end">${fmt(value)}</text>`;
   }
-  const labelEvery = width < 520 ? 3 : 2;
+  const labelEvery = width < 420 ? 4 : width < 620 ? 3 : 2;
   hours.forEach((hour, index) => {
     if (index % labelEvery === 0) markup += `<text x="${x(index)}" y="${height - 4}" text-anchor="middle">${shortHour(hour)}</text>`;
   });
@@ -455,7 +485,7 @@ function renderHeatmap() {
   const maxPct = Math.max(1, ...cells.map(cell => cell.pct));
   const table = element("heat");
   if (!cells.length) { table.innerHTML = `<tr><td style="background:none;color:var(--ink-3)">No data</td></tr>`; return; }
-  let html = `<thead><tr><th></th>${hours.map(hour => `<th scope="col" aria-label="${hourLabel(hour)}">${hour % 3 === 0 ? shortHour(hour) : ""}</th>`).join("")}</tr></thead><tbody>`;
+  let html = `<thead><tr><th></th>${hours.map(hour => `<th scope="col" aria-label="${hourLabel(hour)}">${hour % (mobile ? 6 : 3) === 0 ? shortHour(hour) : ""}</th>`).join("")}</tr></thead><tbody>`;
   for (const weekday of dayOrder) {
     html += `<tr><th scope="row">${days[weekday].slice(0, 3)}</th>`;
     for (const hour of hours) {
