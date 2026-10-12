@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CoRec Busyness</title>
+<meta name="description" content="When each area of Purdue's CoRec is busy or quiet, from live counts and 2+ years of history.">
+<style>
+  :root {
+    --bg: #fbfaf8; --surface: #ffffff; --border: #e6e3de;
+    --ink: #1d1c1a; --ink-2: #5c5a55; --ink-3: #8a8780;
+    --accent: #256abf;
+    --heat-low: #cde2fb; --heat-high: #0d366b; --empty: #f0efec;
+    --bar-track: #f0efec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161614; --surface: #1f1f1d; --border: #34332f;
+      --ink: #f1efea; --ink-2: #b4b1aa; --ink-3: #85827b;
+      --accent: #6da7ec;
+      --heat-low: #142a47; --heat-high: #b7d3f6; --empty: #262624;
+      --bar-track: #2c2c29;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h2 { font-size: 16px; margin: 0 0 12px; }
+  .sub { color: var(--ink-2); margin: 0 0 20px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+  label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--ink-2); }
+  select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 10px; min-width: 200px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 700px) { .grid2 { grid-template-columns: 1fr; } }
+  .times { list-style: none; margin: 0; padding: 0; }
+  .times li { display: flex; justify-content: space-between; padding: 6px 0; border-top: 1px solid var(--border); }
+  .times li:first-child { border-top: 0; }
+  .muted { color: var(--ink-3); font-size: 13px; }
+  .heat-wrap { overflow-x: auto; }
+  table.heat { border-collapse: separate; border-spacing: 2px; width: 100%; min-width: 560px; table-layout: fixed; }
+  .heat thead th { text-align: left; white-space: nowrap; overflow: visible; }
+  .heat th { font-weight: 500; font-size: 12px; color: var(--ink-3); padding: 0 2px; }
+  .heat th[scope=row] { text-align: left; padding-right: 8px; width: 40px; }
+  .heat td { height: 28px; border-radius: 4px; background: var(--empty); }
+  .heat td[data-pct] { cursor: default; }
+  .heat td:hover { outline: 2px solid var(--ink); outline-offset: -1px; }
+  .legend { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 12px; color: var(--ink-3); }
+  .legend .ramp { width: 160px; height: 10px; border-radius: 4px;
+    background: linear-gradient(90deg, var(--heat-low), var(--heat-high)); }
+  #tip { position: fixed; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 13px;
+    padding: 6px 10px; border-radius: 6px; display: none; z-index: 10; white-space: nowrap; }
+  .live { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 4px 20px; }
+  .live button { all: unset; cursor: pointer; display: block; padding: 6px 0; border-radius: 4px; }
+  .live button:focus-visible { outline: 2px solid var(--accent); }
+  .live .row { display: flex; justify-content: space-between; font-size: 14px; }
+  .live .bar { height: 6px; border-radius: 4px; background: var(--bar-track); margin-top: 4px; overflow: hidden; }
+  .live .bar span { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+  .closed { color: var(--ink-3); }
+  footer { color: var(--ink-3); font-size: 13px; margin-top: 24px; }
+  footer a { color: var(--ink-2); }
+</style>
+</head>
+<body>
+<main>
+  <h1>CoRec Busyness</h1>
+  <p class="sub">When each area of the Córdova Recreational Sports Center is quiet or packed, from RecWell's live counts.</p>
+
+  <div class="controls">
+    <label>Area <select id="area"><option value="">Whole building</option></select></label>
+    <label>Time range <select id="range"></select></label>
+  </div>
+
+  <div class="grid2">
+    <section class="card"><h2>Quietest times</h2><ul class="times" id="quiet"></ul></section>
+    <section class="card"><h2>Busiest times</h2><ul class="times" id="busy"></ul></section>
+  </div>
+
+  <section class="card">
+    <h2 id="heat-title">Typical busyness by hour</h2>
+    <div class="heat-wrap"><table class="heat" id="heat"></table></div>
+    <div class="legend"><span id="legend-low">0%</span><span class="ramp"></span><span id="legend-high"></span>
+      <span>· median % full, blank = no data</span></div>
+  </section>
+
+  <section class="card">
+    <h2>Right now <span class="muted" id="live-time"></span></h2>
+    <div class="live" id="live"></div>
+  </section>
+
+  <footer>
+    Live data polled every 10 minutes from RecWell's public facility feed. History before this site launched comes from
+    <a href="https://github.com/Jake-Verburgt/corec-usage">Jake-Verburgt/corec-usage</a>,
+    <a href="https://github.com/im-kvijay/corec-tracker">im-kvijay/corec-tracker</a>
+    and <a href="https://github.com/elliottbmiller/gymScrape">elliottbmiller/gymScrape</a>.
+    Nothing is recorded for Jan 2023 to Sep 2024. Not affiliated with Purdue.
+  </footer>
+</main>
+<div id="tip" role="tooltip"></div>
+
+<script>
+const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const dayOrder = [1, 2, 3, 4, 5, 6, 0];
+const hourOrder = [...Array(24).keys()].map(hour => (hour + 5) % 24);
+const areaSelect = document.getElementById("area");
+const rangeSelect = document.getElementById("range");
+const tip = document.getElementById("tip");
+
+const hourLabel = hour => `${hour % 12 || 12}${hour < 12 ? "am" : "pm"}`;
+const getJSON = url => fetch(url).then(response => response.json());
+
+async function init() {
+  const [semesters, areas] = await Promise.all([getJSON("/api/semesters"), getJSON("/api/areas")]);
+  const today = new Date().toISOString().slice(0, 10);
+  for (const semester of semesters) rangeSelect.add(new Option(semester.name, `${semester.start}|${semester.end}`));
+  rangeSelect.add(new Option("All time", "|"));
+  const current = semesters.find(semester => semester.start <= today && today <= semester.end);
+  rangeSelect.value = current ? `${current.start}|${current.end}` : "|";
+  for (const area of areas) areaSelect.add(new Option(area, area));
+
+  const params = new URLSearchParams(location.search);
+  if (params.has("area")) areaSelect.value = params.get("area");
+  if (params.has("range")) rangeSelect.value = params.get("range");
+
+  areaSelect.onchange = rangeSelect.onchange = render;
+  render();
+  renderLive();
+  setInterval(renderLive, 5 * 60 * 1000);
+}
+
+async function render() {
+  const [from, to] = rangeSelect.value.split("|");
+  const area = areaSelect.value;
+  history.replaceState(null, "", "?" + new URLSearchParams({ area, range: rangeSelect.value }));
+  document.getElementById("heat-title").textContent =
+    `${area || "Whole building"}, ${rangeSelect.selectedOptions[0].text}`;
+  const grid = await getJSON("/api/heatmap?" + new URLSearchParams({ area, from, to }));
+
+  const cells = [];
+  grid.forEach((row, weekday) => row.forEach((cell, hour) => cell && cells.push({ ...cell, weekday, hour })));
+  const hours = hourOrder.filter(hour => cells.some(cell => cell.hour === hour));
+  const maxPct = Math.max(1, ...cells.map(cell => cell.pct));
+
+  const table = document.getElementById("heat");
+  table.replaceChildren();
+  if (!cells.length) {
+    table.innerHTML = `<tr><td style="background:none;color:var(--ink-3)">No data for this area and range.</td></tr>`;
+  } else {
+    const head = table.createTHead().insertRow();
+    head.appendChild(document.createElement("th"));
+    for (const hour of hours) {
+      const th = document.createElement("th");
+      th.scope = "col";
+      th.textContent = hour % 3 === 0 ? hourLabel(hour) : "";
+      th.setAttribute("aria-label", hourLabel(hour));
+      head.appendChild(th);
+    }
+    const body = table.createTBody();
+    for (const weekday of dayOrder) {
+      const row = body.insertRow();
+      const th = document.createElement("th");
+      th.scope = "row";
+      th.textContent = days[weekday];
+      row.appendChild(th);
+      for (const hour of hours) {
+        const td = row.insertCell();
+        const cell = grid[weekday][hour];
+        if (!cell) { td.setAttribute("aria-label", `${days[weekday]} ${hourLabel(hour)}: no data`); continue; }
+        const share = Math.round(100 * cell.pct / maxPct);
+        td.style.background = `color-mix(in oklab, var(--heat-high) ${share}%, var(--heat-low))`;
+        td.dataset.pct = cell.pct;
+        td.dataset.tip = `${days[weekday]} ${hourLabel(hour)}: ${cell.pct.toFixed(0)}% full, ~${Math.round(cell.count)} people (${cell.days} days)`;
+        td.setAttribute("aria-label", td.dataset.tip);
+      }
+    }
+  }
+  document.getElementById("legend-high").textContent = `${maxPct.toFixed(0)}%`;
+
+  // Hours with few samples are usually closing time or early open, so they are left out of the rankings.
+  const maxDays = Math.max(0, ...cells.map(cell => cell.days));
+  const ranked = cells.filter(cell => cell.days >= Math.max(2, maxDays * 0.4)).sort((a, b) => a.pct - b.pct);
+  const list = (element, items) => element.innerHTML = items.length ? items.map(cell =>
+    `<li><span>${days[cell.weekday]} ${hourLabel(cell.hour)}</span><span>${cell.pct.toFixed(0)}% · ~${Math.round(cell.count)} people</span></li>`
+  ).join("") : `<li class="muted">Not enough data yet.</li>`;
+  list(document.getElementById("quiet"), ranked.slice(0, 6));
+  list(document.getElementById("busy"), ranked.slice(-6).reverse());
+}
+
+async function renderLive() {
+  const areas = await getJSON("/api/live");
+  const newest = areas.map(area => area.updated).sort().pop();
+  document.getElementById("live-time").textContent = newest ? `· updated ${newest.slice(11, 16)}` : "";
+  const container = document.getElementById("live");
+  container.replaceChildren(...areas.map(area => {
+    const button = document.createElement("button");
+    const pct = Math.min(100, Math.round(100 * area.count / Math.max(1, area.capacity)));
+    button.innerHTML = `<div class="row ${area.closed ? "closed" : ""}"><span></span><span>${area.closed ? "Closed" : `${area.count} / ${area.capacity}`}</span></div>
+      <div class="bar"><span style="width:${area.closed ? 0 : pct}%"></span></div>`;
+    button.querySelector(".row span").textContent = area.name;
+    button.onclick = () => { areaSelect.value = area.name; render(); scrollTo({ top: 0, behavior: "smooth" }); };
+    return button;
+  }));
+}
+
+document.addEventListener("mousemove", event => {
+  const text = event.target.dataset?.tip;
+  tip.style.display = text ? "block" : "none";
+  if (!text) return;
+  tip.textContent = text;
+  const x = Math.min(event.clientX + 12, innerWidth - tip.offsetWidth - 8);
+  tip.style.left = x + "px";
+  tip.style.top = (event.clientY + 16) + "px";
+});
+
+init();
+</script>
+</body>
+</html>

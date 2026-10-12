@@ -1,0 +1,14 @@
+[Unit]
+Description=CoRec busyness tracker (corec.jaeger.lol)
+After=network-online.target
+
+[Service]
+WorkingDirectory=%h/corec-tracker
+Environment=DB_PATH=%h/corec-tracker/corec.db
+Environment=ADDR=127.0.0.1:8610
+ExecStart=%h/corec-tracker/corec-tracker
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
