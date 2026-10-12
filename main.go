@@ -12,12 +12,16 @@ import (
 	"strings"
 	"time"
 
+	_ "time/tzdata"
+
 	_ "modernc.org/sqlite"
 )
 
 const feedURL = "https://goboardapi.azurewebsites.net/api/FacilityCount/GetCountsByAccount?AccountAPIKey=aedeaf92-036d-4848-980b-7eb5526ea40c"
 
 const pollInterval = 10 * time.Minute
+
+var campus, _ = time.LoadLocation("America/Indiana/Indianapolis")
 
 //go:embed index.html
 var indexHTML []byte
@@ -164,6 +168,8 @@ func pollForever(db *sql.DB) {
 type cell struct {
 	Pct   float64 `json:"pct"`
 	Count float64 `json:"count"`
+	Low   float64 `json:"low"`  // 25th percentile count
+	High  float64 `json:"high"` // 75th percentile count
 	Days  int     `json:"days"`
 }
 
@@ -174,19 +180,21 @@ type sample struct {
 	capacity   int
 }
 
-func median(values []float64) float64 {
-	sort.Float64s(values)
-	middle := len(values) / 2
-	if len(values)%2 == 1 {
-		return values[middle]
+type total struct{ count, capacity float64 }
+
+// quantile expects sorted values and interpolates linearly between neighbours.
+func quantile(sorted []float64, q float64) float64 {
+	position := q * float64(len(sorted)-1)
+	lower := int(position)
+	if lower+1 >= len(sorted) {
+		return sorted[lower]
 	}
-	return (values[middle-1] + values[middle]) / 2
+	return sorted[lower] + (position-float64(lower))*(sorted[lower+1]-sorted[lower])
 }
 
-// heatmap returns a [weekday][hour] grid (Sunday = 0). Each location's readings are
-// averaged within a calendar hour, locations are summed for that hour, and the grid
-// cell is the median of those hourly totals across all dates with that weekday.
-func heatmap(samples []sample) [7][24]*cell {
+// hourlyTotals averages each location's readings within a calendar hour ("2006-01-02T15")
+// and sums the locations, so a group of areas reads as one space.
+func hourlyTotals(samples []sample) map[string]total {
 	type locationHour struct {
 		locationID int
 		hour       string
@@ -202,33 +210,68 @@ func heatmap(samples []sample) [7][24]*cell {
 		perLocation[key].capacity += float64(item.capacity)
 		perLocation[key].readings++
 	}
-	perHour := map[string]*sums{}
-	for key, total := range perLocation {
-		if perHour[key.hour] == nil {
-			perHour[key.hour] = &sums{}
-		}
-		perHour[key.hour].count += total.count / total.readings
-		perHour[key.hour].capacity += total.capacity / total.readings
+	totals := map[string]total{}
+	for key, sum := range perLocation {
+		hour := totals[key.hour]
+		hour.count += sum.count / sum.readings
+		hour.capacity += sum.capacity / sum.readings
+		totals[key.hour] = hour
 	}
+	return totals
+}
+
+// heatmap returns a [weekday][hour] grid (Sunday = 0) of the median hourly total
+// across every date with that weekday.
+func heatmap(samples []sample) [7][24]*cell {
 	var pcts, counts [7][24][]float64
-	for hour, total := range perHour {
+	for hour, sum := range hourlyTotals(samples) {
 		date, err := time.Parse("2006-01-02T15", hour)
-		if err != nil || total.capacity == 0 {
+		if err != nil || sum.capacity == 0 {
 			continue
 		}
 		weekday, hourOfDay := date.Weekday(), date.Hour()
-		pcts[weekday][hourOfDay] = append(pcts[weekday][hourOfDay], 100*total.count/total.capacity)
-		counts[weekday][hourOfDay] = append(counts[weekday][hourOfDay], total.count)
+		pcts[weekday][hourOfDay] = append(pcts[weekday][hourOfDay], 100*sum.count/sum.capacity)
+		counts[weekday][hourOfDay] = append(counts[weekday][hourOfDay], sum.count)
 	}
 	var grid [7][24]*cell
 	for weekday := range grid {
 		for hour := range grid[weekday] {
-			if days := len(pcts[weekday][hour]); days > 0 {
-				grid[weekday][hour] = &cell{median(pcts[weekday][hour]), median(counts[weekday][hour]), days}
+			pct, count := pcts[weekday][hour], counts[weekday][hour]
+			if len(pct) == 0 {
+				continue
 			}
+			sort.Float64s(pct)
+			sort.Float64s(count)
+			grid[weekday][hour] = &cell{quantile(pct, 0.5), quantile(count, 0.5),
+				quantile(count, 0.25), quantile(count, 0.75), len(pct)}
 		}
 	}
 	return grid
+}
+
+func querySamples(db *sql.DB, areas []string, from, to string) ([]sample, error) {
+	statement := `SELECT location_id, ts, count, capacity FROM readings WHERE closed = 0 AND ts >= ? AND ts <= ?`
+	arguments := []any{from, to}
+	if len(areas) > 0 {
+		statement += ` AND location_id IN (SELECT id FROM locations WHERE name IN (?` + strings.Repeat(`, ?`, len(areas)-1) + `))`
+		for _, area := range areas {
+			arguments = append(arguments, area)
+		}
+	}
+	rows, err := db.Query(statement, arguments...)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var samples []sample
+	for rows.Next() {
+		var item sample
+		if err := rows.Scan(&item.locationID, &item.ts, &item.count, &item.capacity); err != nil {
+			return nil, err
+		}
+		samples = append(samples, item)
+	}
+	return samples, rows.Err()
 }
 
 func writeJSON(writer http.ResponseWriter, value any) {
@@ -289,7 +332,7 @@ func serve(db *sql.DB, address string) {
 		writeJSON(writer, names)
 	})
 
-	// /api/heatmap?area=Colby%20Fitness&from=2026-08-24&to=2026-12-12; area omitted means the whole building.
+	// /api/heatmap?area=Lower%20Gym&area=Upper%20Gym&from=2026-08-24&to=2026-12-12; no area means the whole building.
 	http.HandleFunc("GET /api/heatmap", func(writer http.ResponseWriter, request *http.Request) {
 		query := request.URL.Query()
 		from, to := query.Get("from"), query.Get("to")
@@ -301,25 +344,30 @@ func serve(db *sql.DB, address string) {
 		} else {
 			to += "T99"
 		}
-		statement := `SELECT location_id, ts, count, capacity FROM readings WHERE closed = 0 AND ts >= ? AND ts <= ?`
-		arguments := []any{from, to}
-		if area := query.Get("area"); area != "" {
-			statement += ` AND location_id IN (SELECT id FROM locations WHERE name = ?)`
-			arguments = append(arguments, area)
-		}
-		rows, err := db.Query(statement, arguments...)
+		samples, err := querySamples(db, query["area"], from, to)
 		if err != nil {
 			http.Error(writer, err.Error(), 500)
 			return
 		}
-		defer rows.Close()
-		var samples []sample
-		for rows.Next() {
-			var item sample
-			rows.Scan(&item.locationID, &item.ts, &item.count, &item.capacity)
-			samples = append(samples, item)
-		}
 		writeJSON(writer, heatmap(samples))
+	})
+
+	// /api/today?area=...: hourly totals so far for the current campus date, indexed by hour.
+	http.HandleFunc("GET /api/today", func(writer http.ResponseWriter, request *http.Request) {
+		today := time.Now().In(campus).Format("2006-01-02")
+		samples, err := querySamples(db, request.URL.Query()["area"], today, today+"T99")
+		if err != nil {
+			http.Error(writer, err.Error(), 500)
+			return
+		}
+		var hours [24]*float64
+		for hour, sum := range hourlyTotals(samples) {
+			count := sum.count
+			hours[int(hour[11]-'0')*10+int(hour[12]-'0')] = &count
+		}
+		writer.Header().Set("Content-Type", "application/json")
+		writer.Header().Set("Cache-Control", "public, max-age=60")
+		json.NewEncoder(writer).Encode(map[string]any{"date": today, "hours": hours})
 	})
 
 	log.Printf("listening on %s", address)
