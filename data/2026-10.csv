@@ -4091,3 +4091,478 @@ ts,location_id,area,count,capacity,closed,source
 2026-10-15T22:30:42,7290,Colby Fitness,114,380,0,live
 2026-10-15T22:30:43,5985,Lower Gym,75,282,0,live
 2026-10-15T22:30:43,9553,Outdoor Pickleball,14,50,0,live
+2026-10-16T05:48:00,5978,Faculty/Staff Workout Area,0,25,0,live
+2026-10-16T05:48:01,6129,Upper Track (4th Floor),0,10,0,live
+2026-10-16T05:48:02,5996,Upper Gym,0,100,0,live
+2026-10-16T05:48:02,7451,MP6,0,45,0,live
+2026-10-16T05:48:03,7452,MP7,0,45,0,live
+2026-10-16T05:48:04,5995,Upper Fitness,3,46,0,live
+2026-10-16T05:48:04,6130,MAC Court,0,100,0,live
+2026-10-16T05:48:05,6157,East Mezzanine (3rd Floor),0,15,0,live
+2026-10-16T05:48:06,5984,Atrium Track (3rd Floor),0,50,0,live
+2026-10-16T05:48:07,5988,Mindfulness Room,0,20,0,live
+2026-10-16T05:48:07,6158,West Mezzanine (3rd Floor),0,25,0,live
+2026-10-16T05:48:08,10219,Racquetball Courts 9-16,0,80,0,live
+2026-10-16T05:48:09,6143,MP5,0,106,0,live
+2026-10-16T05:48:10,5981,Fitness Loft,1,55,0,live
+2026-10-16T05:48:10,7293,Fitness Pavilion,1,70,0,live
+2026-10-16T05:48:11,5961,B&G Gym 4-6,0,100,0,live
+2026-10-16T05:48:12,5993,Scifres,2,80,0,live
+2026-10-16T05:48:13,5972,Climbing Wall,0,18,1,live
+2026-10-16T05:48:13,7459,MP2,0,100,0,live
+2026-10-16T05:48:14,5969,Bouldering Wall,2,26,0,live
+2026-10-16T05:48:15,11620,East Fitness,2,208,0,live
+2026-10-16T05:48:15,11623,Kilter Board Wall,0,20,0,live
+2026-10-16T05:48:16,5990,Olympic Lifting Room,0,16,0,live
+2026-10-16T05:48:17,5991,Racquetball Courts 2-3,0,20,0,live
+2026-10-16T05:48:17,11610,Climbing Cave,0,15,0,live
+2026-10-16T05:48:18,6142,Combative Arts Room,0,11,0,live
+2026-10-16T05:48:19,6131,MP3,0,20,0,live
+2026-10-16T05:48:19,6132,MP4,0,26,0,live
+2026-10-16T05:48:20,11621,APGL,0,30,1,live
+2026-10-16T05:48:21,5985,Lower Gym,17,282,0,live
+2026-10-16T05:48:21,7290,Colby Fitness,13,380,0,live
+2026-10-16T05:48:22,5994,TREC,0,300,1,live
+2026-10-16T05:48:23,9552,Outdoor Tennis,0,50,0,live
+2026-10-16T05:48:23,9553,Outdoor Pickleball,0,50,0,live
+2026-10-16T06:38:34,5978,Faculty/Staff Workout Area,0,25,0,live
+2026-10-16T06:38:35,6129,Upper Track (4th Floor),0,10,0,live
+2026-10-16T06:38:36,5996,Upper Gym,0,100,0,live
+2026-10-16T06:38:36,7451,MP6,0,45,0,live
+2026-10-16T06:38:37,7452,MP7,0,45,0,live
+2026-10-16T06:38:38,5995,Upper Fitness,8,46,0,live
+2026-10-16T06:38:38,6130,MAC Court,2,100,0,live
+2026-10-16T06:38:39,6157,East Mezzanine (3rd Floor),5,15,0,live
+2026-10-16T06:38:40,5984,Atrium Track (3rd Floor),0,50,0,live
+2026-10-16T06:38:40,6158,West Mezzanine (3rd Floor),1,25,0,live
+2026-10-16T06:38:41,5988,Mindfulness Room,0,20,0,live
+2026-10-16T06:38:42,6143,MP5,0,106,0,live
+2026-10-16T06:38:42,10219,Racquetball Courts 9-16,0,80,0,live
+2026-10-16T06:38:43,7293,Fitness Pavilion,7,70,0,live
+2026-10-16T06:38:44,5961,B&G Gym 4-6,1,100,0,live
+2026-10-16T06:38:44,5981,Fitness Loft,5,55,0,live
+2026-10-16T06:38:45,5993,Scifres,14,80,0,live
+2026-10-16T06:38:46,7459,MP2,0,100,0,live
+2026-10-16T06:38:47,5969,Bouldering Wall,3,26,0,live
+2026-10-16T06:38:47,11623,Kilter Board Wall,0,20,0,live
+2026-10-16T06:38:48,11620,East Fitness,5,208,0,live
+2026-10-16T06:38:49,5990,Olympic Lifting Room,0,16,0,live
+2026-10-16T06:38:49,5991,Racquetball Courts 2-3,0,20,0,live
+2026-10-16T06:38:50,11610,Climbing Cave,0,15,0,live
+2026-10-16T06:38:51,6131,MP3,0,20,0,live
+2026-10-16T06:38:51,6142,Combative Arts Room,0,11,0,live
+2026-10-16T06:38:52,6132,MP4,0,26,0,live
+2026-10-16T06:38:53,5985,Lower Gym,29,282,0,live
+2026-10-16T06:38:53,7290,Colby Fitness,38,380,0,live
+2026-10-16T06:38:54,9552,Outdoor Tennis,0,50,0,live
+2026-10-16T06:38:55,9553,Outdoor Pickleball,0,50,0,live
+2026-10-16T07:37:18,5978,Faculty/Staff Workout Area,0,25,0,live
+2026-10-16T07:37:19,6129,Upper Track (4th Floor),0,10,0,live
+2026-10-16T07:37:20,5996,Upper Gym,1,100,0,live
+2026-10-16T07:37:21,7451,MP6,0,45,0,live
+2026-10-16T07:37:21,7452,MP7,0,45,0,live
+2026-10-16T07:37:22,5995,Upper Fitness,8,46,0,live
+2026-10-16T07:37:23,6130,MAC Court,2,100,0,live
+2026-10-16T07:37:23,6157,East Mezzanine (3rd Floor),2,15,0,live
+2026-10-16T07:37:24,5984,Atrium Track (3rd Floor),2,50,0,live
+2026-10-16T07:37:25,5988,Mindfulness Room,2,20,0,live
+2026-10-16T07:37:25,6158,West Mezzanine (3rd Floor),1,25,0,live
+2026-10-16T07:37:26,10219,Racquetball Courts 9-16,0,80,0,live
+2026-10-16T07:37:27,6143,MP5,0,106,0,live
+2026-10-16T07:37:27,7293,Fitness Pavilion,14,70,0,live
+2026-10-16T07:37:28,5981,Fitness Loft,9,55,0,live
+2026-10-16T07:37:29,5961,B&G Gym 4-6,11,100,0,live
+2026-10-16T07:37:30,5993,Scifres,12,80,0,live
+2026-10-16T07:37:31,7459,MP2,1,100,0,live
+2026-10-16T07:37:32,5969,Bouldering Wall,3,26,0,live
+2026-10-16T07:37:32,11623,Kilter Board Wall,0,20,0,live
+2026-10-16T07:37:33,11620,East Fitness,9,208,0,live
+2026-10-16T07:37:34,5990,Olympic Lifting Room,1,16,0,live
+2026-10-16T07:37:34,5991,Racquetball Courts 2-3,0,20,0,live
+2026-10-16T07:37:35,11610,Climbing Cave,0,15,0,live
+2026-10-16T07:37:36,6131,MP3,0,20,0,live
+2026-10-16T07:37:36,6142,Combative Arts Room,1,11,0,live
+2026-10-16T07:37:37,6132,MP4,0,26,0,live
+2026-10-16T07:37:38,7290,Colby Fitness,63,380,0,live
+2026-10-16T07:37:38,11622,Cycling Studio,12,60,0,live
+2026-10-16T07:37:39,5985,Lower Gym,38,282,0,live
+2026-10-16T07:37:40,9552,Outdoor Tennis,0,50,0,live
+2026-10-16T07:37:40,9553,Outdoor Pickleball,0,50,0,live
+2026-10-16T08:46:38,5978,Faculty/Staff Workout Area,2,25,0,live
+2026-10-16T08:46:39,6129,Upper Track (4th Floor),1,10,0,live
+2026-10-16T08:46:40,5996,Upper Gym,3,100,0,live
+2026-10-16T08:46:40,7451,MP6,0,45,0,live
+2026-10-16T08:46:41,7452,MP7,0,45,0,live
+2026-10-16T08:46:42,5995,Upper Fitness,15,46,0,live
+2026-10-16T08:46:42,6130,MAC Court,2,100,0,live
+2026-10-16T08:46:43,6157,East Mezzanine (3rd Floor),0,15,0,live
+2026-10-16T08:46:44,5984,Atrium Track (3rd Floor),2,50,0,live
+2026-10-16T08:46:45,5988,Mindfulness Room,0,20,0,live
+2026-10-16T08:46:45,6158,West Mezzanine (3rd Floor),5,25,0,live
+2026-10-16T08:46:46,10219,Racquetball Courts 9-16,0,80,0,live
+2026-10-16T08:46:47,6143,MP5,3,106,0,live
+2026-10-16T08:46:47,7293,Fitness Pavilion,16,70,0,live
+2026-10-16T08:46:48,5981,Fitness Loft,14,55,0,live
+2026-10-16T08:46:49,5960,B&G Gym 1-3,0,100,0,live
+2026-10-16T08:46:49,5979,Feature Gym,0,50,0,live
+2026-10-16T08:46:50,5961,B&G Gym 4-6,3,100,0,live
+2026-10-16T08:46:51,5993,Scifres,16,80,0,live
+2026-10-16T08:46:52,7459,MP2,0,100,0,live
+2026-10-16T08:46:53,5969,Bouldering Wall,5,26,0,live
+2026-10-16T08:46:53,11623,Kilter Board Wall,0,20,0,live
+2026-10-16T08:46:54,11620,East Fitness,8,208,0,live
+2026-10-16T08:46:55,5990,Olympic Lifting Room,1,16,0,live
+2026-10-16T08:46:56,5991,Racquetball Courts 2-3,0,20,0,live
+2026-10-16T08:46:56,11610,Climbing Cave,1,15,0,live
+2026-10-16T08:46:57,6142,Combative Arts Room,0,11,0,live
+2026-10-16T08:46:58,6131,MP3,0,20,0,live
+2026-10-16T08:46:58,6132,MP4,0,26,0,live
+2026-10-16T08:46:59,11622,Cycling Studio,0,60,1,live
+2026-10-16T08:47:00,5985,Lower Gym,44,282,0,live
+2026-10-16T08:47:00,7290,Colby Fitness,59,380,0,live
+2026-10-16T08:47:01,9552,Outdoor Tennis,0,50,0,live
+2026-10-16T08:47:02,9553,Outdoor Pickleball,0,50,0,live
+2026-10-16T09:55:02,5978,Faculty/Staff Workout Area,1,25,0,live
+2026-10-16T09:55:02,6129,Upper Track (4th Floor),1,10,0,live
+2026-10-16T09:55:03,5996,Upper Gym,2,100,0,live
+2026-10-16T09:55:04,7451,MP6,21,45,0,live
+2026-10-16T09:55:05,7452,MP7,1,45,0,live
+2026-10-16T09:55:06,5995,Upper Fitness,8,46,0,live
+2026-10-16T09:55:06,6130,MAC Court,2,100,0,live
+2026-10-16T09:55:07,6157,East Mezzanine (3rd Floor),0,15,0,live
+2026-10-16T09:55:08,5984,Atrium Track (3rd Floor),3,50,0,live
+2026-10-16T09:55:08,6158,West Mezzanine (3rd Floor),9,25,0,live
+2026-10-16T09:55:09,5988,Mindfulness Room,1,20,0,live
+2026-10-16T09:55:10,10219,Racquetball Courts 9-16,1,80,0,live
+2026-10-16T09:55:11,6143,MP5,2,106,0,live
+2026-10-16T09:55:11,7293,Fitness Pavilion,19,70,0,live
+2026-10-16T09:55:12,5981,Fitness Loft,11,55,0,live
+2026-10-16T09:55:13,5960,B&G Gym 1-3,0,100,0,live
+2026-10-16T09:55:13,5979,Feature Gym,0,50,0,live
+2026-10-16T09:55:14,5961,B&G Gym 4-6,5,100,0,live
+2026-10-16T09:55:15,5993,Scifres,11,80,0,live
+2026-10-16T09:55:16,7459,MP2,0,100,0,live
+2026-10-16T09:55:17,5969,Bouldering Wall,3,26,0,live
+2026-10-16T09:55:17,11623,Kilter Board Wall,1,20,0,live
+2026-10-16T09:55:18,11620,East Fitness,12,208,0,live
+2026-10-16T09:55:19,5990,Olympic Lifting Room,0,16,0,live
+2026-10-16T09:55:19,5991,Racquetball Courts 2-3,0,20,0,live
+2026-10-16T09:55:20,11610,Climbing Cave,0,15,0,live
+2026-10-16T09:55:21,6131,MP3,4,20,0,live
+2026-10-16T09:55:21,6142,Combative Arts Room,0,11,0,live
+2026-10-16T09:55:22,6132,MP4,0,26,0,live
+2026-10-16T09:55:23,5985,Lower Gym,59,282,0,live
+2026-10-16T09:55:23,7290,Colby Fitness,108,380,0,live
+2026-10-16T09:55:24,9552,Outdoor Tennis,0,50,0,live
+2026-10-16T09:55:25,9553,Outdoor Pickleball,0,50,0,live
+2026-10-16T10:42:16,5978,Faculty/Staff Workout Area,1,25,0,live
+2026-10-16T10:42:17,6129,Upper Track (4th Floor),0,10,0,live
+2026-10-16T10:42:18,5996,Upper Gym,2,100,0,live
+2026-10-16T10:42:18,7451,MP6,0,45,0,live
+2026-10-16T10:42:19,7452,MP7,2,45,0,live
+2026-10-16T10:42:20,5995,Upper Fitness,9,46,0,live
+2026-10-16T10:42:21,6130,MAC Court,11,100,0,live
+2026-10-16T10:42:21,6157,East Mezzanine (3rd Floor),1,15,0,live
+2026-10-16T10:42:22,5984,Atrium Track (3rd Floor),1,50,0,live
+2026-10-16T10:42:23,5988,Mindfulness Room,1,20,0,live
+2026-10-16T10:42:23,6158,West Mezzanine (3rd Floor),3,25,0,live
+2026-10-16T10:42:24,10219,Racquetball Courts 9-16,0,80,0,live
+2026-10-16T10:42:25,6143,MP5,0,106,0,live
+2026-10-16T10:42:26,5981,Fitness Loft,14,55,0,live
+2026-10-16T10:42:26,7293,Fitness Pavilion,19,70,0,live
+2026-10-16T10:42:27,5979,Feature Gym,0,50,0,live
+2026-10-16T10:42:28,5960,B&G Gym 1-3,0,100,0,live
+2026-10-16T10:42:29,5961,B&G Gym 4-6,5,100,0,live
+2026-10-16T10:42:29,5993,Scifres,22,80,0,live
+2026-10-16T10:42:30,7459,MP2,0,100,0,live
+2026-10-16T10:42:31,5969,Bouldering Wall,8,26,0,live
+2026-10-16T10:42:32,11620,East Fitness,17,208,0,live
+2026-10-16T10:42:32,11623,Kilter Board Wall,0,20,0,live
+2026-10-16T10:42:33,5990,Olympic Lifting Room,0,16,0,live
+2026-10-16T10:42:34,5991,Racquetball Courts 2-3,0,20,0,live
+2026-10-16T10:42:34,11610,Climbing Cave,0,15,0,live
+2026-10-16T10:42:35,6142,Combative Arts Room,1,11,0,live
+2026-10-16T10:42:36,6131,MP3,5,20,0,live
+2026-10-16T10:42:37,6132,MP4,0,26,0,live
+2026-10-16T10:42:38,7290,Colby Fitness,85,380,0,live
+2026-10-16T10:42:39,5985,Lower Gym,52,282,0,live
+2026-10-16T10:42:39,9552,Outdoor Tennis,0,50,0,live
+2026-10-16T10:42:40,9553,Outdoor Pickleball,0,50,0,live
+2026-10-16T11:43:50,5978,Faculty/Staff Workout Area,0,25,0,live
+2026-10-16T11:43:51,6129,Upper Track (4th Floor),0,10,0,live
+2026-10-16T11:43:52,5996,Upper Gym,5,100,0,live
+2026-10-16T11:43:52,7451,MP6,1,45,0,live
+2026-10-16T11:43:53,7452,MP7,2,45,0,live
+2026-10-16T11:43:54,5995,Upper Fitness,16,46,0,live
+2026-10-16T11:43:54,6130,MAC Court,20,100,0,live
+2026-10-16T11:43:55,6157,East Mezzanine (3rd Floor),1,15,0,live
+2026-10-16T11:43:56,5984,Atrium Track (3rd Floor),2,50,0,live
+2026-10-16T11:43:56,6158,West Mezzanine (3rd Floor),2,25,0,live
+2026-10-16T11:43:57,5988,Mindfulness Room,0,20,0,live
+2026-10-16T11:43:57,10219,Racquetball Courts 9-16,1,80,0,live
+2026-10-16T11:43:58,6143,MP5,0,106,0,live
+2026-10-16T11:43:59,5981,Fitness Loft,13,55,0,live
+2026-10-16T11:43:59,7293,Fitness Pavilion,20,70,0,live
+2026-10-16T11:44:00,5979,Feature Gym,4,50,0,live
+2026-10-16T11:44:01,5960,B&G Gym 1-3,0,100,0,live
+2026-10-16T11:44:01,5961,B&G Gym 4-6,7,100,0,live
+2026-10-16T11:44:02,5993,Scifres,20,80,0,live
+2026-10-16T11:44:03,5969,Bouldering Wall,12,26,0,live
+2026-10-16T11:44:03,7459,MP2,0,100,0,live
+2026-10-16T11:44:04,11620,East Fitness,14,208,0,live
+2026-10-16T11:44:04,11623,Kilter Board Wall,0,20,0,live
+2026-10-16T11:44:05,5990,Olympic Lifting Room,2,16,0,live
+2026-10-16T11:44:06,5991,Racquetball Courts 2-3,1,20,0,live
+2026-10-16T11:44:06,11610,Climbing Cave,1,15,0,live
+2026-10-16T11:44:07,6142,Combative Arts Room,1,11,0,live
+2026-10-16T11:44:08,6131,MP3,2,20,0,live
+2026-10-16T11:44:08,6132,MP4,4,26,0,live
+2026-10-16T11:44:09,5985,Lower Gym,68,282,0,live
+2026-10-16T11:44:09,7290,Colby Fitness,97,380,0,live
+2026-10-16T11:44:10,9552,Outdoor Tennis,0,50,0,live
+2026-10-16T11:44:11,9553,Outdoor Pickleball,6,50,0,live
+2026-10-16T12:42:07,5978,Faculty/Staff Workout Area,3,25,0,live
+2026-10-16T12:42:07,6129,Upper Track (4th Floor),0,10,0,live
+2026-10-16T12:42:08,5996,Upper Gym,8,100,0,live
+2026-10-16T12:42:09,7451,MP6,20,45,0,live
+2026-10-16T12:42:10,5995,Upper Fitness,13,46,0,live
+2026-10-16T12:42:10,7452,MP7,2,45,0,live
+2026-10-16T12:42:11,6130,MAC Court,8,100,0,live
+2026-10-16T12:42:11,6157,East Mezzanine (3rd Floor),2,15,0,live
+2026-10-16T12:42:12,5984,Atrium Track (3rd Floor),2,50,0,live
+2026-10-16T12:42:13,5988,Mindfulness Room,0,20,0,live
+2026-10-16T12:42:13,6158,West Mezzanine (3rd Floor),1,25,0,live
+2026-10-16T12:42:14,10219,Racquetball Courts 9-16,0,80,0,live
+2026-10-16T12:42:15,6143,MP5,0,106,0,live
+2026-10-16T12:42:15,7293,Fitness Pavilion,19,70,0,live
+2026-10-16T12:42:16,5981,Fitness Loft,7,55,0,live
+2026-10-16T12:42:17,5960,B&G Gym 1-3,2,100,0,live
+2026-10-16T12:42:17,5979,Feature Gym,45,50,0,live
+2026-10-16T12:42:18,5961,B&G Gym 4-6,28,100,0,live
+2026-10-16T12:42:19,5993,Scifres,16,80,0,live
+2026-10-16T12:42:20,5969,Bouldering Wall,13,26,0,live
+2026-10-16T12:42:20,7459,MP2,0,100,0,live
+2026-10-16T12:42:21,11623,Kilter Board Wall,0,20,0,live
+2026-10-16T12:42:22,5990,Olympic Lifting Room,0,16,0,live
+2026-10-16T12:42:22,11620,East Fitness,13,208,0,live
+2026-10-16T12:42:23,5991,Racquetball Courts 2-3,0,20,0,live
+2026-10-16T12:42:23,11610,Climbing Cave,0,15,0,live
+2026-10-16T12:42:25,6131,MP3,3,20,0,live
+2026-10-16T12:42:25,6142,Combative Arts Room,1,11,0,live
+2026-10-16T12:42:26,6132,MP4,0,26,0,live
+2026-10-16T12:42:27,7290,Colby Fitness,85,380,0,live
+2026-10-16T12:42:27,11622,Cycling Studio,20,60,0,live
+2026-10-16T12:42:28,5985,Lower Gym,77,282,0,live
+2026-10-16T12:42:29,9552,Outdoor Tennis,0,50,0,live
+2026-10-16T12:42:29,9553,Outdoor Pickleball,10,50,0,live
+2026-10-16T13:25:34,5978,Faculty/Staff Workout Area,2,25,0,live
+2026-10-16T13:25:35,6129,Upper Track (4th Floor),0,10,0,live
+2026-10-16T13:25:36,5996,Upper Gym,9,100,0,live
+2026-10-16T13:25:36,7451,MP6,0,45,0,live
+2026-10-16T13:25:37,7452,MP7,0,45,0,live
+2026-10-16T13:25:38,5995,Upper Fitness,10,46,0,live
+2026-10-16T13:25:38,6130,MAC Court,1,100,0,live
+2026-10-16T13:25:39,5984,Atrium Track (3rd Floor),1,50,0,live
+2026-10-16T13:25:39,6157,East Mezzanine (3rd Floor),2,15,0,live
+2026-10-16T13:25:40,6158,West Mezzanine (3rd Floor),4,25,0,live
+2026-10-16T13:25:41,5988,Mindfulness Room,0,20,0,live
+2026-10-16T13:25:42,6143,MP5,0,106,0,live
+2026-10-16T13:25:42,10219,Racquetball Courts 9-16,0,80,0,live
+2026-10-16T13:25:43,7293,Fitness Pavilion,19,70,0,live
+2026-10-16T13:25:44,5979,Feature Gym,50,50,0,live
+2026-10-16T13:25:44,5981,Fitness Loft,8,55,0,live
+2026-10-16T13:25:45,5960,B&G Gym 1-3,5,100,0,live
+2026-10-16T13:25:46,5961,B&G Gym 4-6,35,100,0,live
+2026-10-16T13:25:47,5993,Scifres,15,80,0,live
+2026-10-16T13:25:48,7459,MP2,0,100,0,live
+2026-10-16T13:25:49,5969,Bouldering Wall,10,26,0,live
+2026-10-16T13:25:49,11623,Kilter Board Wall,0,20,0,live
+2026-10-16T13:25:50,11620,East Fitness,19,208,0,live
+2026-10-16T13:25:51,5990,Olympic Lifting Room,0,16,0,live
+2026-10-16T13:25:51,5991,Racquetball Courts 2-3,0,20,0,live
+2026-10-16T13:25:52,11610,Climbing Cave,0,15,0,live
+2026-10-16T13:25:53,6131,MP3,2,20,0,live
+2026-10-16T13:25:53,6142,Combative Arts Room,1,11,0,live
+2026-10-16T13:25:54,6132,MP4,0,26,0,live
+2026-10-16T13:25:55,7290,Colby Fitness,92,380,0,live
+2026-10-16T13:25:55,11622,Cycling Studio,0,60,1,live
+2026-10-16T13:25:56,5985,Lower Gym,58,282,0,live
+2026-10-16T13:25:57,9552,Outdoor Tennis,2,50,0,live
+2026-10-16T13:25:58,9553,Outdoor Pickleball,8,50,0,live
+2026-10-16T17:23:44,5978,Faculty/Staff Workout Area,2,25,0,live
+2026-10-16T17:23:45,5996,Upper Gym,22,100,0,live
+2026-10-16T17:23:45,6129,Upper Track (4th Floor),1,10,0,live
+2026-10-16T17:23:46,7451,MP6,0,45,0,live
+2026-10-16T17:23:47,7452,MP7,0,45,0,live
+2026-10-16T17:23:48,5995,Upper Fitness,12,46,0,live
+2026-10-16T17:23:48,6130,MAC Court,24,100,0,live
+2026-10-16T17:23:49,6157,East Mezzanine (3rd Floor),1,15,0,live
+2026-10-16T17:23:50,5984,Atrium Track (3rd Floor),6,50,0,live
+2026-10-16T17:23:50,6158,West Mezzanine (3rd Floor),5,25,0,live
+2026-10-16T17:23:51,5988,Mindfulness Room,0,20,0,live
+2026-10-16T17:23:52,6143,MP5,0,106,0,live
+2026-10-16T17:23:52,10219,Racquetball Courts 9-16,6,80,0,live
+2026-10-16T17:23:53,7293,Fitness Pavilion,25,70,0,live
+2026-10-16T17:23:54,5981,Fitness Loft,14,55,0,live
+2026-10-16T17:23:55,5979,Feature Gym,46,50,0,live
+2026-10-16T17:23:56,5960,B&G Gym 1-3,50,100,0,live
+2026-10-16T17:23:56,5961,B&G Gym 4-6,32,100,0,live
+2026-10-16T17:23:57,5993,Scifres,20,80,0,live
+2026-10-16T17:23:58,5969,Bouldering Wall,13,26,0,live
+2026-10-16T17:23:58,7459,MP2,0,100,0,live
+2026-10-16T17:23:59,11620,East Fitness,28,208,0,live
+2026-10-16T17:23:59,11623,Kilter Board Wall,2,20,0,live
+2026-10-16T17:24:00,5990,Olympic Lifting Room,0,16,0,live
+2026-10-16T17:24:01,5991,Racquetball Courts 2-3,0,20,0,live
+2026-10-16T17:24:01,11610,Climbing Cave,0,15,0,live
+2026-10-16T17:24:02,6142,Combative Arts Room,1,11,0,live
+2026-10-16T17:24:03,6131,MP3,1,20,0,live
+2026-10-16T17:24:03,6132,MP4,20,26,0,live
+2026-10-16T17:24:04,11621,APGL,18,30,0,live
+2026-10-16T17:24:05,7290,Colby Fitness,80,380,0,live
+2026-10-16T17:24:06,5985,Lower Gym,62,282,0,live
+2026-10-16T17:24:06,9552,Outdoor Tennis,0,50,0,live
+2026-10-16T17:24:07,9553,Outdoor Pickleball,0,50,0,live
+2026-10-16T18:26:21,5978,Faculty/Staff Workout Area,3,25,0,live
+2026-10-16T18:26:22,5996,Upper Gym,24,100,0,live
+2026-10-16T18:26:22,6129,Upper Track (4th Floor),0,10,0,live
+2026-10-16T18:26:23,7451,MP6,2,45,0,live
+2026-10-16T18:26:24,5995,Upper Fitness,6,46,0,live
+2026-10-16T18:26:24,7452,MP7,7,45,0,live
+2026-10-16T18:26:25,6130,MAC Court,30,100,0,live
+2026-10-16T18:26:26,6157,East Mezzanine (3rd Floor),0,15,0,live
+2026-10-16T18:26:27,5984,Atrium Track (3rd Floor),7,50,0,live
+2026-10-16T18:26:27,6158,West Mezzanine (3rd Floor),4,25,0,live
+2026-10-16T18:26:28,5988,Mindfulness Room,0,20,0,live
+2026-10-16T18:26:29,10219,Racquetball Courts 9-16,3,80,0,live
+2026-10-16T18:26:30,6143,MP5,0,106,0,live
+2026-10-16T18:26:30,7293,Fitness Pavilion,21,70,0,live
+2026-10-16T18:26:31,5981,Fitness Loft,18,55,0,live
+2026-10-16T18:26:32,5960,B&G Gym 1-3,125,100,0,live
+2026-10-16T18:26:32,5979,Feature Gym,45,50,0,live
+2026-10-16T18:26:33,5961,B&G Gym 4-6,36,100,0,live
+2026-10-16T18:26:33,5993,Scifres,11,80,0,live
+2026-10-16T18:26:34,7459,MP2,15,100,0,live
+2026-10-16T18:26:35,5969,Bouldering Wall,19,26,0,live
+2026-10-16T18:26:35,5972,Climbing Wall,3,18,0,live
+2026-10-16T18:26:36,11623,Kilter Board Wall,3,20,0,live
+2026-10-16T18:26:37,5990,Olympic Lifting Room,0,16,0,live
+2026-10-16T18:26:37,11620,East Fitness,30,208,0,live
+2026-10-16T18:26:38,5991,Racquetball Courts 2-3,4,20,0,live
+2026-10-16T18:26:38,11610,Climbing Cave,2,15,0,live
+2026-10-16T18:26:39,6142,Combative Arts Room,4,11,0,live
+2026-10-16T18:26:40,6131,MP3,5,20,0,live
+2026-10-16T18:26:40,6132,MP4,20,26,0,live
+2026-10-16T18:26:41,11621,APGL,15,30,0,live
+2026-10-16T18:26:42,5985,Lower Gym,66,282,0,live
+2026-10-16T18:26:42,7290,Colby Fitness,78,380,0,live
+2026-10-16T18:26:43,9552,Outdoor Tennis,0,50,0,live
+2026-10-16T18:26:44,9553,Outdoor Pickleball,0,50,0,live
+2026-10-16T18:37:13,9553,Outdoor Pickleball,0,50,0,live
+2026-10-16T18:37:36,5994,TREC,17,300,0,live
+2026-10-16T19:28:24,9553,Outdoor Pickleball,0,50,0,live
+2026-10-16T19:28:59,5994,TREC,36,300,0,live
+2026-10-16T19:33:18,5978,Faculty/Staff Workout Area,1,25,0,live
+2026-10-16T19:33:18,6129,Upper Track (4th Floor),0,10,0,live
+2026-10-16T19:33:19,5996,Upper Gym,27,100,0,live
+2026-10-16T19:33:20,7451,MP6,9,45,0,live
+2026-10-16T19:33:21,5995,Upper Fitness,8,46,0,live
+2026-10-16T19:33:21,7452,MP7,18,45,0,live
+2026-10-16T19:33:22,6130,MAC Court,46,100,0,live
+2026-10-16T19:33:23,5984,Atrium Track (3rd Floor),2,50,0,live
+2026-10-16T19:33:23,6157,East Mezzanine (3rd Floor),1,15,0,live
+2026-10-16T19:33:24,5988,Mindfulness Room,1,20,0,live
+2026-10-16T19:33:24,6158,West Mezzanine (3rd Floor),3,25,0,live
+2026-10-16T19:33:25,10219,Racquetball Courts 9-16,7,80,0,live
+2026-10-16T19:33:26,6143,MP5,8,106,0,live
+2026-10-16T19:33:26,7293,Fitness Pavilion,22,70,0,live
+2026-10-16T19:33:27,5981,Fitness Loft,9,55,0,live
+2026-10-16T19:33:28,5960,B&G Gym 1-3,64,100,0,live
+2026-10-16T19:33:28,5979,Feature Gym,38,50,0,live
+2026-10-16T19:33:29,5961,B&G Gym 4-6,40,100,0,live
+2026-10-16T19:33:30,5993,Scifres,13,80,0,live
+2026-10-16T19:33:30,7459,MP2,12,100,0,live
+2026-10-16T19:33:31,5969,Bouldering Wall,15,26,0,live
+2026-10-16T19:33:31,5972,Climbing Wall,10,18,0,live
+2026-10-16T19:33:32,11623,Kilter Board Wall,0,20,0,live
+2026-10-16T19:33:33,5990,Olympic Lifting Room,0,16,0,live
+2026-10-16T19:33:33,11620,East Fitness,17,208,0,live
+2026-10-16T19:33:34,5991,Racquetball Courts 2-3,0,20,0,live
+2026-10-16T19:33:35,6142,Combative Arts Room,4,11,0,live
+2026-10-16T19:33:35,11610,Climbing Cave,2,15,0,live
+2026-10-16T19:33:36,6131,MP3,11,20,0,live
+2026-10-16T19:33:37,6132,MP4,18,26,0,live
+2026-10-16T19:33:37,11621,APGL,13,30,0,live
+2026-10-16T19:33:38,5985,Lower Gym,47,282,0,live
+2026-10-16T19:33:38,7290,Colby Fitness,68,380,0,live
+2026-10-16T19:33:39,9552,Outdoor Tennis,0,50,0,live
+2026-10-16T20:21:28,5978,Faculty/Staff Workout Area,1,25,0,live
+2026-10-16T20:21:29,6129,Upper Track (4th Floor),0,10,0,live
+2026-10-16T20:21:30,5996,Upper Gym,27,100,0,live
+2026-10-16T20:21:30,7451,MP6,5,45,0,live
+2026-10-16T20:21:31,7452,MP7,28,45,0,live
+2026-10-16T20:21:32,5995,Upper Fitness,7,46,0,live
+2026-10-16T20:21:32,6130,MAC Court,62,100,0,live
+2026-10-16T20:21:33,6157,East Mezzanine (3rd Floor),4,15,0,live
+2026-10-16T20:21:34,5984,Atrium Track (3rd Floor),1,50,0,live
+2026-10-16T20:21:34,6158,West Mezzanine (3rd Floor),1,25,0,live
+2026-10-16T20:21:35,5988,Mindfulness Room,0,20,0,live
+2026-10-16T20:21:36,6143,MP5,14,106,0,live
+2026-10-16T20:21:36,10219,Racquetball Courts 9-16,9,80,0,live
+2026-10-16T20:21:37,5981,Fitness Loft,16,55,0,live
+2026-10-16T20:21:37,7293,Fitness Pavilion,24,70,0,live
+2026-10-16T20:21:38,5960,B&G Gym 1-3,0,100,0,live
+2026-10-16T20:21:39,5961,B&G Gym 4-6,45,100,0,live
+2026-10-16T20:21:39,5993,Scifres,18,80,0,live
+2026-10-16T20:21:40,7459,MP2,20,100,0,live
+2026-10-16T20:21:41,5969,Bouldering Wall,15,26,0,live
+2026-10-16T20:21:41,5972,Climbing Wall,10,18,0,live
+2026-10-16T20:21:42,11623,Kilter Board Wall,6,20,0,live
+2026-10-16T20:21:43,5990,Olympic Lifting Room,0,16,0,live
+2026-10-16T20:21:43,11620,East Fitness,14,208,0,live
+2026-10-16T20:21:44,5991,Racquetball Courts 2-3,0,20,0,live
+2026-10-16T20:21:44,11610,Climbing Cave,1,15,0,live
+2026-10-16T20:21:45,6142,Combative Arts Room,0,11,0,live
+2026-10-16T20:21:46,6131,MP3,6,20,0,live
+2026-10-16T20:21:46,6132,MP4,21,26,0,live
+2026-10-16T20:21:47,11621,APGL,13,30,0,live
+2026-10-16T20:21:48,5985,Lower Gym,59,282,0,live
+2026-10-16T20:21:48,7290,Colby Fitness,67,380,0,live
+2026-10-16T20:30:46,5994,TREC,27,300,0,live
+2026-10-16T20:33:13,9552,Outdoor Tennis,0,50,0,live
+2026-10-16T20:33:14,9553,Outdoor Pickleball,0,50,0,live
+2026-10-16T21:38:01,5978,Faculty/Staff Workout Area,0,25,0,live
+2026-10-16T21:38:02,6129,Upper Track (4th Floor),2,10,0,live
+2026-10-16T21:38:03,5996,Upper Gym,25,100,0,live
+2026-10-16T21:38:04,7451,MP6,4,45,0,live
+2026-10-16T21:38:04,7452,MP7,28,45,0,live
+2026-10-16T21:38:05,5995,Upper Fitness,3,46,0,live
+2026-10-16T21:38:05,6130,MAC Court,35,100,0,live
+2026-10-16T21:38:06,6157,East Mezzanine (3rd Floor),2,15,0,live
+2026-10-16T21:38:07,5984,Atrium Track (3rd Floor),4,50,0,live
+2026-10-16T21:38:08,5988,Mindfulness Room,1,20,0,live
+2026-10-16T21:38:08,6158,West Mezzanine (3rd Floor),2,25,0,live
+2026-10-16T21:38:09,10219,Racquetball Courts 9-16,17,80,0,live
+2026-10-16T21:38:10,6143,MP5,8,106,0,live
+2026-10-16T21:38:10,7293,Fitness Pavilion,17,70,0,live
+2026-10-16T21:38:11,5981,Fitness Loft,8,55,0,live
+2026-10-16T21:38:12,5960,B&G Gym 1-3,0,100,0,live
+2026-10-16T21:38:12,5979,Feature Gym,0,50,0,live
+2026-10-16T21:38:13,5961,B&G Gym 4-6,29,100,0,live
+2026-10-16T21:38:14,5993,Scifres,14,80,0,live
+2026-10-16T21:38:14,7459,MP2,1,100,0,live
+2026-10-16T21:38:15,5969,Bouldering Wall,10,26,0,live
+2026-10-16T21:38:15,5972,Climbing Wall,7,18,0,live
+2026-10-16T21:38:16,11623,Kilter Board Wall,4,20,0,live
+2026-10-16T21:38:17,11620,East Fitness,12,208,0,live
+2026-10-16T21:38:18,5990,Olympic Lifting Room,0,16,0,live
+2026-10-16T21:38:18,5991,Racquetball Courts 2-3,0,20,0,live
+2026-10-16T21:38:19,11610,Climbing Cave,2,15,0,live
+2026-10-16T21:38:20,6131,MP3,8,20,0,live
+2026-10-16T21:38:20,6142,Combative Arts Room,2,11,0,live
+2026-10-16T21:38:21,6132,MP4,0,26,0,live
+2026-10-16T21:38:22,7290,Colby Fitness,42,380,0,live
+2026-10-16T21:38:22,11621,APGL,13,30,0,live
+2026-10-16T21:38:23,5985,Lower Gym,21,282,0,live
+2026-10-16T21:38:24,9552,Outdoor Tennis,0,50,0,live
+2026-10-16T21:38:24,9553,Outdoor Pickleball,0,50,0,live
