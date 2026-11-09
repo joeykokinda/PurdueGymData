@@ -9368,6 +9368,9 @@ ts,location_id,area,count,capacity,closed,source
 2026-03-25T19:36:18,7290,Colby Fitness,105,380,0,jake
 2026-03-25T19:36:19,5985,Lower Gym,94,282,0,jake
 2026-03-25T19:36:20,11610,Climbing Cave,11,15,0,jake
+2026-03-25T20:34:19,5994,TREC,30,300,0,live
+2026-03-25T20:34:19,9552,Outdoor Tennis,0,50,0,live
+2026-03-25T20:34:19,9553,Outdoor Pickleball,0,50,0,live
 2026-03-25T20:35:12,5994,TREC,30,300,0,jake
 2026-03-25T20:35:18,9552,Outdoor Tennis,0,50,0,jake
 2026-03-25T20:35:21,9553,Outdoor Pickleball,0,50,0,jake
@@ -10437,6 +10440,9 @@ ts,location_id,area,count,capacity,closed,source
 2026-03-27T19:15:22,7290,Colby Fitness,127,380,0,jake
 2026-03-27T19:15:23,5985,Lower Gym,87,282,0,jake
 2026-03-27T19:15:24,11610,Climbing Cave,8,15,0,jake
+2026-03-27T19:18:52,5994,TREC,57,300,0,live
+2026-03-27T19:18:52,9552,Outdoor Tennis,2,50,0,live
+2026-03-27T19:18:52,9553,Outdoor Pickleball,19,50,0,live
 2026-03-27T19:18:53,5994,TREC,57,300,0,jake
 2026-03-27T19:18:55,9552,Outdoor Tennis,2,50,0,jake
 2026-03-27T19:18:56,9553,Outdoor Pickleball,19,50,0,jake
