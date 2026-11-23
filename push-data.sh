@@ -1,5 +1,5 @@
 #!/bin/sh
-# Nightly on brach via crontab: export every reading to data/YYYY-MM.csv and push if anything changed.
+# Weekly (Sunday) on brach via crontab: export every reading to data/YYYY-MM.csv and push if anything changed.
 set -eu
 cd "$HOME/PurdueGymData"
 git pull -q --rebase

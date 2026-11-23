@@ -5,7 +5,7 @@ How busy each area of Purdue's CoRec is, live and historically. Live at **https:
 ## Data
 
 `data/YYYY-MM.csv`: every headcount reading for every CoRec area, one file per month, Aug 2022 to now
-(nothing exists for Jan 2023 to Sep 2024). Updated nightly.
+(nothing exists for Jan 2023 to Sep 2024). Updated weekly.
 
 | column | meaning |
 |---|---|
